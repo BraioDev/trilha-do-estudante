@@ -1,7 +1,6 @@
 body {
     height: 100%;
     overflow-x: hidden;
-    background-color: var(--branco-base);
     transition: background-color 0.5s ease;
 }
 
@@ -21,10 +20,10 @@ header {
 
 /* Variavel de cores*/
 :root {
-    --branco-box: #ffffff;
+    --branco-box: rgba(255, 255, 255, 0.8);
     --branco-base: #f6f6f6;
     --branco-cinza: #ececec;
-    --branco-escuro: #dadada;
+    --branco-amarelado: rgba(255, 204, 0, 0.9);
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
     --azul-base: #008fe0;
@@ -144,3 +143,7 @@ button:focus {
 .box_escuro:hover {
   background-color: var(--preto-cinza); /* Fica tudo escuro */
 }
+
+.box_escuro:hover  {
+    background-color: var(--preto-cinza); /* Fica tudo escuro */
+  }
