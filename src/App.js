@@ -1,10 +1,20 @@
 import React from 'react';
 import './style.css';
-import Header from './components/Header';
 
-export default function app() {
+export default function App() {
 
   return (
-      <Header/>
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-5 box box_claro">
+
+          </div>
+          <div class="col-5 box box_escuro">
+
+          </div>
+        </div>
+      </div>
+    </body>
   );
 }

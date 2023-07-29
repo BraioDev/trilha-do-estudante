@@ -14,7 +14,7 @@ export default class Header extends Component {
                             <span>Logo</span>
                         </div>
                         <div class="col-5">
-                            <Input />
+                            <Input/>
                         </div>
                         <div class="col-1">
                             <button>
