@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component} from 'react';
+import './style.css';
+import BibliotecaSelect from './components/BibliotecaSelect';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/* componentes */
+class Input extends Component {
+    render() {
+        return (
+            <div>
+                <input class="barra_pesquisa" maxlength="30" placeholder="Pesquisar" />
+            </div>
+        );
+    }
+};
+
+export default function app() {
+
+    return (
+        <div>
+            <body>
+                <header>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3">
+                                <span>Logo</span>
+                            </div>
+                            <div class="col-5">
+                                <Input />
+                            </div>
+                            <div class="col-1">
+                                <button>
+                                    Login
+                                </button>
+                            </div>
+                            <div class="col-2">
+                                <BibliotecaSelect />
+                            </div>
+                            <div class="col-1">
+                                <button>
+                                    Blog
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </body>
+        </div>
+
+    );
 }
-
-export default App;
