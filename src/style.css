@@ -1,0 +1,121 @@
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--branco-base);
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: var(--branco-base);
+}
+
+.container {
+    width: 100%;
+}
+
+/* Variavel de cores*/
+:root {
+    --branco-base: #f6f6f6;
+    --branco-acizentado: #ececec;
+    --branco-escuro: #dadada;
+    --azul-base: #008fe0;
+    --azul-escurecido: #00a2ff;
+}
+
+/* Componentes */
+input {
+    padding: 0 20px;
+    text-align: left;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Cera Round Pro', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    height: 35px;
+    background: var(--branco-acizentado);
+    caret-color: var(--azul-base);
+}
+
+input:focus::placeholder {
+    transition: all 0.1s;
+    color: transparent;
+}
+
+select{
+    border-radius: 8px;
+    font-family: 'Cera Round Pro', sans-serif;
+    font-size: 14px;
+    height: 35px;
+    border: none;
+    transition: ease-in-out 0.3s;
+    outline: none;
+    background: transparent;
+    color: var(--azul-escurecido);
+    user-select: none;
+}
+
+select:focus{
+    transform: scale(1.1);
+    background-color: var(--azul-base);
+    color: var(--branco-base);
+    transition: ease-in-out 0.3s;
+}
+
+select:hover {
+    transform: scale(1.1);
+    outline: none;
+    background-color: var(--azul-base);
+    transition: ease-in-out 0.3s;
+    color: var(--branco-base);
+}
+
+select option {
+    background-color: var(--branco-base);
+    outline: none;
+}
+
+option{
+    font-size: 14px;
+    font-family: 'Cera Round Pro', sans-serif;
+    background-color: var(--branco-base);
+    color: var(--azul-base);
+}
+
+option:hover{
+    background-color: var(--azul-base);
+}
+
+
+button {
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Cera Round Pro', sans-serif;
+    font-size: 14px;
+    height: 35px;
+    width: 100%;
+    background: transparent;
+    transition: ease-in-out 0.3s;
+    user-select: none;
+    color: var(--azul-escurecido);
+}
+
+button:hover {
+    transform: scale(1.1);
+    outline: none;
+    background-color: var(--azul-base);
+    transition: ease-in-out 0.3s;
+    color: var(--branco-base);
+}
+
+button:focus {
+    outline: none;
+    background-color: var(--azul-escurecido);
+    transition: ease-in-out 0.3s;
+    color: var(--branco-base);
+}
