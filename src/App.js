@@ -21,7 +21,7 @@ export default function App() {
             className="col-5 box box_claro"
             onMouseEnter={() => handleBoxHover('var(--azul-base)')}
             onMouseLeave={() => handleBoxHover('var(--cinza)')}
-          >
+            >
             <img src={tsIcon} alt="back"></img>
             <h3>Front end</h3>
           </div>

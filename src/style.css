@@ -2,6 +2,7 @@ body {
     height: 100%;
     overflow-x: hidden;
     transition: background-color 0.5s ease;
+    user-select: none;
 }
 
 header {
@@ -143,20 +144,23 @@ button:focus {
 
 .box_claro:hover {
     background-color: var(--branco-base);
-    /* Fica tudo claro */
+    color: #3178C6;
 }
 
 .box_escuro:hover {
     background-color: var(--preto-cinza);
-    /* Fica tudo escuro */
-}
-
-.box_escuro:hover {
-    background-color: var(--preto-cinza);
-    /* Fica tudo escuro */
+    color: var(--branco-base);
 }
 
 img{
+    border-radius: 8px;
     width: 200px;
     height: 200px;
+    margin: 90px 0 20px 0;
+    user-select: none;
+}
+
+h3{
+    font-size: 32px;
+    font-weight: bold;
 }
