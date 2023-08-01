@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import BibliotecaSelect from './BibliotecaSelect';
-import Input from './Input';
+import BibliotecaSelect from '../select/bibliotecaSelect';
 import '../style.css';
+import './header.css';
 
 export default class Header extends Component {
 
@@ -14,7 +14,7 @@ export default class Header extends Component {
                             <span>Logo</span>
                         </div>
                         <div class="col-5">
-                            <Input/>
+                            <input></input>
                         </div>
                         <div class="col-1">
                             <button>

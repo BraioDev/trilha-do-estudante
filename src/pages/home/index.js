@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import java from './assets/imagens/java_icon.png';
 import tsIcon from './assets/imagens/ts_icon.png';
-
-import './style.css';
+import '../../style.css';
 
 export default function App() {
   // Definir o estado inicial para a cor do body
