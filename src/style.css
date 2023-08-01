@@ -22,7 +22,8 @@ header {
 :root {
     --branco-box: rgba(255, 255, 255, 0.8);
     --branco-base: #f6f6f6;
-    --branco-cinza: #ececec;
+    --branco-cinza: #cfcfcf;
+    --cinza: #bbbbbb;
     --branco-amarelado: rgba(255, 204, 0, 0.9);
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
@@ -52,7 +53,7 @@ input:focus::placeholder {
     color: transparent;
 }
 
-select{
+select {
     border-radius: 8px;
     font-family: 'Cera Round Pro', sans-serif;
     font-size: 14px;
@@ -65,7 +66,7 @@ select{
     user-select: none;
 }
 
-select:focus{
+select:focus {
     transform: scale(1.1);
     background-color: var(--azul-base);
     color: var(--branco-base);
@@ -85,14 +86,14 @@ select option {
     outline: none;
 }
 
-option{
+option {
     font-size: 14px;
     font-family: 'Cera Round Pro', sans-serif;
     background-color: var(--branco-base);
     color: var(--azul-base);
 }
 
-option:hover{
+option:hover {
     background-color: var(--azul-base);
 }
 
@@ -127,7 +128,11 @@ button:focus {
 }
 
 /* Box */
-.box{
+.box {
+    display: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     height: 450px;
     width: 500px;
     border-radius: 8px;
@@ -137,13 +142,21 @@ button:focus {
 }
 
 .box_claro:hover {
-  background-color: var(--branco-base); /* Fica tudo claro */
+    background-color: var(--branco-base);
+    /* Fica tudo claro */
 }
 
 .box_escuro:hover {
-  background-color: var(--preto-cinza); /* Fica tudo escuro */
+    background-color: var(--preto-cinza);
+    /* Fica tudo escuro */
 }
 
-.box_escuro:hover  {
-    background-color: var(--preto-cinza); /* Fica tudo escuro */
-  }
+.box_escuro:hover {
+    background-color: var(--preto-cinza);
+    /* Fica tudo escuro */
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
