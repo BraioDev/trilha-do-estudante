@@ -24,8 +24,9 @@ header {
 :root {
     --branco-box: rgba(255, 255, 255, 0.8);
     --branco-base: #ececec;
-    --branco-cinza: #cfcfcf;
+    --branco-cinza: #c4c4c4;
     --cinza: #bbbbbb;
+    --cinza-escuro: #999999;
     --branco-amarelado: rgba(255, 204, 0, 0.9);
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
@@ -134,7 +135,7 @@ button:focus {
 /* Box */
 .box {
     display: wrap;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     align-items: center;
     height: 300px;
@@ -152,24 +153,28 @@ button:focus {
 
 .box_escuro:hover {
     background-color: var(--preto-cinza);
-    color: var(--branco-base);
+    color: #eed85a;
 }
 
 .box_verde:hover {
     background-color: var(--preto-cinza);
-    color: var(--branco-base);
+    color: var(--verde-claro);
 }
 
 .box_roxo:hover {
     background-color: var(--preto-cinza);
-    color: var(--branco-base);
+    color: var(--azul-roxo);
+}
+
+.box_cinza:hover {
+    background-color: var(--preto-cinza);
+    color: #E51C20;
 }
 
 img{
     border-radius: 8px;
     width: 150px;
     height: 150px;
-    margin-top: 45px;
 }
 
 h3{
