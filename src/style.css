@@ -23,29 +23,42 @@ header {
 
 /* Variavel de cores*/
 :root {
+    /* branco */
     --branco-box: rgba(255, 255, 255, 0.8);
     --branco-base: #ececec;
     --branco-cinza: #c4c4c4;
+    /* cinza */
     --cinza: #bbbbbb;
     --cinza-escuro: #999999;
-    --branco-amarelado: rgba(255, 204, 0, 0.9);
+    /* preto */
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
     --cinza-padrao: #202124;
     --preto-azul: #042030;
+    /* azul */
     --azul-base: #008fe0;
     --azul-escurecido: #00a2ff;
     --azul-react: #00BCD4;
     --azul-forte: #3178C6;
+    --azul-xamarin: #3199DC;
+    --azul-ionic: #4F8FF7;
+    --azul-xcode: #235EE1;
+    --azul-flutter: #54C5F8;
+    /* roxo */
     --azul-roxo: #aa67e9;
+    /* verde */
     --verde-claro: #38ce6a;
     --verde-musgo: #6D9A00;
-    --vermelho-laranja: #DB380E;
+    /* vermelho */
     --vermelho: #E51C20;
     --vermelho-bordo: #C40030;
+    /* laranja */
+    --vermelho-laranja: #DB380E;
     --laranja: #FF9100;
     --laranja-forte: #FD6C35;
+    /* amarelo */
     --amarelo-claro: #F0DC4E;
+    --amarelo-rgb: rgba(255, 204, 0, 0.9);
     --amarelo: #F9C63D;
 }
 
@@ -153,7 +166,7 @@ button:focus {
     color: var(--branco-base);
 }
 
-.posicao-botao{
+.posicao-botao {
     position: absolute;
 }
 

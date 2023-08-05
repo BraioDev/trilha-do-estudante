@@ -19,7 +19,7 @@ export default function Mobile() {
 
           {/* -------------------Inicio dos cards----------------------- */}
           <div
-            className="col-3 box box_java"
+            className="col-3 box box_android"
           >
             <Link to="/android" className='link-invisivel'>
               <div class="col-12">
@@ -33,7 +33,7 @@ export default function Mobile() {
 
 
           <div
-            className="col-3 box box_python"
+            className="col-3 box box_flutter"
           >
             <Link to="/flutter" className="link-invisivel">
               <div className="col-12">
@@ -46,7 +46,7 @@ export default function Mobile() {
           </div>
 
           <div
-            className="col-3 box box_roxo"
+            className="col-3 box box_ionic"
           >
             <Link to="/ionic" className='link-invisivel'>
               <div class="col-12">
@@ -59,7 +59,7 @@ export default function Mobile() {
           </div>
           {/* -------------------metade dos cards----------------------- */}
           <div
-            className="col-3 box box_postman"
+            className="col-3 box box_react"
           >
             <Link to="/reactNative" className='link-invisivel'>
               <div class="col-12">
@@ -72,7 +72,7 @@ export default function Mobile() {
           </div>
 
           <div
-            className="col-3 box box_verde"
+            className="col-3 box box_xamarin"
           >
             <Link to="/xamarin" className='link-invisivel'>
               <div class="col-12">
@@ -85,7 +85,7 @@ export default function Mobile() {
           </div>
 
           <div
-            className="col-3 box box_verde"
+            className="col-3 box box_xcode"
           >
             <Link to="/xcode" className='link-invisivel'>
               <div class="col-12">

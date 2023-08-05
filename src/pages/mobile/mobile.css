@@ -1,0 +1,19 @@
+.box_android:hover {
+    color: var(--verde-claro);
+}
+
+.box_xamarin:hover{
+    color: var(--azul-xamarin);
+}
+
+.box_ionic:hover    {
+    color:  var(--azul-ionic);
+}
+
+.box_xcode:hover{
+    color: var(--azul-xcode);
+}
+
+.box_flutter:hover{
+    color: var(--azul-flutter);
+}
