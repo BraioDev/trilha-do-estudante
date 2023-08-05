@@ -1,24 +1,31 @@
 import React from 'react';
 import '../../style.css';
+import './erro.css';
+import notFound from '../../assets/imagens/404.png';
 import { Link } from 'react-router-dom';
 
 export default function Erro() {
   return (
-    <body>
+    <body style={{ background: 'var(--cinza)' }}>
       <div className="container">
-        <div className="row">
-          <span>Ops! Parece que essa página não foi encontrada</span>
-          <br></br>
-          <span>Encontramos essas páginas no lugar:</span>
-          <Link to="/">Home</Link>
-          <br></br>
-          <Link to="/back">Back</Link>
-          <br></br>
-          <Link to="/front">Front</Link>
-          <br></br>
-          <Link to="/mobile">Mobile</Link>
-          <br></br>
-          <Link to="/ux">Ui/Ux</Link>
+        <div className="row erro">
+          <div class="col-12">
+            <img src={notFound} alt="back"></img>
+            <h4>Ops! Parece que essa página não foi encontrada! 😥</h4>
+            <h4>Tente algumas destas</h4>
+            <br></br>
+            <Link to="/" className='link-invisivel'><b>Home</b></Link>
+            <br></br>
+            <Link to="/front" className='link-invisivel'><b>Front</b></Link>
+            <br></br>
+            <Link to="/back" className='link-invisivel'><b>Back</b></Link>
+            <br></br>
+            <Link to="/mobile" className='link-invisivel'><b>Mobile</b></Link>
+            <br></br>
+            <Link to="/banco" className='link-invisivel'><b>Banco</b></Link>
+            <br></br>
+            <Link to="/desing" className='link-invisivel'><b>Design</b></Link>
+          </div>
         </div>
       </div>
     </body>

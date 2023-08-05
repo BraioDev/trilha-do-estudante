@@ -1,0 +1,32 @@
+.erro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+b {
+  color: var(--preto-cinza);
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 0.5s;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Cera Round Pro', sans-serif;
+  height: 35px;
+  width: 100%;
+  background: transparent;
+  transition: ease-in-out 0.3s;
+  user-select: none;
+}
+
+b:hover {
+  font-size: 40px;
+  background-color: var(--azul-base);
+  color: var(--branco-base);
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 40px;
+}

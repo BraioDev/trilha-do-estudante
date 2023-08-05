@@ -1,13 +1,13 @@
 import {Link} from 'react-router-dom';
 import '../../style.css';
-import './mobile.css';
+import './banco.css';
 
-export default function Mobile(){
+export default function Banco(){
     return (
-        <body style={{ backgroundColor: 'var(--verde-claro)'}}>
+        <body style={{ backgroundColor: 'var(--cinza-escuro)'}}>
           <div className="container">
             <div className="row">
-              <span>Mobile</span>
+              <span>Banco</span>
             </div>
           </div>
         </body>
