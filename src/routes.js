@@ -43,12 +43,12 @@ export default function RoutesAPP(){
             <Route path="/bootstrap" element={<Bootstrap/>}/>
 
             {/* Rotas Back */}
-            <Route path="/typeScript" element={<Postman/>}/>
-            <Route path="/html" element={<Spring/>}/>
-            <Route path="/javaScript" element={<Swagger/>}/>
-            <Route path="/angular" element={<Java/>}/>   
-            <Route path="/react" element={<Python/>}/>   
-            <Route path="/bootstrap" element={<CSharp/>}/>
+            <Route path="/postman" element={<Postman/>}/>
+            <Route path="/spring" element={<Spring/>}/>
+            <Route path="/swagger" element={<Swagger/>}/>
+            <Route path="/java" element={<Java/>}/>   
+            <Route path="/python" element={<Python/>}/>   
+            <Route path="/csharp" element={<CSharp/>}/>
         </Routes>
         </BrowserRouter>
     );

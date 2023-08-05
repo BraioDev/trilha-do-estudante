@@ -1,0 +1,15 @@
+.box_java:hover {
+    color: var(--vermelho-laranja);
+}
+
+.box_postman:hover{
+    color: var(--laranja-forte);
+}
+
+.box_verde:hover{
+    color: var(--verde-musgo);
+}
+
+.box_python:hover{
+    color: var(--amarelo);
+}
