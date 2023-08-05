@@ -1,0 +1,19 @@
+.box_claro:hover {
+    color: var(--azul-forte);
+}
+
+.box_html:hover{
+    color: var(--laranja);
+}
+
+.box_js:hover{
+    color: var(--amarelo-claro);
+}
+
+.box_angular:hover{
+    color: var(--vermelho-bordo);
+}
+
+.box_react:hover{
+    color: var(--azul-react);
+}
