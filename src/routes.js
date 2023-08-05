@@ -14,7 +14,12 @@ import Angular from './pages/front/angular';
 import React from './pages/front/react';
 import Bootstrap from './pages/front/bootstrap';
 
-import Header from "./components/header/header";
+import Postman from './pages/back/postman';
+import Spring from './pages/back/spring';
+import Swagger from './pages/back/swagger';
+import Java from './pages/back/java';
+import Python from './pages/back/python';
+import CSharp from './pages/back/csharp';
 
 export default function RoutesAPP(){
     return(
@@ -36,6 +41,14 @@ export default function RoutesAPP(){
             <Route path="/angular" element={<Angular/>}/>   
             <Route path="/react" element={<React/>}/>   
             <Route path="/bootstrap" element={<Bootstrap/>}/>
+
+            {/* Rotas Back */}
+            <Route path="/typeScript" element={<Postman/>}/>
+            <Route path="/html" element={<Spring/>}/>
+            <Route path="/javaScript" element={<Swagger/>}/>
+            <Route path="/angular" element={<Java/>}/>   
+            <Route path="/react" element={<Python/>}/>   
+            <Route path="/bootstrap" element={<CSharp/>}/>
         </Routes>
         </BrowserRouter>
     );

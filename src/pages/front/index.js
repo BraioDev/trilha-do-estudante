@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../style.css';
 import './front.css';
@@ -12,14 +12,6 @@ import bootstrap from '../../assets/imagens/bootstrap_icon.png';
 
 export default function Front() {
 
-  // Definir o estado inicial para a cor do body
-  const [bodyColor, setBodyColor] = useState('var(--cinza)');
-
-  // Função para atualizar a cor do body com base na cor do box em destaque
-  const handleBoxHover = (color) => {
-    setBodyColor(color);
-  };
-
   return (
     <body style={{ backgroundColor: 'var(--azul-base)' }}>
       <div className="container">
@@ -28,8 +20,6 @@ export default function Front() {
           {/* -------------------Inicio dos cards----------------------- */}
           <div
             className="col-3 box box_claro"
-            onMouseEnter={() => handleBoxHover('var(--azul-base)')}
-            onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
             <Link to="/typeScript" className='link-invisivel'>
               <div class="col-12">
@@ -44,8 +34,6 @@ export default function Front() {
 
           <div
             className="col-3 box box_html"
-            onMouseEnter={() => handleBoxHover('var(--preto-cinza)')}
-            onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
             <Link to="/html" className="link-invisivel">
               <div className="col-12">
@@ -59,8 +47,6 @@ export default function Front() {
 
           <div
             className="col-3 box box_js"
-            onMouseEnter={() => handleBoxHover('var(--verde-claro)')}
-            onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
             <Link to="/javaScript" className='link-invisivel'>
               <div class="col-12">
@@ -74,8 +60,6 @@ export default function Front() {
           {/* -------------------metade dos cards----------------------- */}
           <div
             className="col-3 box box_angular"
-            onMouseEnter={() => handleBoxHover('var(--cinza-escuro)')}
-            onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
             <Link to="/angular" className='link-invisivel'>
               <div class="col-12">
@@ -89,8 +73,6 @@ export default function Front() {
 
           <div
             className="col-3 box box_react"
-            onMouseEnter={() => handleBoxHover('var(--azul-roxo)')}
-            onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
             <Link to="/react" className='link-invisivel'>
               <div class="col-12">
@@ -104,8 +86,6 @@ export default function Front() {
 
           <div
             className="col-3 box box_roxo"
-            onMouseEnter={() => handleBoxHover('var(--azul-roxo)')}
-            onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
             <Link to="/bootstrap" className='link-invisivel'>
               <div class="col-12">
