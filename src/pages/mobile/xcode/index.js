@@ -1,12 +1,12 @@
 import '../../../style.css';
-import '../back.css';
+import '../mobile.css';
 
-export default function Spring() {
+export default function Xcode() {
     return (
-        <body style={{ backgroundColor: 'var(--preto-cinza)'}}>
+        <body style={{ backgroundColor: 'var(--verde-claro)'}}>
             <div className="container">
                 <div className="row">
-                    <span>Spring</span>
+                    <span>Xcode</span>
                 </div>
             </div>
         </body>

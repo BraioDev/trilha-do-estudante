@@ -1,7 +1,7 @@
 import '../../../style.css';
 import '../back.css';
 
-export default function postman() {
+export default function Postman() {
     return (
         <body style={{ backgroundColor: 'var(--preto-cinza)'}}>
             <div className="container">
