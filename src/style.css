@@ -44,11 +44,15 @@ header {
     --azul-ionic: #4F8FF7;
     --azul-xcode: #235EE1;
     --azul-flutter: #54C5F8;
+    --azul-pgadmin: #336791;
+    --azul-mysql: #00556C;
+    --azul-sqlite: #329AD9;
     /* roxo */
     --azul-roxo: #aa67e9;
     /* verde */
     --verde-claro: #38ce6a;
     --verde-musgo: #6D9A00;
+    --verde-mongodb: #519747;
     /* vermelho */
     --vermelho: #E51C20;
     --vermelho-bordo: #C40030;

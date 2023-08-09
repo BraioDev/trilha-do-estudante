@@ -1,3 +1,19 @@
-body{
-    background-color: var(--cinza-escuro);
+.box_heid:hover {
+    color: var(--verde-musgo);
+}
+
+.box_pgadmin:hover{
+    color: var(--azul-pgadmin);
+}
+
+.box_mongodb:hover{
+    color: var(--verde-mongodb);
+}
+
+.box_mysql:hover{
+    color: var(--azul-mysql);
+}
+
+.box_sqlite:hover{
+    color: var(--azul-sqlite);
 }

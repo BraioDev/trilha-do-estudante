@@ -28,6 +28,13 @@ import Ionic from './pages/mobile/ionic';
 import ReactNative from './pages/mobile/reactNative';
 import Xamarin from './pages/mobile/xamarin';
 import Xcode from './pages/mobile/xcode';
+/* Banco */
+import Heid from './pages/banco/heid';
+import Oracle from './pages/banco/oracle';
+import Pgadmin from './pages/banco/pgadmin';
+import Mysql from './pages/banco/mysql';
+import Sqlite from './pages/banco/sqlite';
+import Mongodb from './pages/banco/mongodb';
 
 export default function RoutesAPP(){
     return(
@@ -65,6 +72,14 @@ export default function RoutesAPP(){
             <Route path="/reactNative" element={<ReactNative/>}/>   
             <Route path="/xamarin" element={<Xamarin/>}/>   
             <Route path="/xcode" element={<Xcode/>}/>
+
+            {/* Rotas Banco */}
+            <Route path="/heid" element={<Heid/>}/>
+            <Route path="/oracle" element={<Oracle/>}/>
+            <Route path="/pgadmin" element={<Pgadmin/>}/>
+            <Route path="/mysql" element={<Mysql/>}/>   
+            <Route path="/sqlite" element={<Sqlite/>}/>   
+            <Route path="/mongodb" element={<Mongodb/>}/>
         </Routes>
         </BrowserRouter>
     );
