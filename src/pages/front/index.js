@@ -16,7 +16,11 @@ export default function Front() {
     <body style={{ backgroundColor: 'var(--azul-base)' }}>
       <div className="container">
         <div className="row">
-
+          <div className="w-100 alinhar-fim">
+            <Link to="/" className='link-invisivel'>
+              <button className='button-dark'>Voltar</button>
+            </Link>
+          </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
             className="col-3 box box_claro"
@@ -94,12 +98,6 @@ export default function Front() {
               <div class="col-12">
                 <h3>Bootstrap</h3>
               </div>
-            </Link>
-          </div>
-
-          <div className="col-1 posicao-botao">
-            <Link to="/" className='link-invisivel'>
-              <button className='button-dark'>Voltar</button>
             </Link>
           </div>
           {/* -------------------Fim dos cards----------------------- */}
