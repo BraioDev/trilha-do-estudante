@@ -16,7 +16,11 @@ export default function Back() {
     <body style={{ backgroundColor: 'var(--preto-cinza)' }}>
       <div className="container">
         <div className="row">
-
+          <div className="w-100 alinhar-fim">
+            <Link to="/" className='link-invisivel'>
+              <button className='button-dark'>Voltar</button>
+            </Link>
+          </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
             className="col-3 box box_java"
@@ -94,12 +98,6 @@ export default function Back() {
               <div class="col-12">
                 <h3>Swagger</h3>
               </div>
-            </Link>
-          </div>
-
-          <div className="col-1 posicao-botao">
-            <Link to="/" className='link-invisivel'>
-              <button className='button-dark'>Voltar</button>
             </Link>
           </div>
           {/* -------------------Fim dos cards----------------------- */}

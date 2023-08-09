@@ -163,7 +163,6 @@ button:hover {
 }
 
 .button-dark:hover {
-    font-size: 18px;
     background-color: var(--preto-cinza);
     color: var(--branco-base);
     cursor: pointer;
