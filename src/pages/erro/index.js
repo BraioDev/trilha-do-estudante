@@ -11,8 +11,8 @@ export default function Erro() {
         <div className="row erro">
           <div class="col-12">
             <img src={notFound} alt="back"></img>
-            <h4>Ops! Parece que essa página não foi encontrada! 😥</h4>
-            <h4>Tente algumas destas</h4>
+            <h1>Ops! Parece que essa página não foi encontrada! 😥</h1>
+            <h1>Tente algumas destas</h1>
             <br></br>
             <Link to="/" className='link-invisivel'><b>Home</b></Link>
             <br></br>
