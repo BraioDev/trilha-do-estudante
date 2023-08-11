@@ -30,7 +30,7 @@ export default function Front() {
                 <img src={typeScript} alt="TypeScript"></img>
               </div>
               <div class="col-12">
-                <h3>Front end</h3>
+                <h3>TypeScript</h3>
               </div>
             </Link>
           </div>
