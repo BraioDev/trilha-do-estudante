@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../../style.css'
 
 export default function CustomComponent() {
-    const [jsonData, setJsonData] = useState([]);
+    const [jsonData, setJsonData] = useState({ front: [], back: [] });
 
     useEffect(() => {
         fetch(process.env.PUBLIC_URL + '/data.json')
@@ -23,32 +23,33 @@ export default function CustomComponent() {
         }
     };
 
+    const typeScriptData = jsonData.front.find(item => item.nome === "TypeScript");
+
+    if (!typeScriptData) {
+        return null;
+    }
+
     return (
-        <div className="container-direita">
+        <div className="container">
             <div className="conteudo">
                 <div className="row">
                     <div className='barra-lateral col-1-meio'>
                         <ul>
-                            {jsonData.map(item => (
-                                <li key={item.id}>
-                                    <a href={`#${item.id}`} onClick={(e) => scrollToSection(e, item.id)}>
-                                        {item.nome}
+                            {typeScriptData.topicos.map(topico => (
+                                <li key={topico.id}>
+                                    <a href={`#${topico.id}`} onClick={(e) => scrollToSection(e, topico.id)}>
+                                        {topico.nome}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div className="col-11">
-                        {jsonData.map(item => (
-                            <div key={item.id} id={item.id} className="box-conteudo">
-                                <h2>{item.nome}</h2>
-                                <img src={item.conteudo} alt={item.nome} />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Nulla volutpat auctor ante, eu pretium libero venenatis id.
-                                    Nullam euismod feugiat dolor, eget dignissim neque consectetur a.
-                                    Pellentesque nec nunc a arcu hendrerit condimentum.
-                                </p>
+                        {typeScriptData.topicos.map(topico => (
+                            <div key={topico.id} id={topico.id} className="box-conteudo">
+                                <h2>{topico.nome}</h2>
+                                <img src={topico.conteudo} alt={topico.nome} />
+                                {/* Adicione mais conteúdo conforme necessário */}
                             </div>
                         ))}
                     </div>

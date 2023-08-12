@@ -1,46 +1,153 @@
-[
-  {
-    "id": 1,
-    "nome": "Type",
-    "type": "Front",
-    "conteudo": "https://exemplo.com/imagem1.jpg"
-  },
-  {
-    "id": 2,
-    "nome": "Html",
-    "type": "Front",
-    "conteudo": "https://exemplo.com/imagem1.jpg"
-  },
-  {
-    "id": 3,
-    "nome": "Javascript",
-    "type": "Front",
-    "conteudo": "https://exemplo.com/imagem1.jpg"
-  },
-  {
-    "id": 4,
-    "nome": "Angular",
-    "type": "Front",
-    "conteudo": "https://exemplo.com/imagem1.jpg"
-  },
-  {
-    "id": 5,
-    "nome": "React",
-    "type": "Front",
-    "conteudo": "https://exemplo.com/imagem1.jpg"
-  },
-  {
-    "id": 6,
-    "nome": "Bootstrap",
-    "type": "Front",
-    "conteudo": "https://exemplo.com/imagem1.jpg"
-  },
-  
+{
+  "front": [
+    {
+      "id": 1,
+      "nome": "TypeScript",
+      "topicos": [
+        {
+          "id": 1,
+          "nome": "o que é",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 2,
+          "nome": "Para que serve",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 3,
+          "nome": "como utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 4,
+          "nome": "onde utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 5,
+          "nome": "Documentação",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 6,
+          "nome": "Fóruns",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        }
+      ]
+    },
+    
+    {
+      "id": 2,
+      "nome": "Html",
+      "topicos": [
+        {
+          "id": 1,
+          "nome": "o que é",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 2,
+          "nome": "Para que serve",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 3,
+          "nome": "como utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 4,
+          "nome": "onde utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 5,
+          "nome": "Documentação",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 6,
+          "nome": "Fóruns",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        }
+      ]
+    }
+  ],
 
-  {
-    "id": 7,
-    "nome": "Item 2",
-    "type": "Back",
-    "conteudo": "https://exemplo.com/imagem2.jpg"
-  }
-]
+  "back": [
+    {
+      "id": 1,
+      "nome": "Java",
+      "topicos": [
+        {
+          "id": 1,
+          "nome": "o que é",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 2,
+          "nome": "Para que serve",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 3,
+          "nome": "como utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 4,
+          "nome": "onde utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 5,
+          "nome": "Documentação",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 6,
+          "nome": "Fóruns",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        }
+      ]
+    },
+    
+    {
+      "id": 2,
+      "nome": "Back",
+      "topicos": [
+        {
+          "id": 1,
+          "nome": "o que é",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 2,
+          "nome": "Para que serve",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 3,
+          "nome": "como utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 4,
+          "nome": "onde utilizar",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 5,
+          "nome": "Documentação",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        },
+        {
+          "id": 6,
+          "nome": "Fóruns",
+          "conteudo": "https://exemplo.com/imagem1.jpg"
+        }
+      ]
+    }
+  ]
+}
