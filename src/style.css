@@ -86,7 +86,7 @@ header {
     --amarelo: #F9C63D;
 }
 
-/* Componentes */
+/* Input*/
 input {
     padding: 0 20px;
     text-align: left;
@@ -96,10 +96,19 @@ input {
     border-radius: 8px;
     font-size: 14px;
     font-weight: bold;
-    width: 100%;
+    width: 300px;
     height: 35px;
+    padding: 10px;
     background: var(--branco-cinza);
     caret-color: var(--azul-base);
+}
+
+.input-pesquisa {
+    width: 450px;
+}
+
+.espacamento{
+    margin: 0 5px;
 }
 
 input:focus::placeholder {
@@ -107,6 +116,15 @@ input:focus::placeholder {
     color: transparent;
 }
 
+.topo {
+    z-index: 9999;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 40%;
+}
+
+/*Select*/
 select {
     border-radius: 8px;
     font-size: 14px;
@@ -240,7 +258,7 @@ button:focus {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     background-color: var(--branco-base);
     margin-bottom: 20px;
-    margin-left: 80px;
+    margin-left: 100px;
 }
 
 .barra-lateral {
@@ -265,7 +283,7 @@ ul {
     padding: 0;
 }
 
-li{
+li {
     font-size: 14px;
     margin-bottom: 20px;
     transition: ease-in-out 0.3s;
@@ -273,10 +291,10 @@ li{
 
 a {
     text-decoration: none !important;
-    color: inherit!important;
+    color: inherit !important;
 }
 
-li:hover{
+li:hover {
     outline: none;
     text-decoration: none !important;
     cursor: pointer;
