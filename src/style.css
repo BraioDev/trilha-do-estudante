@@ -1,12 +1,15 @@
+* {
+    font-family: 'Cera Round Pro', sans-serif;
+}
+
 body {
     height: 100vh;
     overflow-x: hidden;
     transition: background-color 0.5s ease;
     user-select: none;
-    font-family: 'Cera Round Pro', sans-serif;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +28,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 
 /* Variavel de cores*/
@@ -82,7 +85,6 @@ input {
     text-decoration: none;
     border-radius: 8px;
     font-size: 14px;
-    font-family: 'Cera Round Pro', sans-serif;
     font-weight: bold;
     width: 100%;
     height: 35px;
@@ -97,7 +99,6 @@ input:focus::placeholder {
 
 select {
     border-radius: 8px;
-    font-family: 'Cera Round Pro', sans-serif;
     font-size: 14px;
     height: 35px;
     border: none;
@@ -130,7 +131,6 @@ select option {
 
 option {
     font-size: 14px;
-    font-family: 'Cera Round Pro', sans-serif;
     background-color: var(--branco-base);
     color: var(--azul-base);
 }
@@ -144,7 +144,6 @@ button {
     text-align: center;
     border: none;
     border-radius: 8px;
-    font-family: 'Cera Round Pro', sans-serif;
     font-size: 16px;
     height: 35px;
     width: 83px;
@@ -219,6 +218,43 @@ button:focus {
     color: var(--vermelho);
 }
 
+.barra-lateral {
+    height: 100vh;
+    padding: 20px;
+    display: wrap;
+    text-align: left;
+    align-items: center;
+    position: fixed;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: var(--branco-base);
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--azul-base);
+    font-size: 20px;
+    display: inline-block;
+    width: 1em;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:hover{
+    color: var(--branco-cinza);
+}
+
 img {
     border-radius: 8px;
     width: 75px;
@@ -237,7 +273,7 @@ h3 {
     color: inherit !important;
 }
 
-.alinhar-fim{
+.alinhar-fim {
     display: flex;
     justify-content: end;
 }

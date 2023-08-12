@@ -1,37 +1,46 @@
 [
   {
     "id": 1,
-    "nome": "Front",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "Type",
+    "type": "Front",
+    "conteudo": "https://exemplo.com/imagem1.jpg"
   },
   {
     "id": 2,
-    "nome": "Back",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "Html",
+    "type": "Front",
+    "conteudo": "https://exemplo.com/imagem1.jpg"
   },
   {
     "id": 3,
-    "nome": "Mobile",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "Javascript",
+    "type": "Front",
+    "conteudo": "https://exemplo.com/imagem1.jpg"
   },
   {
     "id": 4,
-    "nome": "Banco",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "Angular",
+    "type": "Front",
+    "conteudo": "https://exemplo.com/imagem1.jpg"
   },
   {
     "id": 5,
-    "nome": "Design",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "React",
+    "type": "Front",
+    "conteudo": "https://exemplo.com/imagem1.jpg"
   },
   {
     "id": 6,
-    "nome": "Refeições proteicas para fazer antes de dormir",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "Bootstrap",
+    "type": "Front",
+    "conteudo": "https://exemplo.com/imagem1.jpg"
   },
+  
+
   {
     "id": 7,
-    "nome": "Refeições proteicas para fazer antes de dormir",
-    "conteudo": "https://sujeitoprogramador.com/nutriapp/wp-content/uploads/2017/12/Screenshot_3-2.jpg"
+    "nome": "Item 2",
+    "type": "Back",
+    "conteudo": "https://exemplo.com/imagem2.jpg"
   }
 ]
