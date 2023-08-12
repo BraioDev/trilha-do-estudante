@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../../style.css'
+import '../../style.css';
 
 export default function CustomComponent() {
     const [jsonData, setJsonData] = useState({ front: [], back: [] });
     const [searchKeyword, setSearchKeyword] = useState("");
+    const [showAlert, setShowAlert] = useState(false);
 
     useEffect(() => {
         fetch(process.env.PUBLIC_URL + '/data.json')
@@ -26,6 +27,13 @@ export default function CustomComponent() {
     };
 
     const typeScriptData = jsonData.front.find(item => item.nome === "TypeScript");
+
+    useEffect(() => {
+        setShowAlert(
+            searchKeyword.length > 0 &&
+            !typeScriptData.topicos.some(topico => topico.Titulo.toLowerCase().includes(searchKeyword.toLowerCase()))
+        );
+    }, [searchKeyword, typeScriptData]);
 
     if (!typeScriptData) {
         return null;
@@ -68,6 +76,11 @@ export default function CustomComponent() {
                                 return null;
                             })}
                         </ul>
+                        {showAlert && (
+                            <div id="custom-alert" className="custom-alert">
+                                <p>Não possuimos nada relacionado 😥</p>
+                            </div>
+                        )}
                     </div>
                     <div className="col-11">
                         {typeScriptData.topicos.map(topico => {

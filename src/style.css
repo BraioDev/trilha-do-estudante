@@ -102,7 +102,20 @@ input {
     background: var(--branco-cinza);
     caret-color: var(--azul-base);
 }
-
+.custom-alert {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 28px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--preto-cinza);
+    color: var(--branco-base);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+}
 .input-pesquisa {
     width: 450px;
 }
