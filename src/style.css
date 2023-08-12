@@ -15,6 +15,11 @@ body {
     align-items: center;
 }
 
+.container-direita {
+    display: flex;
+    justify-content: right;
+}
+
 header {
     width: 100%;
     height: 100%;
@@ -28,7 +33,12 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
 
+/*col*/
+.col-1-meio {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
 }
 
 /* Variavel de cores*/
@@ -218,7 +228,22 @@ button:focus {
     color: var(--vermelho);
 }
 
+.box-conteudo {
+    display: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    max-height: 500px;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: var(--branco-base);
+    margin-bottom: 20px;
+}
+
 .barra-lateral {
+    transition: all 0.4s;
     height: 100vh;
     padding: 20px;
     display: wrap;
@@ -238,21 +263,28 @@ ul {
     padding: 0;
 }
 
-ul li::before {
-    content: "•";
-    color: var(--azul-base);
-    font-size: 20px;
-    display: inline-block;
-    width: 1em;
+li{
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
 }
 
 a {
     text-decoration: none !important;
-    color: inherit;
+    color: inherit!important;
 }
 
-a:hover{
-    color: var(--branco-cinza);
+li:hover{
+    outline: none;
+    text-decoration: none !important;
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.1);
+    font-size: 20px;
+    padding: 3px 20px;
+    background-color: var(--preto-cinza);
+    color: var(--branco-base);
+    border-radius: 8px;
 }
 
 img {

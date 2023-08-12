@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../style.css'
 
-export default function CustomComponent({ type, id }) {
+export default function CustomComponent() {
     const [jsonData, setJsonData] = useState([]);
 
     useEffect(() => {
@@ -9,46 +9,51 @@ export default function CustomComponent({ type, id }) {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                setJsonData(data)
+                setJsonData(data);
             })
             .catch(error => console.error('Erro ao buscar dados JSON:', error));
     }, []);
 
-    const filteredItems = jsonData.filter(item => item.type === type && item.id === id);
+    const scrollToSection = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
-        <body style={{ backgroundColor: 'var(--azul-base)' }}>
+        <div className="container-direita">
+            <div className="conteudo">
                 <div className="row">
-                    <div className='barra-lateral'>
-                        <h2>Links</h2>
+                    <div className='barra-lateral col-1-meio'>
                         <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            {/* Adicione mais links aqui */}
+                            {jsonData.map(item => (
+                                <li key={item.id}>
+                                    <a href={`#${item.id}`} onClick={(e) => scrollToSection(e, item.id)}>
+                                        {item.nome}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
-                    <div>
-                        {filteredItems.map(item => (
-                            <div key={item.id}>
+                    <div className="col-11">
+                        {jsonData.map(item => (
+                            <div key={item.id} id={item.id} className="box-conteudo">
                                 <h2>{item.nome}</h2>
                                 <img src={item.conteudo} alt={item.nome} />
-
-                                <h2>{item.nome}</h2>
-                                <img src={item.conteudo} alt={item.nome} />
-
-                                <h2>{item.nome}</h2>
-                                <img src={item.conteudo} alt={item.nome} />
-
-                                <h2>{item.nome}</h2>
-                                <img src={item.conteudo} alt={item.nome} />
-
-                                <h2>{item.nome}</h2>
-                                <img src={item.conteudo} alt={item.nome} />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Nulla volutpat auctor ante, eu pretium libero venenatis id.
+                                    Nullam euismod feugiat dolor, eget dignissim neque consectetur a.
+                                    Pellentesque nec nunc a arcu hendrerit condimentum.
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
-        </body>
+            </div>
+        </div>
     );
 }
