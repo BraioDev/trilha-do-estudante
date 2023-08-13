@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../../style.css';
 import { FaHouse } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa6";
+import { FaAngleLeft } from "react-icons/fa6";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
 
@@ -49,6 +50,10 @@ export default function CustomComponent() {
         return null;
     }
 
+    const handleBack = () => {
+        window.history.back(); // Volta para a página anterior na história de navegação
+    };
+
     return (
         <div className="container">
             <div className="conteudo">
@@ -74,6 +79,9 @@ export default function CustomComponent() {
                                 </button>
                             </Tooltip>
                         )}
+                        <button className="botao espacamento" onClick={handleBack}>
+                            <FaAngleLeft size={20} /> {/* Ícone de seta para trás */}
+                        </button>
                         <Link to="/" className='espacamento link-invisivel'>
                             <Tooltip
                                 title="Home"
