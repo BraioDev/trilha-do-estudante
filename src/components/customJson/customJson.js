@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../style.css';
+import CodeEditor from '../editor/editor'; 
 import { FaHouse } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa6";
 
@@ -54,11 +55,11 @@ export default function CustomComponent() {
                         />
                         {searchKeyword && (
                             <button className="botao espacamento lixeira" onClick={() => setSearchKeyword("")}>
-                                <FaTrash size={20}/>
+                                <FaTrash size={20} />
                             </button>
                         )}
                         <Link to="/" className='espacamento link-invisivel'>
-                            <button className='botao button-dark home'> <FaHouse size={20}/></button>
+                            <button className='botao button-dark home'> <FaHouse size={20} /></button>
                         </Link>
                     </div>
                     <div className='barra-lateral col-1-meio'>
@@ -87,10 +88,20 @@ export default function CustomComponent() {
                         {typeScriptData.topicos.map(topico => {
                             const lowerCaseTitulo = topico.Titulo.toLowerCase();
                             if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {
+                                const conteudoComQuebrasDeLinha = topico.conteudo.replace(/\./g, '.\n');
+                                const conteudoArray = conteudoComQuebrasDeLinha.split('\n');
+
                                 return (
                                     <div key={topico.id} id={topico.id} className="box-conteudo">
                                         <h2>{topico.Titulo}</h2>
-                                        <img src={topico.conteudo} alt={topico.Titulo} />
+                                        <span>
+                                            {conteudoArray.map((linha, index) => (
+                                                <React.Fragment key={index}>
+                                                    {linha}
+                                                    <br />
+                                                </React.Fragment>
+                                            ))}
+                                        </span>
                                     </div>
                                 );
                             }
