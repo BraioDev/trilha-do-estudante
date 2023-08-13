@@ -61,28 +61,30 @@ export default function CustomComponent() {
                             <button className='botao button-dark home'> <FaHouse size={20} /></button>
                         </Link>
                     </div>
-                    <div className='barra-lateral col-1-meio'>
-                        <ul>
-                            {typeScriptData.topicos.map(topico => {
-                                const lowerCaseTitulo = topico.Titulo.toLowerCase();
-                                if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {
-                                    return (
-                                        <li key={topico.id}>
-                                            <a href={`#${topico.id}`} onClick={(e) => scrollToSection(e, topico.id)}>
-                                                {topico.Titulo}
-                                            </a>
-                                        </li>
-                                    );
-                                }
-                                return null;
-                            })}
-                        </ul>
-                        {showAlert && (
-                            <div id="custom-alert" className="custom-alert">
-                                <p>Desculpe não encontrei nada relacionado 😥</p>
-                            </div>
-                        )}
-                    </div>
+                    {!showAlert && (
+                        <div className='barra-lateral col-1-meio'>
+                            <ul>
+                                {typeScriptData.topicos.map(topico => {
+                                    const lowerCaseTitulo = topico.Titulo.toLowerCase();
+                                    if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {
+                                        return (
+                                            <li key={topico.id}>
+                                                <a href={`#${topico.id}`} onClick={(e) => scrollToSection(e, topico.id)}>
+                                                    {topico.Titulo}
+                                                </a>
+                                            </li>
+                                        );
+                                    }
+                                    return null;
+                                })}
+                            </ul>
+                        </div>
+                    )}
+                    {showAlert && (
+                        <div id="custom-alert" className="custom-alert">
+                            <p>Desculpe não encontrei nada relacionado 😥</p>
+                        </div>
+                    )}
                     <div className="col-11">
                         {typeScriptData.topicos.map(topico => {
                             const lowerCaseTitulo = topico.Titulo.toLowerCase();
@@ -122,6 +124,6 @@ export default function CustomComponent() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
