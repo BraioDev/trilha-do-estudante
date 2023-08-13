@@ -6,7 +6,7 @@ import CustomComponent from '../../../components/customJson/customJson';
 export default function TypeScript() {
     return (
         <body style={{ backgroundColor: 'var(--azul-base)' }}>
-            <CustomComponent type="Front" id={1} />
+            <CustomComponent linguagem="TypeScript" />
         </body>
     );
 }

@@ -8,9 +8,9 @@ import { FaAngleLeft } from "react-icons/fa6";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
 
-export default function CustomComponent() {
+export default function CustomComponent({ linguagem }) {
     /*Simula a chamada de api*/
-    const [jsonData, setJsonData] = useState({ front: [], back: [] });
+    const [jsonData, setJsonData] = useState([]);
     const [searchKeyword, setSearchKeyword] = useState("");
     const [showAlert, setShowAlert] = useState(false);
 
@@ -19,13 +19,14 @@ export default function CustomComponent() {
         fetch(process.env.PUBLIC_URL + '/data.json')
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 setJsonData(data);
             })
             .catch(error => console.error('Erro ao buscar dados JSON:', error));
     }, []);
 
     /*Procura dentro do json pelo termo*/
-    const typeScriptData = jsonData.front.find(item => item.nome === "TypeScript");
+    const linguagemData = jsonData.find(item => item.nome === linguagem);
 
     /*Scrola até a parte clicada*/
     const scrollToSection = (event, targetId, offset = 0) => {
@@ -41,12 +42,12 @@ export default function CustomComponent() {
     useEffect(() => {
         setShowAlert(
             searchKeyword.length > 0 &&
-            !typeScriptData.topicos.some(topico => topico.Titulo.toLowerCase().includes(searchKeyword.toLowerCase()))
+            !linguagemData.topicos.some(topico => topico.Titulo.toLowerCase().includes(searchKeyword.toLowerCase()))
         );
-    }, [searchKeyword, typeScriptData]);
+    }, [searchKeyword, linguagemData]);
 
     /*Retorna null caso não tenha nenhum dado*/
-    if (!typeScriptData) {
+    if (!linguagemData) {
         return null;
     }
 
@@ -60,6 +61,16 @@ export default function CustomComponent() {
                 <div className="row">
                     {/*Parte superior dentro está input, botão de lixeira e botão de home*/}
                     <div className='topo'>
+                        <Link to="/" className='espacamento link-invisivel'>
+                            <Tooltip
+                                title="Home"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool"
+                            >
+                                <button className='botao button-dark home'> <FaHouse size={20} className="icon" /></button>
+                            </Tooltip>
+                        </Link>
                         <input
                             className='espacamento input-pesquisa'
                             type="text"
@@ -72,32 +83,29 @@ export default function CustomComponent() {
                                 title="Limpar"
                                 position="bottom"
                                 trigger="mouseenter"
-                                className="tool" // Aplicando a classe de estilo
+                                className="tool"
                             >
                                 <button className="botao espacamento lixeira" onClick={() => setSearchKeyword("")}>
-                                    <FaTrash size={20} />
+                                    <FaTrash size={20} className="icon" />
                                 </button>
                             </Tooltip>
                         )}
-                        <button className="botao espacamento" onClick={handleBack}>
-                            <FaAngleLeft size={20} /> {/* Ícone de seta para trás */}
-                        </button>
-                        <Link to="/" className='espacamento link-invisivel'>
-                            <Tooltip
-                                title="Home"
-                                position="bottom"
-                                trigger="mouseenter"
-                                className="tool" // Aplicando a classe de estilo
-                            >
-                                <button className='botao button-dark home'> <FaHouse size={20} /></button>
-                            </Tooltip>
-                        </Link>
+                        <Tooltip
+                            title="voltar"
+                            position="bottom"
+                            trigger="mouseenter"
+                            className="tool"
+                        >
+                            <button className="botao espacamento" onClick={handleBack}>
+                                <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
+                            </button>
+                        </Tooltip>
                     </div>
                     {/*Barra lateral que pega o titulo de cada json para a pessoa clicar*/}
                     {!showAlert && (
                         <div className='barra-lateral col-1-meio'>
                             <ul>
-                                {typeScriptData.topicos.map(topico => {
+                                {linguagemData.topicos.map(topico => {
                                     const lowerCaseTitulo = topico.Titulo.toLowerCase();
                                     if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {
                                         return (
@@ -121,7 +129,7 @@ export default function CustomComponent() {
                     )}
                     {/*Renderiza o conteudo dentro da tela*/}
                     <div className="col-11">
-                        {typeScriptData.topicos.map(topico => {
+                        {linguagemData.topicos.map(topico => {
                             const lowerCaseTitulo = topico.Titulo.toLowerCase();
 
                             if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {

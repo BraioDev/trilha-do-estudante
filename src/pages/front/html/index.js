@@ -1,14 +1,12 @@
+import React from 'react';
 import '../../../style.css';
 import '../front.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Html() {
     return (
         <body style={{ backgroundColor: 'var(--azul-base)' }}>
-            <div className="container">
-                <div className="row">
-                    <span>Html</span>
-                </div>
-            </div>
+            <CustomComponent linguagem="Html" />
         </body>
     );
 }

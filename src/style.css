@@ -116,7 +116,7 @@ input::placeholder{
 }
 
 .input-pesquisa {
-    width: 450px;
+    width: 500px;
     background-color: var(--cinza-transparente);
     color: var(--branco-base);
 }
@@ -128,7 +128,7 @@ input:focus::placeholder {
 
 /*Topo do site*/
 .espacamento{
-    margin: 5px;
+    margin: 5px 5px 0 0;
 }
 
 .topo {
@@ -136,7 +136,7 @@ input:focus::placeholder {
     display: block;
     position: fixed;
     top: 0;
-    left: 40%;
+    left: 35%;
 }
 
 /*icones*/
@@ -313,7 +313,9 @@ button:focus {
     margin-bottom: 20px;
     margin-left: 100px;
 }
-
+.icon{
+    margin-bottom: 2px;
+}
 .barra-lateral {
     transition: all 0.4s;
     height: 100vh;

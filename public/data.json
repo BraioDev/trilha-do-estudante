@@ -1,185 +1,142 @@
-{
-  "front": [
-    {
-      "id": 1,
-      "nome": "TypeScript",
-      "topicos": [
-        {
-          "id": 1,
-          "Titulo": "O que é",
-          "conteudo": "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. Ela foi projetada como uma extensão do JavaScript, uma das linguagens de programação mais amplamente utilizadas para desenvolvimento web e aplicativos. O objetivo principal por trás da criação do TypeScript é proporcionar uma experiência de desenvolvimento mais robusta e confiável, especialmente para projetos de grande escala.\nA principal característica distintiva do TypeScript é a adição de tipagem estática opcional ao JavaScript. Isso significa que, ao contrário do JavaScript tradicional, onde os tipos de dados das variáveis podem mudar dinamicamente, no TypeScript você pode optar por definir tipos específicos para as variáveis, parâmetros de função e retornos de função. Essa abordagem de tipagem estática traz vários benefícios."
-        },
-        {
-          "id": 2,
-          "Titulo": "Para que serve",
-          "conteudo": "TypeScript é usado para desenvolver aplicativos web e de software em geral. Ele ajuda os desenvolvedores a identificar erros de código em tempo de desenvolvimento, oferece autocompletar e melhores ferramentas de desenvolvimento, além de aumentar a legibilidade e a escalabilidade do código."
-        },
-        {
-          "id": 3,
-          "Titulo": "Como utilizar",
-          "conteudo": "1: Instale o Nodejs em seu sistema. 2: Instale o TypeScript globalmente via npm: npm install -g typescript. 3: Crie um arquivo TypeScript com a extensão 'ts' e comece a escrever seu código. 4: Compile o código TypeScript em JavaScript usando o comando: tsc arquivo ts."
-        },
-        {
-          "id": 4,
-          "Titulo": "Onde utilizar",
-          "conteudo": "Você pode utilizar o TypeScript em várias áreas de desenvolvimento, incluindo:\n✨ Desenvolvimento web (frontend e backend).\n✨ Aplicativos móveis.\n✨ Aplicativos desktop.\n✨ Internet das Coisas (IoT).\n✨ Jogos."
-        },
-        {
-          "id": 5,
-          "Titulo": "Dicas",
-          "conteudo": "✨ Aproveite a tipagem estática para evitar erros em tempo de execução.\n✨ Use interfaces para definir contratos claros entre componentes.\n✨ Aprenda a usar tipos avançados como uniões e interseções.\n✨ Utilize a inferência de tipos para minimizar a necessidade de anotações explícitas.\n✨ Explore as vantagens do uso de classes e herança.\n✨ Use enums para representar conjuntos de valores relacionados.\n✨ Familiarize-se com a sintaxe das funções de seta (() => {}) e o uso de this.\n✨ Integre o TypeScript em projetos existentes gradualmente usando a declaração de tipos.\n✨ Explore a compatibilidade com bibliotecas e frameworks populares como React, Angular e Vue."
-        },
-        {
-          "id": 6,
-          "Titulo": "Como começar",
-          "conteudo": "Para começar com TypeScript:\n\n✨ Instale o TypeScript e o Nodejs.\n✨ Escreva pequenos programas para praticar.\n✨ Aprenda sobre tipos básicos e interfaces.\n✨ Gradualmente avance para recursos mais avançados.\n✨ Utilize a documentação oficial para referência.\n✨ Participe de fóruns e comunidades online para obter suporte e compartilhar conhecimentos"
-        },
-        {
-          "id": 7,
-          "Titulo": "Benefícios do TypeScript",
-          "conteudo": "Além de suas características já mencionadas, o TypeScript oferece diversos benefícios, como:\n\n✨ Maior produtividade e confiabilidade no desenvolvimento.\n✨ Detecção antecipada de erros e bugs.\n✨ Refatoração mais segura e eficiente.\n✨ Melhoria na qualidade e manutenção do código ao longo do tempo.\n✨ Integração com ferramentas populares como IDEs e editores de código.\n✨ Compatibilidade com bibliotecas e frameworks amplamente utilizados.\n✨ Crescente adoção pela comunidade de desenvolvimento."
-        },
-        {
-          "id": 8,
-          "Titulo": "Tipos Avançados",
-          "conteudo": "Além dos tipos básicos, o TypeScript oferece tipos avançados que podem ser utilizados para lidar com situações mais complexas:\n\n✨ Uniões e Interseções de tipos.\n✨ Tipos condicionais para lógica baseada em tipos.\n✨ Tipos genéricos para escrever código mais flexível e reutilizável.\n✨ Tipos indexáveis e mapeamentos.\n✨ Tipo 'keyof' para manipulação de chaves de objeto.\n✨ Tipos de função e inferência de parâmetros.\n✨ Tipos literais e discriminação de união."
-        },
-        {
-          "id": 9,
-          "Titulo": "Integração com React",
-          "conteudo": "TypeScript oferece uma integração eficaz com a biblioteca React, permitindo a criação de componentes tipados e a detecção precoce de erros em tempo de desenvolvimento. Aprenda como utilizar TypeScript em projetos React."
-        },
-        {
-          "id": 10,
-          "Titulo": "Migração para TypeScript",
-          "conteudo": "Saiba como migrar gradualmente um projeto existente para o TypeScript. Aprenda as melhores práticas, ferramentas de conversão e como lidar com desafios durante o processo de migração."
-        },
-        {
-          "id": 11,
-          "Titulo": "Padrões de Design em TypeScript",
-          "conteudo": "Descubra como aplicar padrões de design populares, como Singleton, Factory, Decorator e outros, usando TypeScript. Veja exemplos práticos de implementações e benefícios da utilização de padrões."
-        },
-        {
-          "id": 12,
-          "Titulo": "Outras Aplicações",
-          "conteudo": "Além do desenvolvimento de aplicações web e backend, o TypeScript pode ser aplicado em outras áreas, como Internet das Coisas (IoT), jogos e aplicativos móveis. Conheça essas possibilidades e descubra como TypeScript pode ser usado além do convencional."
-        },
-        {
-          "id": 13,
-          "Titulo": "Documentação",
-          "conteudo": "https://www.typescriptlang.org/docs/"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Html",
-      "topicos": [
-        {
-          "id": 1,
-          "Titulo": "O que é",
-          "conteudo": "Exemplo de o que é:\n   [Imagem](https://exemplo.com/imagem1.jpg)"
-        },
-        {
-          "id": 2,
-          "Titulo": "Para que serve",
-          "conteudo": "Exemplo de para que serve:\n   [Imagem](https://exemplo.com/imagem1.jpg)"
-        },
-        {
-          "id": 3,
-          "Titulo": "Como utilizar",
-          "conteudo": "Exemplo de como utilizar:\n   [Imagem](https://exemplo.com/imagem1.jpg)"
-        },
-        {
-          "id": 4,
-          "Titulo": "Onde utilizar",
-          "conteudo": "Exemplo de onde utilizar:\n   [Imagem](https://exemplo.com/imagem1.jpg)"
-        },
-        {
-          "id": 5,
-          "Titulo": "Documentação",
-          "conteudo": "Exemplo de Documentação:\n   [Imagem](https://exemplo.com/imagem1.jpg)"
-        },
-        {
-          "id": 6,
-          "Titulo": "Fóruns",
-          "conteudo": "Exemplo de Fóruns:\n   [Imagem](https://exemplo.com/imagem1.jpg)"
-        }
-      ]
-    }
-  ],
-  "back": [
-    {
-      "id": 1,
-      "nome": "Java",
-      "topicos": [
-        {
-          "id": 1,
-          "nome": "o que é",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 2,
-          "nome": "Para que serve",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 3,
-          "nome": "como utilizar",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 4,
-          "nome": "onde utilizar",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 5,
-          "nome": "Documentação",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 6,
-          "nome": "Fóruns",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Back",
-      "topicos": [
-        {
-          "id": 1,
-          "nome": "o que é",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 2,
-          "nome": "Para que serve",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 3,
-          "nome": "como utilizar",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 4,
-          "nome": "onde utilizar",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 5,
-          "nome": "Documentação",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        },
-        {
-          "id": 6,
-          "nome": "Fóruns",
-          "conteudo": "https://exemplo.com/imagem1.jpg"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "nome": "TypeScript",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. Ela foi projetada como uma extensão do JavaScript, uma das linguagens de programação mais amplamente utilizadas para desenvolvimento web e aplicativos. O objetivo principal por trás da criação do TypeScript é proporcionar uma experiência de desenvolvimento mais robusta e confiável, especialmente para projetos de grande escala.\nA principal característica distintiva do TypeScript é a adição de tipagem estática opcional ao JavaScript. Isso significa que, ao contrário do JavaScript tradicional, onde os tipos de dados das variáveis podem mudar dinamicamente, no TypeScript você pode optar por definir tipos específicos para as variáveis, parâmetros de função e retornos de função. Essa abordagem de tipagem estática traz vários benefícios."
+      },
+      {
+        "id": 2,
+        "Titulo": "Para que serve",
+        "conteudo": "TypeScript é usado para desenvolver aplicativos web e de software em geral. Ele ajuda os desenvolvedores a identificar erros de código em tempo de desenvolvimento, oferece autocompletar e melhores ferramentas de desenvolvimento, além de aumentar a legibilidade e a escalabilidade do código."
+      },
+      {
+        "id": 3,
+        "Titulo": "Como utilizar",
+        "conteudo": "1: Instale o Nodejs em seu sistema. 2: Instale o TypeScript globalmente via npm: npm install -g typescript. 3: Crie um arquivo TypeScript com a extensão 'ts' e comece a escrever seu código. 4: Compile o código TypeScript em JavaScript usando o comando: tsc arquivo ts."
+      },
+      {
+        "id": 4,
+        "Titulo": "Onde utilizar",
+        "conteudo": "Você pode utilizar o TypeScript em várias áreas de desenvolvimento, incluindo:\n✨ Desenvolvimento web (frontend e backend).\n✨ Aplicativos móveis.\n✨ Aplicativos desktop.\n✨ Internet das Coisas (IoT).\n✨ Jogos."
+      },
+      {
+        "id": 5,
+        "Titulo": "Dicas",
+        "conteudo": "✨ Aproveite a tipagem estática para evitar erros em tempo de execução.\n✨ Use interfaces para definir contratos claros entre componentes.\n✨ Aprenda a usar tipos avançados como uniões e interseções.\n✨ Utilize a inferência de tipos para minimizar a necessidade de anotações explícitas.\n✨ Explore as vantagens do uso de classes e herança.\n✨ Use enums para representar conjuntos de valores relacionados.\n✨ Familiarize-se com a sintaxe das funções de seta (() => {}) e o uso de this.\n✨ Integre o TypeScript em projetos existentes gradualmente usando a declaração de tipos.\n✨ Explore a compatibilidade com bibliotecas e frameworks populares como React, Angular e Vue."
+      },
+      {
+        "id": 6,
+        "Titulo": "Como começar",
+        "conteudo": "Para começar com TypeScript:\n\n✨ Instale o TypeScript e o Nodejs.\n✨ Escreva pequenos programas para praticar.\n✨ Aprenda sobre tipos básicos e interfaces.\n✨ Gradualmente avance para recursos mais avançados.\n✨ Utilize a documentação oficial para referência.\n✨ Participe de fóruns e comunidades online para obter suporte e compartilhar conhecimentos"
+      },
+      {
+        "id": 7,
+        "Titulo": "Benefícios do TypeScript",
+        "conteudo": "Além de suas características já mencionadas, o TypeScript oferece diversos benefícios, como:\n\n✨ Maior produtividade e confiabilidade no desenvolvimento.\n✨ Detecção antecipada de erros e bugs.\n✨ Refatoração mais segura e eficiente.\n✨ Melhoria na qualidade e manutenção do código ao longo do tempo.\n✨ Integração com ferramentas populares como IDEs e editores de código.\n✨ Compatibilidade com bibliotecas e frameworks amplamente utilizados.\n✨ Crescente adoção pela comunidade de desenvolvimento."
+      },
+      {
+        "id": 8,
+        "Titulo": "Tipos Avançados",
+        "conteudo": "Além dos tipos básicos, o TypeScript oferece tipos avançados que podem ser utilizados para lidar com situações mais complexas:\n\n✨ Uniões e Interseções de tipos.\n✨ Tipos condicionais para lógica baseada em tipos.\n✨ Tipos genéricos para escrever código mais flexível e reutilizável.\n✨ Tipos indexáveis e mapeamentos.\n✨ Tipo 'keyof' para manipulação de chaves de objeto.\n✨ Tipos de função e inferência de parâmetros.\n✨ Tipos literais e discriminação de união."
+      },
+      {
+        "id": 9,
+        "Titulo": "Integração com React",
+        "conteudo": "TypeScript oferece uma integração eficaz com a biblioteca React, permitindo a criação de componentes tipados e a detecção precoce de erros em tempo de desenvolvimento. Aprenda como utilizar TypeScript em projetos React."
+      },
+      {
+        "id": 10,
+        "Titulo": "Migração para TypeScript",
+        "conteudo": "Saiba como migrar gradualmente um projeto existente para o TypeScript. Aprenda as melhores práticas, ferramentas de conversão e como lidar com desafios durante o processo de migração."
+      },
+      {
+        "id": 11,
+        "Titulo": "Padrões de Design em TypeScript",
+        "conteudo": "Descubra como aplicar padrões de design populares, como Singleton, Factory, Decorator e outros, usando TypeScript. Veja exemplos práticos de implementações e benefícios da utilização de padrões."
+      },
+      {
+        "id": 12,
+        "Titulo": "Outras Aplicações",
+        "conteudo": "Além do desenvolvimento de aplicações web e backend, o TypeScript pode ser aplicado em outras áreas, como Internet das Coisas (IoT), jogos e aplicativos móveis. Conheça essas possibilidades e descubra como TypeScript pode ser usado além do convencional."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://www.typescriptlang.org/docs/"
+      }
+    ]
+  },
+  {
+    "nome": "Html",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Html é uma linguagem de marcação utilizada para estruturar o conteúdo de páginas web. Ela é a base de qualquer site na internet e é interpretada pelos navegadores para exibir informações aos usuários. Html significa HyperText Markup Language (Linguagem de Marcação de Hipertexto) e permite criar elementos como texto, imagens, links e outros elementos interativos."
+      },
+      {
+        "id": 2,
+        "Titulo": "Para que serve",
+        "conteudo": "Html é usado para criar a estrutura básica de uma página web. Ele define a organização do conteúdo, como títulos, parágrafos, listas, tabelas e formulários. Além disso, o Html também é fundamental para incorporar outros tipos de mídia, como imagens e vídeos, e para criar links que conectam diferentes páginas e recursos na web."
+      },
+      {
+        "id": 3,
+        "Titulo": "Como utilizar",
+        "conteudo": "1: Abra qualquer editor de texto simples, como o Bloco de Notas (Windows) ou o TextEdit (Mac).\n2: Digite as tags Html para definir a estrutura do conteúdo, como <html>, <head> e <body>.\n3: Dentro da seção <body>, utilize tags como <p> para parágrafos, <h1> para títulos, <ul> e <li> para listas, <table> para tabelas, e assim por diante.\n4: Salve o arquivo com a extensão '.html' e abra-o em um navegador para visualizar o resultado."
+      },
+      {
+        "id": 4,
+        "Titulo": "Elementos Básicos",
+        "conteudo": "Alguns elementos básicos do Html incluem:\n✨ <h1> a <h6>: Títulos de diferentes níveis de importância.\n✨ <p>: Parágrafos de texto.\n✨ <a>: Links para outras páginas ou recursos.\n✨ <img>: Imagens.\n✨ <ul> e <ol>: Listas não ordenadas (com marcadores) e ordenadas (numeradas), respectivamente.\n✨ <li>: Itens de lista.\n✨ <table>: Tabela para exibir dados tabulares.\n✨ <form>: Formulários interativos."
+      },
+      {
+        "id": 5,
+        "Titulo": "Estrutura Básica",
+        "conteudo": "A estrutura básica de um documento Html inclui as seguintes tags:\n✨ <!DOCTYPE html>: Declaração do tipo de documento.\n✨ <html>: Elemento raiz que engloba todo o conteúdo.\n✨ <head>: Cabeçalho do documento, contendo informações como título e metadados.\n✨ <body>: Corpo do documento, onde o conteúdo visível é colocado.\n✨ <title>: Título da página exibido na barra de título do navegador."
+      },
+      {
+        "id": 6,
+        "Titulo": "Links e Âncoras",
+        "conteudo": "Os links são criados com a tag <a> (âncora) e são usados para navegar entre páginas e recursos da web. Um exemplo de link:\n<a href=\"https://www.exemplo.com\">Visitar Exemplo</a>\nEste link direciona os usuários para o site 'exemplo.com' quando clicado."
+      },
+      {
+        "id": 7,
+        "Titulo": "Formulários",
+        "conteudo": "Os formulários são utilizados para coletar informações dos usuários. Eles contêm elementos como caixas de texto, botões de rádio, caixas de seleção e botões de envio. Um exemplo de formulário simples:\n<form>\n  <label for=\"nome\">Nome:</label>\n  <input type=\"text\" id=\"nome\" name=\"nome\"><br><br>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n  <input type=\"submit\" value=\"Enviar\">\n</form>"
+      },
+      {
+        "id": 8,
+        "Titulo": "Semântica",
+        "conteudo": "Html5 introduziu elementos semânticos que fornecem significado ao conteúdo da página. Alguns exemplos:\n✨ <header>: Cabeçalho da página.\n✨ <nav>: Navegação.\n✨ <main>: Conteúdo principal.\n✨ <article>: Conteúdo independente.\n✨ <section>: Seção genérica.\n✨ <aside>: Conteúdo relacionado.\n✨ <footer>: Rodapé da página."
+      },
+      {
+        "id": 9,
+        "Titulo": "Recursos Adicionais",
+        "conteudo": "Além dos elementos básicos, o Html oferece muitos recursos adicionais, como incorporação de mídia, estilos CSS, scripts JavaScript e muito mais. Aprender esses recursos permite criar páginas web interativas e visualmente atraentes."
+      },
+      {
+        "id": 10,
+        "Titulo": "Criando Layouts Responsivos",
+        "conteudo": "Desenvolver layouts responsivos é essencial para garantir que seus sites se adaptem a diferentes tamanhos de tela, como smartphones e tablets. Utilize técnicas como CSS Grid e Media Queries para criar interfaces que se ajustem de maneira elegante e intuitiva."
+      },
+      {
+        "id": 11,
+        "Titulo": "HTML e Acessibilidade",
+        "conteudo": "Garantir que seu código HTML seja acessível é fundamental para tornar a web inclusiva para todos os usuários, incluindo pessoas com deficiência. Aprenda a usar tags semânticas corretamente, fornecer descrições alternativas para imagens e implementar recursos como leitores de tela."
+      },
+      {
+        "id": 12,
+        "Titulo": "Integração de Vídeos e Áudios",
+        "conteudo": "Além de imagens, o HTML permite incorporar facilmente mídia de áudio e vídeo em suas páginas. Saiba como usar as tags <video> e <audio> para fornecer uma experiência multimídia atraente para os visitantes do seu site."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://developer.mozilla.org/pt-BR/docs/Web/Html"
+      }
+    ]
+  }
+]
