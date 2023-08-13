@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import '../../style.css';
 import { FaHouse } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa6";
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
 
 export default function CustomComponent() {
     /*Simula a chamada de api*/
@@ -34,7 +36,7 @@ export default function CustomComponent() {
         }
     };
 
-    /*Mostra o alert caso a palavra pesquisada não seja encontrada*/
+    /*Pesquisa a palavra do input*/
     useEffect(() => {
         setShowAlert(
             searchKeyword.length > 0 &&
@@ -61,12 +63,26 @@ export default function CustomComponent() {
                             placeholder="Pesquisar"
                         />
                         {searchKeyword && (
-                            <button className="botao espacamento lixeira" onClick={() => setSearchKeyword("")}>
-                                <FaTrash size={20} />
-                            </button>
+                            <Tooltip
+                                title="Limpar"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool" // Aplicando a classe de estilo
+                            >
+                                <button className="botao espacamento lixeira" onClick={() => setSearchKeyword("")}>
+                                    <FaTrash size={20} />
+                                </button>
+                            </Tooltip>
                         )}
                         <Link to="/" className='espacamento link-invisivel'>
-                            <button className='botao button-dark home'> <FaHouse size={20} /></button>
+                            <Tooltip
+                                title="Home"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool" // Aplicando a classe de estilo
+                            >
+                                <button className='botao button-dark home'> <FaHouse size={20} /></button>
+                            </Tooltip>
                         </Link>
                     </div>
                     {/*Barra lateral que pega o titulo de cada json para a pessoa clicar*/}
@@ -99,18 +115,19 @@ export default function CustomComponent() {
                     <div className="col-11">
                         {typeScriptData.topicos.map(topico => {
                             const lowerCaseTitulo = topico.Titulo.toLowerCase();
-                            {/*Mostra o que foi pesquisado, fazendo ele ficar tudo em minusculo*/ }
+
                             if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {
-                                {/*Validação para que ao começar com http ele não quebre no . trocando para \n*/ }
                                 const conteudoComQuebrasDeLinha = topico.conteudo.replace(/\.\s/g, '.\n');
                                 const conteudoArray = conteudoComQuebrasDeLinha.split('\n');
 
+                                const marginTop = lowerCaseTitulo.includes("o que é") ? "50px" : "0"; // Adiciona a margem apenas se o título contiver "O que é"
+
                                 return (
-                                    <div key={topico.id} id={topico.id} className="box-conteudo">
+                                    <div key={topico.id} id={topico.id} className="box-conteudo" style={{ marginTop }}>
                                         <h2>{topico.Titulo}</h2>
                                         <span>
                                             {conteudoArray.map((linha, index) => {
-                                                {/*Caso comece com https ele gera um href para a pesoa clicar*/ }
+                                                /* Caso o conteudo comece com https deixa com href*/
                                                 if (linha.trim().startsWith("https:")) {
                                                     return (
                                                         <React.Fragment key={index}>
@@ -121,7 +138,7 @@ export default function CustomComponent() {
                                                         </React.Fragment>
                                                     );
                                                 } else {
-                                                    {/*Caso não mostra normalmente*/ }
+                                                    /* Se não aprensenta normamlmente*/
                                                     return (
                                                         <React.Fragment key={index}>
                                                             {linha}
