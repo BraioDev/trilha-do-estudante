@@ -54,6 +54,8 @@ header {
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
     --cinza-padrao: #202124;
+    --cinza-input: #303134;
+    --cinza-transparente: rgba(48, 49, 52, 0.5);;
     --preto-azul: #042030;
     /* azul */
     --azul-base: #008fe0;
@@ -75,6 +77,7 @@ header {
     --verde-mongodb: #519747;
     /* vermelho */
     --vermelho: #E51C20;
+    --vermelho-claro: #e94144;
     --vermelho-bordo: #C40030;
     /* laranja */
     --vermelho-laranja: #DB380E;
@@ -99,9 +102,66 @@ input {
     width: 300px;
     height: 35px;
     padding: 10px;
-    background: var(--branco-cinza);
-    caret-color: var(--azul-base);
+    background: var(--branco-base);
+    transition: ease-in-out 0.2s;
 }
+
+input:hover,
+input:focus{
+    background-color: var(--cinza-input);
+}
+
+input::placeholder{
+    color: var(--branco-base);
+}
+
+.input-pesquisa {
+    width: 450px;
+    background-color: var(--cinza-transparente);
+    color: var(--branco-base);
+}
+
+input:focus::placeholder {
+    transition: all 0.1s;
+    color: transparent;
+}
+
+/*Topo do site*/
+.espacamento{
+    margin: 5px;
+}
+
+.topo {
+    z-index: 9999;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 40%;
+}
+
+/*icones*/
+.botao{
+    max-width: 42px;
+    max-height: 42px;
+    align-items: center;
+}
+
+.lixeira{
+    background-color: var(--vermelho);
+    color: var(--branco-base);
+}
+
+.lixeira:hover,
+.lixeira:focus{
+    background-color: var(--vermelho-claro);
+}
+
+.home{
+    background-color: var(--branco-base);
+    color: var(--preto-cinza); 
+}
+
+/*Alert de erro ou algo assim*/
 .custom-alert {
     display: block;
     position: fixed;
@@ -115,26 +175,6 @@ input {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     z-index: 9999;
-}
-.input-pesquisa {
-    width: 450px;
-}
-
-.espacamento{
-    margin: 0 5px;
-}
-
-input:focus::placeholder {
-    transition: all 0.1s;
-    color: transparent;
-}
-
-.topo {
-    z-index: 9999;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 40%;
 }
 
 /*Select*/
@@ -180,7 +220,7 @@ option:hover {
     background-color: var(--azul-base);
 }
 
-
+/*Button*/
 button {
     text-align: center;
     border: none;

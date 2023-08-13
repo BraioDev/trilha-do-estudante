@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../style.css';
+import { FaHouse } from "react-icons/fa6";
+import { FaTrash } from "react-icons/fa6";
 
 export default function CustomComponent() {
     const [jsonData, setJsonData] = useState({ front: [], back: [] });
@@ -11,7 +13,6 @@ export default function CustomComponent() {
         fetch(process.env.PUBLIC_URL + '/data.json')
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 setJsonData(data);
             })
             .catch(error => console.error('Erro ao buscar dados JSON:', error));
@@ -52,12 +53,12 @@ export default function CustomComponent() {
                             placeholder="Pesquisar"
                         />
                         {searchKeyword && (
-                            <button className="espacamento botao-limpar" onClick={() => setSearchKeyword("")}>
-                                X
+                            <button className="botao espacamento lixeira" onClick={() => setSearchKeyword("")}>
+                                <FaTrash size={20}/>
                             </button>
                         )}
-                        <Link to="/" className='espacamento link-invisivel home'>
-                            <button className='button-dark'>Voltar</button>
+                        <Link to="/" className='espacamento link-invisivel'>
+                            <button className='botao button-dark home'> <FaHouse size={20}/></button>
                         </Link>
                     </div>
                     <div className='barra-lateral col-1-meio'>
@@ -78,7 +79,7 @@ export default function CustomComponent() {
                         </ul>
                         {showAlert && (
                             <div id="custom-alert" className="custom-alert">
-                                <p>Não possuimos nada relacionado 😥</p>
+                                <p>Desculpe não encontrei nada relacionado 😥</p>
                             </div>
                         )}
                     </div>
