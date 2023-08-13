@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../style.css';
-import CodeEditor from '../editor/editor'; 
 import { FaHouse } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa6";
 
@@ -88,19 +87,32 @@ export default function CustomComponent() {
                         {typeScriptData.topicos.map(topico => {
                             const lowerCaseTitulo = topico.Titulo.toLowerCase();
                             if (lowerCaseTitulo.includes(searchKeyword.toLowerCase())) {
-                                const conteudoComQuebrasDeLinha = topico.conteudo.replace(/\./g, '.\n');
+                                const conteudoComQuebrasDeLinha = topico.conteudo.replace(/\.\s/g, '.\n');
                                 const conteudoArray = conteudoComQuebrasDeLinha.split('\n');
 
                                 return (
                                     <div key={topico.id} id={topico.id} className="box-conteudo">
                                         <h2>{topico.Titulo}</h2>
                                         <span>
-                                            {conteudoArray.map((linha, index) => (
-                                                <React.Fragment key={index}>
-                                                    {linha}
-                                                    <br />
-                                                </React.Fragment>
-                                            ))}
+                                            {conteudoArray.map((linha, index) => {
+                                                if (linha.trim().startsWith("https:")) {
+                                                    return (
+                                                        <React.Fragment key={index}>
+                                                            <a href={linha} target="_blank" rel="noopener noreferrer">
+                                                                Saiba mais em: {linha}
+                                                                <br />
+                                                            </a>
+                                                        </React.Fragment>
+                                                    );
+                                                } else {
+                                                    return (
+                                                        <React.Fragment key={index}>
+                                                            {linha}
+                                                            <br />
+                                                        </React.Fragment>
+                                                    );
+                                                }
+                                            })}
                                         </span>
                                     </div>
                                 );

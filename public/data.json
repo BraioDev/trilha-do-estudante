@@ -67,7 +67,7 @@
         {
           "id": 13,
           "Titulo": "Documentação",
-          "conteudo": "Saiba mais em: http//documentação"
+          "conteudo": "https://www.typescriptlang.org/docs/"
         }
       ]
     },
