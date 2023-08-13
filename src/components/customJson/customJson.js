@@ -96,7 +96,7 @@ export default function CustomComponent({ linguagem }) {
                             trigger="mouseenter"
                             className="tool"
                         >
-                            <button className="botao espacamento" onClick={handleBack}>
+                            <button className="botao button-dark espacamento" onClick={handleBack}>
                                 <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
                             </button>
                         </Tooltip>
@@ -136,7 +136,7 @@ export default function CustomComponent({ linguagem }) {
                                 const conteudoComQuebrasDeLinha = topico.conteudo.replace(/\.\s/g, '.\n');
                                 const conteudoArray = conteudoComQuebrasDeLinha.split('\n');
 
-                                const marginTop = lowerCaseTitulo.includes("o que é") ? "50px" : "0"; // Adiciona a margem apenas se o título contiver "O que é"
+                                const marginTop = lowerCaseTitulo.includes("o que é") ? "45px" : "0"; // Adiciona a margem apenas se o título contiver "O que é"
 
                                 return (
                                     <div key={topico.id} id={topico.id} className="box-conteudo" style={{ marginTop }}>

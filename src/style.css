@@ -55,7 +55,8 @@ header {
     --preto-cinza: rgba(0, 0, 0, 0.8);
     --cinza-padrao: #202124;
     --cinza-input: #303134;
-    --cinza-transparente: rgba(48, 49, 52, 0.5);;
+    --cinza-transparente: rgba(48, 49, 52, 0.5);
+    ;
     --preto-azul: #042030;
     /* azul */
     --azul-base: #008fe0;
@@ -107,11 +108,11 @@ input {
 }
 
 input:hover,
-input:focus{
+input:focus {
     background-color: var(--cinza-input);
 }
 
-input::placeholder{
+input::placeholder {
     color: var(--branco-base);
 }
 
@@ -127,7 +128,7 @@ input:focus::placeholder {
 }
 
 /*Topo do site*/
-.espacamento{
+.espacamento {
     margin: 5px 5px 0 0;
 }
 
@@ -140,25 +141,25 @@ input:focus::placeholder {
 }
 
 /*icones*/
-.botao{
+.botao {
     max-width: 42px;
     max-height: 42px;
     align-items: center;
 }
 
-.lixeira{
+.lixeira {
     background-color: var(--vermelho);
     color: var(--branco-base);
 }
 
 .lixeira:hover,
-.lixeira:focus{
+.lixeira:focus {
     background-color: var(--vermelho-claro);
 }
 
-.home{
+.home {
     background-color: var(--branco-base);
-    color: var(--preto-cinza); 
+    color: var(--preto-cinza);
 }
 
 /*Alert de erro ou algo assim*/
@@ -313,15 +314,19 @@ button:focus {
     margin-bottom: 20px;
     margin-left: 100px;
 }
-.icon{
+
+.icon {
     margin-bottom: 2px;
 }
+
 .barra-lateral {
+    overflow-y: auto;
     transition: all 0.4s;
     height: 100vh;
     width: 200px;
     padding: 20px;
-    display: wrap;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     align-items: center;
     position: fixed;
@@ -331,6 +336,16 @@ button:focus {
     top: 0;
     bottom: 0;
     left: 0;
+}
+
+/* barra de rolagem */
+.barra-lateral::-webkit-scrollbar {
+    width: 8px;
+    width: 8px;
+}
+.barra-lateral::-webkit-scrollbar-thumb {
+    background-color: var(--cinza);
+    border-radius: 8px;
 }
 
 ul {

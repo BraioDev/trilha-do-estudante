@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../front.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function React() {
     return (
         <body style={{ backgroundColor: 'var(--azul-base)' }}>
-            <div className="container">
-                <div className="row">
-                    <span>React</span>
-                </div>
-            </div>
+            <CustomComponent linguagem="React" />
         </body>
     );
 }

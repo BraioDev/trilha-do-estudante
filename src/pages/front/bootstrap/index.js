@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../front.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Bootstrap() {
     return (
         <body style={{ backgroundColor: 'var(--azul-base)' }}>
-            <div className="container">
-                <div className="row">
-                    <span>Bootstrap</span>
-                </div>
-            </div>
+            <CustomComponent linguagem="Bootstrap" />
         </body>
     );
 }

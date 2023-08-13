@@ -138,5 +138,285 @@
         "conteudo": "https://developer.mozilla.org/pt-BR/docs/Web/Html"
       }
     ]
+  },
+  {
+    "nome": "JavaScript",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Javascript é uma linguagem de programação amplamente utilizada para adicionar interatividade e funcionalidade dinâmica a páginas web. Ele permite aos desenvolvedores criar scripts que são executados no navegador do usuário, manipulando elementos da página, respondendo a eventos e fazendo requisições a servidores para obter ou enviar dados."
+      },
+      {
+        "id": 2,
+        "Titulo": "Sintaxe Básica",
+        "conteudo": "A sintaxe do Javascript é semelhante a muitas outras linguagens de programação. Você pode declarar variáveis usando 'var', 'let' ou 'const'. As instruções são encerradas com ponto e vírgula. Funções podem ser definidas usando a palavra-chave 'function'."
+      },
+      {
+        "id": 3,
+        "Titulo": "Manipulando o DOM",
+        "conteudo": "Uma das principais características do Javascript é a capacidade de manipular o DOM (Modelo de Objeto de Documento). Isso permite que você selecione elementos HTML e modifique seus atributos, conteúdo e estilo dinamicamente. Bibliotecas como jQuery e métodos nativos como 'getElementById' e 'querySelector' são usados para interagir com o DOM."
+      },
+      {
+        "id": 4,
+        "Titulo": "Eventos",
+        "conteudo": "Os eventos são a base da interatividade no Javascript. Você pode atribuir funções a eventos como 'click', 'mouseover', 'keydown' e muito mais. Quando um evento ocorre em um elemento da página, a função associada é executada, permitindo que você responda a ações do usuário."
+      },
+      {
+        "id": 5,
+        "Titulo": "Ajax e Requisições Assíncronas",
+        "conteudo": "O Javascript é frequentemente usado para fazer requisições a servidores e atualizar partes específicas de uma página sem a necessidade de recarregá-la. Isso é conhecido como AJAX (Asynchronous JavaScript and XML). Com a introdução do 'fetch' e 'XMLHttpRequest', você pode buscar e enviar dados para um servidor de forma assíncrona."
+      },
+      {
+        "id": 6,
+        "Titulo": "Programação Orientada a Objetos",
+        "conteudo": "Javascript suporta programação orientada a objetos, permitindo que você crie e organize código de maneira mais modular e reutilizável. Você pode criar classes e objetos, definir propriedades e métodos, e usar conceitos como herança e encapsulamento."
+      },
+      {
+        "id": 7,
+        "Titulo": "Frameworks e Bibliotecas",
+        "conteudo": "Além do Javascript puro, existem vários frameworks e bibliotecas populares que facilitam o desenvolvimento web, como React, Angular e Vue.js. Essas ferramentas oferecem estruturas e padrões para a construção de aplicações complexas e interativas."
+      },
+      {
+        "id": 8,
+        "Titulo": "ES6 e Recursos Modernos",
+        "conteudo": "O ECMAScript 6 (ES6) trouxe muitos recursos modernos ao Javascript, incluindo declarações 'let' e 'const', arrow functions, classes, desestruturação, módulos e muito mais. Esses recursos melhoram a legibilidade, manutenção e eficiência do código."
+      },
+      {
+        "id": 9,
+        "Titulo": "Testando e Depurando",
+        "conteudo": "Testar e depurar código Javascript é essencial para garantir a qualidade e o funcionamento correto das aplicações. Ferramentas de desenvolvedor dos navegadores, como o console, podem ajudar a identificar erros, verificar variáveis e executar testes."
+      },
+      {
+        "id": 10,
+        "Titulo": "Recursos e Aprendizado",
+        "conteudo": "A comunidade Javascript é vasta e oferece uma infinidade de recursos para aprendizado, incluindo tutoriais, documentação oficial e fóruns de discussão. Plataformas como MDN Web Docs, Stack Overflow e cursos online são ótimos pontos de partida para quem deseja aprofundar seus conhecimentos em Javascript."
+      },
+      {
+        "id": 11,
+        "Titulo": "Javascript Assíncrono",
+        "conteudo": "A programação assíncrona é uma parte crucial do desenvolvimento moderno em Javascript. Aprenda a usar Promises, async/await e outras técnicas para lidar com operações demoradas sem bloquear a execução do código."
+      },
+      {
+        "id": 12,
+        "Titulo": "Segurança em Aplicações Web",
+        "conteudo": "Construir aplicações web seguras é fundamental. Saiba como proteger seu código Javascript contra ataques comuns, como injeção de código malicioso (XSS) e roubo de dados sensíveis. Aprenda boas práticas de segurança e validação de entrada."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+      }
+    ]
+  },
+  {
+    "nome": "Angular",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Angular é um framework de desenvolvimento front-end mantido pelo Google. Ele permite a criação de aplicações web dinâmicas e responsivas, usando HTML, CSS e principalmente TypeScript. O Angular oferece uma abordagem baseada em componentes para a construção de interfaces de usuário modernas."
+      },
+      {
+        "id": 2,
+        "Titulo": "Configuração Inicial",
+        "conteudo": "Começar com o Angular envolve a instalação do Angular CLI (Command Line Interface) e a criação de um novo projeto usando o comando 'ng new'. Isso configura uma estrutura básica para sua aplicação Angular, incluindo arquivos e pastas essenciais."
+      },
+      {
+        "id": 3,
+        "Titulo": "Componentes e Templates",
+        "conteudo": "Os componentes são a base do desenvolvimento Angular. Eles encapsulam a lógica e a apresentação de partes específicas da interface de usuário. Os templates HTML definem como os componentes são renderizados na página, permitindo a criação de interfaces dinâmicas e reutilizáveis."
+      },
+      {
+        "id": 4,
+        "Titulo": "Diretivas",
+        "conteudo": "As diretivas são instruções que o Angular aplica aos elementos DOM. Elas podem ser estruturais (como *ngIf e *ngFor) ou de atributos (como ngModel). As diretivas permitem adicionar comportamentos dinâmicos aos elementos e manipular o DOM de forma declarativa."
+      },
+      {
+        "id": 5,
+        "Titulo": "Serviços e Injeção de Dependência",
+        "conteudo": "Os serviços são classes que contêm lógica de negócios compartilhada entre componentes. A injeção de dependência do Angular permite que você injete serviços em componentes e outros serviços, facilitando a comunicação e a reutilização de código."
+      },
+      {
+        "id": 6,
+        "Titulo": "Roteamento",
+        "conteudo": "O roteamento no Angular permite a criação de aplicativos de várias páginas, com diferentes estados e URLs. O Angular Router fornece recursos para navegar entre diferentes componentes e estados, tornando a navegação em sua aplicação suave e responsiva."
+      },
+      {
+        "id": 7,
+        "Titulo": "Formulários Reativos",
+        "conteudo": "Os formulários reativos são uma abordagem mais poderosa para lidar com formulários no Angular. Eles permitem que você crie formulários dinâmicos e complexos, com validação e tratamento de eventos personalizados, usando o poder do RxJS (biblioteca reativa)."
+      },
+      {
+        "id": 8,
+        "Titulo": "Integração com Backend",
+        "conteudo": "O Angular é frequentemente usado em conjunto com serviços web e APIs RESTful. Aprenda a realizar solicitações HTTP, manipular respostas e atualizar a interface do usuário com os dados obtidos do servidor."
+      },
+      {
+        "id": 9,
+        "Titulo": "Testes Unitários e E2E",
+        "conteudo": "O Angular oferece ferramentas para testar suas aplicações, desde testes unitários de componentes e serviços até testes end-to-end (E2E) usando o Protractor. Testar sua aplicação é fundamental para garantir sua qualidade e funcionamento correto."
+      },
+      {
+        "id": 10,
+        "Titulo": "Estilos e Temas",
+        "conteudo": "O Angular permite a estilização de componentes usando CSS, SASS ou outras tecnologias de estilo. Além disso, você pode usar bibliotecas de design, como Angular Material, para adicionar temas e componentes estilizados à sua aplicação."
+      },
+      {
+        "id": 11,
+        "Titulo": "Gerenciamento de Estado",
+        "conteudo": "À medida que as aplicações Angular crescem em complexidade, o gerenciamento de estado se torna importante. Bibliotecas como NgRx fornecem uma abordagem de gerenciamento de estado inspirada no padrão Redux, permitindo controlar o estado da aplicação de forma previsível."
+      },
+      {
+        "id": 12,
+        "Titulo": "Publicação e Implantação",
+        "conteudo": "Após concluir o desenvolvimento, é hora de publicar e implantar sua aplicação Angular. Saiba como criar uma versão de produção otimizada, configurar um servidor de hospedagem e colocar sua aplicação online para que os usuários possam acessá-la."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://angular.io/docs"
+      }
+    ]
+  },
+  {
+    "nome": "React",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "React é uma biblioteca JavaScript de código aberto para a construção de interfaces de usuário. Desenvolvida pelo Facebook, ela permite criar componentes reutilizáveis que gerenciam seu próprio estado e podem ser compostos para construir interfaces complexas e interativas."
+      },
+      {
+        "id": 2,
+        "Titulo": "Criando Componentes",
+        "conteudo": "Componentes são a unidade fundamental do React. Eles representam partes independentes e reutilizáveis da interface. Com JSX (JavaScript XML), você pode criar componentes de forma semelhante à estrutura de árvore de elementos HTML."
+      },
+      {
+        "id": 3,
+        "Titulo": "Estado e Ciclo de Vida",
+        "conteudo": "O estado é um conceito central no React. Com o uso de estados, os componentes podem reagir às mudanças de dados e atualizar a interface em tempo real. O ciclo de vida dos componentes descreve os estágios pelos quais passam, desde a inicialização até a remoção."
+      },
+      {
+        "id": 4,
+        "Titulo": "Renderização Condicional",
+        "conteudo": "React permite renderização condicional com base em condições. Você pode mostrar ou ocultar componentes ou partes deles, dependendo do estado ou de outras variáveis."
+      },
+      {
+        "id": 5,
+        "Titulo": "Manipulação de Eventos",
+        "conteudo": "Assim como no JavaScript tradicional, o React permite manipular eventos do DOM, como cliques, submissões de formulários e muito mais. Você pode adicionar funções de tratamento de eventos a elementos JSX para criar interações."
+      },
+      {
+        "id": 6,
+        "Titulo": "Componentes Controlados",
+        "conteudo": "Componentes controlados mantêm o estado como única fonte de verdade para os elementos de entrada, como campos de texto e caixas de seleção. Isso permite que o React controle e atualize o estado desses elementos de forma unidirecional."
+      },
+      {
+        "id": 7,
+        "Titulo": "Roteamento com React Router",
+        "conteudo": "Para criar aplicações de várias páginas, você pode usar o React Router. Ele permite definir rotas para diferentes componentes e estados de aplicação, mantendo a experiência de navegação suave e sem recarregamento de página."
+      },
+      {
+        "id": 8,
+        "Titulo": "Hooks",
+        "conteudo": "Os Hooks são funções especiais que permitem que você 'ganhe' recursos do React, como estado e ciclo de vida, em componentes funcionais. Hooks, como useState e useEffect, simplificam a lógica dos componentes e os tornam mais reutilizáveis."
+      },
+      {
+        "id": 9,
+        "Titulo": "Context API",
+        "conteudo": "A Context API permite compartilhar dados entre componentes sem a necessidade de passá-los manualmente através de props. É útil para gerenciar o estado global da aplicação e evitar a propagação excessiva de props."
+      },
+      {
+        "id": 10,
+        "Titulo": "Estilização com CSS e Bibliotecas",
+        "conteudo": "React permite estilizar componentes com CSS, CSS-in-JS ou bibliotecas como styled-components e Emotion. Essas abordagens oferecem maneiras flexíveis de estilizar e criar interfaces atraentes."
+      },
+      {
+        "id": 11,
+        "Titulo": "Testes com Jest e Testing Library",
+        "conteudo": "Testes são essenciais para garantir a qualidade do código. O Jest é uma estrutura popular para testes de unidade e integração no React, enquanto a Testing Library fornece ferramentas para testar interações do usuário e comportamentos do DOM."
+      },
+      {
+        "id": 12,
+        "Titulo": "Gerenciamento de Estado Avançado",
+        "conteudo": "Além do estado local, aplicações React podem precisar de gerenciamento de estado global. Bibliotecas como Redux e Mobx permitem criar estruturas robustas para compartilhar e gerenciar o estado em toda a aplicação."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://reactjs.org/docs/getting-started.html"
+      }
+    ]
+  },
+  {
+    "nome": "Bootstrap",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Bootstrap é um framework front-end popular e de código aberto para o desenvolvimento rápido e responsivo de interfaces de usuário. Criado pelo Twitter, o Bootstrap oferece um conjunto de estilos, componentes e recursos que facilitam a criação de páginas web modernas e atraentes."
+      },
+      {
+        "id": 2,
+        "Titulo": "Instalação e Configuração",
+        "conteudo": "Para começar a usar o Bootstrap, você pode incluir os arquivos CSS e JavaScript do Bootstrap em seu projeto. O Bootstrap também suporta o uso via gerenciadores de pacotes, como npm e yarn."
+      },
+      {
+        "id": 3,
+        "Titulo": "Grid System",
+        "conteudo": "O sistema de grid do Bootstrap é uma das características distintivas do framework. Ele permite criar layouts responsivos com colunas e linhas, facilitando a adaptação da interface para diferentes tamanhos de tela."
+      },
+      {
+        "id": 4,
+        "Titulo": "Componentes Pré-estilizados",
+        "conteudo": "Bootstrap oferece uma variedade de componentes prontos para uso, como botões, formulários, alertas, navegação e muito mais. Esses componentes têm estilos e funcionalidades pré-estilizados, economizando tempo de desenvolvimento."
+      },
+      {
+        "id": 5,
+        "Titulo": "Tipografia e Estilização",
+        "conteudo": "Bootstrap inclui estilos de tipografia que garantem uma aparência consistente e legível em toda a aplicação. Além disso, você pode usar classes de estilização para modificar elementos de forma rápida e fácil."
+      },
+      {
+        "id": 6,
+        "Titulo": "Modais e Popovers",
+        "conteudo": "Modais e popovers são componentes que exibem informações adicionais ou conteúdo em uma janela sobreposta. Eles são úteis para exibir detalhes, formulários ou confirmações sem a necessidade de navegar para outra página."
+      },
+      {
+        "id": 7,
+        "Titulo": "Navegação Responsiva",
+        "conteudo": "Bootstrap oferece opções de navegação responsiva, incluindo barras de navegação e menus de hambúrguer, que se adaptam bem a diferentes tamanhos de tela, como tablets e smartphones."
+      },
+      {
+        "id": 8,
+        "Titulo": "Componentes de Carrossel",
+        "conteudo": "Carrosséis são úteis para exibir imagens ou conteúdo de forma dinâmica. O Bootstrap fornece um componente de carrossel que pode ser facilmente personalizado e usado para criar galerias de imagens ou destaques."
+      },
+      {
+        "id": 9,
+        "Titulo": "Personalização e Temas",
+        "conteudo": "Bootstrap pode ser personalizado para se adequar à identidade visual do seu projeto. Você pode modificar variáveis de CSS ou usar ferramentas online para criar temas personalizados."
+      },
+      {
+        "id": 10,
+        "Titulo": "Integração com JavaScript",
+        "conteudo": "Além de estilos, Bootstrap também inclui componentes JavaScript interativos, como abas, modais e dropdowns. Esses componentes podem ser facilmente ativados usando atributos de dados ou chamadas de função JavaScript."
+      },
+      {
+        "id": 11,
+        "Titulo": "Compatibilidade com Dispositivos Móveis",
+        "conteudo": "Bootstrap é conhecido por sua responsividade e suporte a dispositivos móveis. Ele oferece uma experiência consistente em várias plataformas e tamanhos de tela, facilitando a criação de aplicações acessíveis."
+      },
+      {
+        "id": 12,
+        "Titulo": "Utilidades de Espaçamento e Margens",
+        "conteudo": "As classes de utilitários do Bootstrap permitem adicionar espaçamento, margens e alinhamentos de forma rápida e concisa. Isso ajuda a criar layouts bem organizados e alinhados."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://getbootstrap.com/docs/5.1/getting-started/introduction/"
+      }
+    ]
   }
 ]

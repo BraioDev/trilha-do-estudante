@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../front.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function JavaScript() {
     return (
         <body style={{ backgroundColor: 'var(--azul-base)' }}>
-            <div className="container">
-                <div className="row">
-                    <span>JavaScript</span>
-                </div>
-            </div>
+            <CustomComponent linguagem="JavaScript" />
         </body>
     );
 }
