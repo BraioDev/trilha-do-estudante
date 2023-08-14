@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../banco.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Mongodb() {
     return (
         <body style={{ backgroundColor: 'var(--cinza-escuro)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>MongoDB</span>
-                </div>
-            </div>
+          <CustomComponent linguagem="Mongodb" />
         </body>
     );
 }

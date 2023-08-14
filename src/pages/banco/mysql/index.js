@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../banco.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Mysql() {
     return (
         <body style={{ backgroundColor: 'var(--cinza-escuro)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>MySql</span>
-                </div>
-            </div>
+                <CustomComponent linguagem="Mysql" />
         </body>
     );
 }

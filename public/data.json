@@ -1258,7 +1258,425 @@
         "conteudo": "https://developer.apple.com/documentation/xcode/"
       }
     ]
+  },
+  {
+    "nome": "Oracle",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "O Oracle Database é um sistema de gerenciamento de banco de dados relacional desenvolvido pela Oracle Corporation. Ele é projetado para armazenar, organizar e gerenciar dados de forma eficiente e segura, permitindo a criação de aplicativos empresariais escaláveis e de alto desempenho."
+      },
+      {
+        "id": 2,
+        "Titulo": "Arquitetura",
+        "conteudo": "O Oracle Database utiliza uma arquitetura cliente-servidor, onde os clientes (aplicativos) se comunicam com o servidor de banco de dados para realizar operações de leitura, gravação e gerenciamento de dados. O servidor gerencia o armazenamento, recuperação e segurança dos dados."
+      },
+      {
+        "id": 3,
+        "Titulo": "Linguagem SQL",
+        "conteudo": "Oracle Database suporta a linguagem SQL (Structured Query Language) para consulta e manipulação de dados. A SQL é usada para criar, consultar, atualizar e gerenciar bancos de dados, permitindo a interação eficaz com o Oracle Database."
+      },
+      {
+        "id": 4,
+        "Titulo": "Recursos de Segurança",
+        "conteudo": "Oracle Database oferece recursos de segurança avançados, incluindo autenticação, autorização, criptografia e auditoria. Isso ajuda a proteger os dados armazenados no banco de dados contra acessos não autorizados."
+      },
+      {
+        "id": 5,
+        "Titulo": "Escalabilidade e Desempenho",
+        "conteudo": "Oracle Database é conhecido por sua escalabilidade e desempenho excepcionais. Ele pode lidar com grandes volumes de dados e muitos usuários simultâneos, garantindo um acesso rápido e eficiente às informações."
+      },
+      {
+        "id": 6,
+        "Titulo": "Suporte a Transações",
+        "conteudo": "Oracle Database suporta transações ACID (Atomicidade, Consistência, Isolamento e Durabilidade) para garantir a integridade dos dados e a consistência das operações, mesmo em cenários de falha ou interrupção."
+      },
+      {
+        "id": 7,
+        "Titulo": "Backup e Recuperação",
+        "conteudo": "Oracle Database oferece recursos abrangentes de backup e recuperação para proteger os dados contra perda. Isso inclui backups completos, incrementais e de ponto no tempo, além de recursos para restaurar o banco de dados em diferentes estados."
+      },
+      {
+        "id": 8,
+        "Titulo": "Gerenciamento de Dados",
+        "conteudo": "Oracle Database permite a criação de tabelas, índices, visões, procedimentos armazenados e muito mais para organizar e gerenciar eficientemente os dados. Ele também oferece recursos para otimização de consultas e ajuste de desempenho."
+      },
+      {
+        "id": 9,
+        "Titulo": "Suporte a Dados Estruturados e Não Estruturados",
+        "conteudo": "Além de dados estruturados, o Oracle Database também oferece suporte a dados não estruturados, como documentos e mídia. Ele pode armazenar, pesquisar e recuperar dados em diferentes formatos."
+      },
+      {
+        "id": 10,
+        "Titulo": "Integração com Aplicativos",
+        "conteudo": "Oracle Database oferece conectividade e integração com várias linguagens de programação e tecnologias. Isso permite a criação de aplicativos que interagem de maneira eficaz com o banco de dados."
+      },
+      {
+        "id": 11,
+        "Titulo": "Oracle Cloud",
+        "conteudo": "Oracle Database está disponível na nuvem por meio da plataforma Oracle Cloud. Isso oferece a flexibilidade de hospedar e gerenciar bancos de dados na nuvem, reduzindo a necessidade de infraestrutura local."
+      },
+      {
+        "id": 12,
+        "Titulo": "Comunidade e Suporte",
+        "conteudo": "A Oracle possui uma comunidade ativa de desenvolvedores e oferece suporte técnico para ajudar os usuários do Oracle Database a resolver problemas, otimizar o desempenho e aproveitar ao máximo a plataforma."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://docs.oracle.com/en/database/"
+      }
+    ]
+  },
+  {
+    "nome": "Heid",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "HeidiSQL é uma ferramenta de administração de banco de dados gratuita e de código aberto, projetada para gerenciar e interagir com bancos de dados MySQL, MariaDB, Microsoft SQL Server e PostgreSQL. Ela fornece uma interface gráfica amigável para executar consultas, gerenciar tabelas, visualizar dados e muito mais."
+      },
+      {
+        "id": 2,
+        "Titulo": "Interface Amigável",
+        "conteudo": "HeidiSQL possui uma interface de usuário intuitiva e fácil de usar, com recursos de arrastar e soltar, realce de sintaxe SQL e navegação simplificada entre bancos de dados e tabelas."
+      },
+      {
+        "id": 3,
+        "Titulo": "Gerenciamento de Dados",
+        "conteudo": "HeidiSQL permite criar, alterar e excluir tabelas, colunas e índices. Você pode inserir, atualizar e excluir dados diretamente pela interface, simplificando o gerenciamento do banco de dados."
+      },
+      {
+        "id": 4,
+        "Titulo": "Consultas SQL",
+        "conteudo": "A ferramenta oferece um editor de consulta SQL com realce de sintaxe, assistente de construção de consulta e histórico de consultas recentes, tornando mais fácil a criação e execução de consultas complexas."
+      },
+      {
+        "id": 5,
+        "Titulo": "Importação e Exportação",
+        "conteudo": "HeidiSQL permite importar e exportar dados em vários formatos, incluindo CSV, SQL, Excel e mais. Isso facilita a transferência de dados entre diferentes bancos de dados ou aplicativos."
+      },
+      {
+        "id": 6,
+        "Titulo": "Backup e Restauração",
+        "conteudo": "Você pode realizar backups e restaurações de bancos de dados e tabelas diretamente no HeidiSQL, ajudando a proteger seus dados contra perda e a realizar tarefas de manutenção."
+      },
+      {
+        "id": 7,
+        "Titulo": "Suporte a Múltiplos Sistemas de Gerenciamento de Banco de Dados",
+        "conteudo": "Além do MySQL e MariaDB, o HeidiSQL também oferece suporte para Microsoft SQL Server e PostgreSQL, permitindo gerenciar diferentes tipos de bancos de dados usando uma única ferramenta."
+      },
+      {
+        "id": 8,
+        "Titulo": "Personalização",
+        "conteudo": "Você pode personalizar a aparência do HeidiSQL, incluindo temas de cores e estilos de exibição, para criar uma experiência de usuário mais agradável e adequada às suas preferências."
+      },
+      {
+        "id": 9,
+        "Titulo": "Comunidade e Suporte",
+        "conteudo": "HeidiSQL possui uma comunidade ativa de usuários e desenvolvedores que compartilham conhecimento, tutoriais e recursos. Isso ajuda a resolver problemas e aproveitar ao máximo a ferramenta."
+      },
+      {
+        "id": 10,
+        "Titulo": "Ferramentas Adicionais",
+        "conteudo": "Além das funcionalidades básicas, HeidiSQL oferece recursos avançados como rastreamento de consultas, exportação de diagramas de tabelas, sincronização de dados e mais."
+      },
+      {
+        "id": 11,
+        "Titulo": "Versões Portáteis",
+        "conteudo": "HeidiSQL está disponível em versões portáteis que podem ser executadas a partir de um dispositivo USB, permitindo levar a ferramenta e seus bancos de dados para onde você precisar."
+      },
+      {
+        "id": 12,
+        "Titulo": "Desenvolvimento Contínuo",
+        "conteudo": "HeidiSQL é uma ferramenta em constante desenvolvimento, com atualizações regulares que adicionam novos recursos, melhorias e correções de bugs."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://www.heidisql.com/help.php"
+      }
+    ]
+  },
+  {
+    "nome": "Pgadmin",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "pgAdmin é uma plataforma de administração de banco de dados de código aberto projetada para gerenciar bancos de dados PostgreSQL. Ela fornece uma interface gráfica avançada para criar, gerenciar e interagir com bancos de dados PostgreSQL de forma eficaz e intuitiva."
+      },
+      {
+        "id": 2,
+        "Titulo": "Interface Gráfica",
+        "conteudo": "pgAdmin oferece uma interface gráfica rica em recursos, permitindo a execução de consultas SQL, gerenciamento de tabelas, visualização de dados, design de esquema e muito mais, tudo por meio de uma interface amigável."
+      },
+      {
+        "id": 3,
+        "Titulo": "Ferramentas de Consulta",
+        "conteudo": "A ferramenta oferece um editor de consulta SQL com realce de sintaxe, conclusão automática, visualização de resultados e histórico de consultas. Isso simplifica a criação e execução de consultas complexas."
+      },
+      {
+        "id": 4,
+        "Titulo": "Gerenciamento de Tabelas",
+        "conteudo": "pgAdmin permite criar, editar e excluir tabelas, colunas, índices e restrições. Você pode realizar operações de gerenciamento de esquema facilmente por meio da interface gráfica."
+      },
+      {
+        "id": 5,
+        "Titulo": "Visualização de Dados",
+        "conteudo": "A ferramenta oferece visualizações tabulares e gráficas para resultados de consultas, permitindo a análise e interpretação dos dados de maneira eficaz."
+      },
+      {
+        "id": 6,
+        "Titulo": "Administração de Usuários e Privilégios",
+        "conteudo": "pgAdmin permite gerenciar usuários, funções e privilégios de segurança do banco de dados. Você pode conceder permissões e controlar o acesso aos objetos do banco de dados."
+      },
+      {
+        "id": 7,
+        "Titulo": "Importação e Exportação",
+        "conteudo": "Você pode importar e exportar dados em vários formatos, como CSV, SQL e mais, facilitando a transferência de dados entre diferentes bancos de dados ou aplicativos."
+      },
+      {
+        "id": 8,
+        "Titulo": "Visualização de Dependências",
+        "conteudo": "pgAdmin permite visualizar as dependências entre objetos do banco de dados, facilitando a compreensão das relações e impactos das alterações."
+      },
+      {
+        "id": 9,
+        "Titulo": "Agendamento de Tarefas",
+        "conteudo": "A ferramenta oferece um agendador de tarefas para automação de atividades, como backup, restauração e execução de consultas em horários específicos."
+      },
+      {
+        "id": 10,
+        "Titulo": "Customização e Extensibilidade",
+        "conteudo": "pgAdmin é altamente customizável e extensível. Você pode personalizar a interface, criar plugins e estender a funcionalidade da ferramenta de acordo com suas necessidades."
+      },
+      {
+        "id": 11,
+        "Titulo": "Gerenciamento de Servidores",
+        "conteudo": "Você pode adicionar e gerenciar vários servidores PostgreSQL dentro do pgAdmin, permitindo administrar múltiplos bancos de dados de diferentes locais."
+      },
+      {
+        "id": 12,
+        "Titulo": "Comunidade e Suporte",
+        "conteudo": "pgAdmin possui uma comunidade ativa de usuários e desenvolvedores que compartilham conhecimento, tutoriais e recursos. Isso ajuda a resolver problemas e aproveitar ao máximo a ferramenta."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://www.pgadmin.org/docs/"
+      }
+    ]
+  },
+  {
+    "nome": "Mongodb",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "MongoDB é um sistema de gerenciamento de banco de dados NoSQL, projetado para armazenar, recuperar e gerenciar dados de maneira flexível e escalável. Ele difere dos bancos de dados relacionais tradicionais, permitindo o armazenamento de dados em formato de documento e facilitando o desenvolvimento de aplicativos modernos e escaláveis."
+      },
+      {
+        "id": 2,
+        "Titulo": "Modelo de Dados NoSQL",
+        "conteudo": "MongoDB utiliza um modelo de dados NoSQL baseado em documentos. Os dados são armazenados em documentos JSON, o que permite uma representação flexível e hierárquica dos dados, facilitando a evolução do esquema e a adaptação a diferentes tipos de dados."
+      },
+      {
+        "id": 3,
+        "Titulo": "Estrutura de Documento",
+        "conteudo": "Cada documento no MongoDB é autocontido e pode conter várias chaves e valores. Os documentos podem ser aninhados, permitindo a representação de estruturas complexas, como arrays e documentos incorporados."
+      },
+      {
+        "id": 4,
+        "Titulo": "Escalabilidade Horizontal",
+        "conteudo": "MongoDB é conhecido por sua escalabilidade horizontal, o que significa que você pode distribuir dados em vários servidores e clusters para lidar com grandes volumes de dados e tráfego."
+      },
+      {
+        "id": 5,
+        "Titulo": "Consultas e Índices",
+        "conteudo": "MongoDB suporta consultas ricas usando uma linguagem de consulta poderosa. Ele também oferece recursos de indexação para otimizar o desempenho de consultas e melhorar a recuperação de dados."
+      },
+      {
+        "id": 6,
+        "Titulo": "Alta Disponibilidade",
+        "conteudo": "MongoDB oferece opções para replicação de dados em várias instâncias, garantindo alta disponibilidade e tolerância a falhas. Se um servidor falhar, os dados ainda estarão disponíveis em outras réplicas."
+      },
+      {
+        "id": 7,
+        "Titulo": "Sharding",
+        "conteudo": "O sharding permite distribuir dados em várias máquinas para melhorar o desempenho e a escalabilidade. Isso é particularmente útil para aplicativos que precisam lidar com grandes volumes de dados."
+      },
+      {
+        "id": 8,
+        "Titulo": "Triggers e Funções Armazenadas",
+        "conteudo": "MongoDB suporta triggers e funções armazenadas que podem ser usados para automatizar tarefas ou executar lógica personalizada quando certos eventos ocorrem no banco de dados."
+      },
+      {
+        "id": 9,
+        "Titulo": "Aggregation Framework",
+        "conteudo": "O Aggregation Framework permite realizar operações de análise e agregação de dados diretamente no banco de dados, facilitando a obtenção de insights e relatórios complexos."
+      },
+      {
+        "id": 10,
+        "Titulo": "Suporte a Geoespacial",
+        "conteudo": "MongoDB oferece suporte a dados geoespaciais, permitindo a indexação e consulta de informações baseadas em localização, como coordenadas de GPS."
+      },
+      {
+        "id": 11,
+        "Titulo": "Comunidade e Suporte",
+        "conteudo": "MongoDB possui uma comunidade ativa de desenvolvedores e oferece suporte técnico para ajudar os usuários a resolver problemas, otimizar o desempenho e aproveitar ao máximo a plataforma."
+      },
+      {
+        "id": 12,
+        "Titulo": "Integração com Linguagens de Programação",
+        "conteudo": "MongoDB possui drivers para várias linguagens de programação, permitindo que você desenvolva aplicativos que se integrem facilmente ao banco de dados."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://docs.mongodb.com/"
+      }
+    ]
+  },
+  {
+    "nome": "Mysql",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "MySQL é um sistema de gerenciamento de banco de dados relacional de código aberto, amplamente utilizado para armazenar, gerenciar e recuperar dados. Ele fornece uma plataforma robusta e confiável para desenvolvimento de aplicativos que exigem armazenamento de informações estruturadas."
+      },
+      {
+        "id": 2,
+        "Titulo": "Modelo Relacional",
+        "conteudo": "MySQL segue o modelo de banco de dados relacional, onde os dados são organizados em tabelas com linhas e colunas. Essa estrutura facilita a organização e o acesso aos dados por meio de consultas SQL."
+      },
+      {
+        "id": 3,
+        "Titulo": "Linguagem SQL",
+        "conteudo": "MySQL suporta a linguagem SQL (Structured Query Language) para realizar operações de leitura, gravação, atualização e gerenciamento de dados. A SQL é usada para criar consultas, definir estruturas de tabelas e mais."
+      },
+      {
+        "id": 4,
+        "Titulo": "Desempenho",
+        "conteudo": "MySQL é conhecido por seu desempenho eficiente e rápido. Ele oferece mecanismos de indexação e otimização que permitem a recuperação eficaz de dados, mesmo em bancos de dados grandes."
+      },
+      {
+        "id": 5,
+        "Titulo": "Gerenciamento de Tabelas",
+        "conteudo": "MySQL permite criar, alterar e excluir tabelas, colunas, índices e chaves estrangeiras. Você pode definir restrições de integridade para manter a consistência dos dados."
+      },
+      {
+        "id": 6,
+        "Titulo": "Suporte a Transações",
+        "conteudo": "MySQL suporta transações ACID (Atomicidade, Consistência, Isolamento e Durabilidade), garantindo que as operações sejam executadas de maneira segura e consistente."
+      },
+      {
+        "id": 7,
+        "Titulo": "Segurança",
+        "conteudo": "MySQL oferece recursos de segurança, como autenticação de usuário, privilégios de acesso e criptografia, para proteger os dados armazenados no banco de dados."
+      },
+      {
+        "id": 8,
+        "Titulo": "Replicação",
+        "conteudo": "MySQL permite a replicação de dados em várias instâncias, garantindo alta disponibilidade e tolerância a falhas. Os dados podem ser copiados para servidores secundários para fins de backup e recuperação."
+      },
+      {
+        "id": 9,
+        "Titulo": "Backup e Restauração",
+        "conteudo": "Você pode realizar backups regulares do banco de dados e restaurar dados a partir desses backups em caso de falhas ou erros."
+      },
+      {
+        "id": 10,
+        "Titulo": "Comunidade e Suporte",
+        "conteudo": "MySQL possui uma comunidade ativa de desenvolvedores e oferece suporte técnico para ajudar os usuários a resolver problemas, otimizar o desempenho e aproveitar ao máximo a plataforma."
+      },
+      {
+        "id": 11,
+        "Titulo": "Integração com Linguagens de Programação",
+        "conteudo": "MySQL possui drivers para várias linguagens de programação, permitindo que você desenvolva aplicativos que se integrem facilmente ao banco de dados."
+      },
+      {
+        "id": 12,
+        "Titulo": "Ferramentas de Administração",
+        "conteudo": "Existem diversas ferramentas de administração e visualização, como phpMyAdmin e MySQL Workbench, que tornam a gestão do banco de dados mais fácil e eficaz."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://dev.mysql.com/doc/"
+      }
+    ]
+  },
+  {
+    "nome": "Sqlite",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "SQLite é um sistema de gerenciamento de banco de dados embutido, de código aberto, que oferece armazenamento eficiente e confiável de dados. Ele é amplamente utilizado em aplicativos móveis, de desktop e embarcados, oferecendo um banco de dados local sem a necessidade de um servidor separado."
+      },
+      {
+        "id": 2,
+        "Titulo": "Arquitetura",
+        "conteudo": "SQLite utiliza uma arquitetura de servidor embutido, onde o banco de dados é acessado por meio de bibliotecas de programação. Isso permite que o banco de dados seja incorporado diretamente nos aplicativos, sem a necessidade de um processo de servidor separado."
+      },
+      {
+        "id": 3,
+        "Titulo": "Armazenamento",
+        "conteudo": "SQLite armazena dados em um único arquivo, tornando-o portátil e fácil de gerenciar. O banco de dados é autocontido e não requer configuração de servidor, sendo uma opção ideal para aplicativos que necessitam de armazenamento local."
+      },
+      {
+        "id": 4,
+        "Titulo": "Zero Configuração",
+        "conteudo": "SQLite não exige configuração de servidor ou instalação complexa. Basta incluir a biblioteca do SQLite no aplicativo e começar a usar o banco de dados imediatamente."
+      },
+      {
+        "id": 5,
+        "Titulo": "Linguagem SQL",
+        "conteudo": "SQLite suporta a linguagem SQL (Structured Query Language) para consulta e manipulação de dados. Ele oferece recursos de criação de tabelas, consultas, índices e restrições semelhantes a outros sistemas de banco de dados."
+      },
+      {
+        "id": 6,
+        "Titulo": "Tamanho Reduzido",
+        "conteudo": "O tamanho compacto do banco de dados SQLite torna-o uma opção adequada para aplicativos com recursos limitados de armazenamento ou para situações em que o tamanho do arquivo é uma preocupação."
+      },
+      {
+        "id": 7,
+        "Titulo": "Multiplataforma",
+        "conteudo": "SQLite é multiplataforma e funciona em diversos sistemas operacionais, incluindo Windows, macOS, Linux e dispositivos móveis, tornando-o adequado para uma variedade de cenários."
+      },
+      {
+        "id": 8,
+        "Titulo": "Transações ACID",
+        "conteudo": "SQLite suporta transações ACID (Atomicidade, Consistência, Isolamento e Durabilidade), garantindo a integridade dos dados e a consistência das operações, mesmo em situações de falha."
+      },
+      {
+        "id": 9,
+        "Titulo": "Comunidade e Suporte",
+        "conteudo": "SQLite possui uma comunidade ativa de desenvolvedores e oferece suporte técnico para ajudar os usuários a resolver problemas e aproveitar ao máximo a plataforma."
+      },
+      {
+        "id": 10,
+        "Titulo": "Flexibilidade",
+        "conteudo": "SQLite é adequado para uma variedade de casos de uso, desde aplicativos móveis simples até sistemas complexos, oferecendo uma solução eficiente para armazenamento de dados locais."
+      },
+      {
+        "id": 11,
+        "Titulo": "Ferramentas de Administração",
+        "conteudo": "Existem várias ferramentas de administração e visualização para SQLite, como o comando `sqlite3` em linha de comando e aplicativos GUI que facilitam a gestão do banco de dados."
+      },
+      {
+        "id": 12,
+        "Titulo": "Integração com Linguagens de Programação",
+        "conteudo": "SQLite possui drivers para várias linguagens de programação, permitindo que você desenvolva aplicativos que se integrem facilmente ao banco de dados."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://www.sqlite.org/docs.html"
+      }
+    ]
   }
-
-  
 ]
