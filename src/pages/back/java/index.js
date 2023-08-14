@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../back.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Java() {
     return (
         <body style={{ backgroundColor: 'var(--preto-cinza)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>Java</span>
-                </div>
-            </div>
+            <CustomComponent linguagem="Java" />
         </body>
     );
 }

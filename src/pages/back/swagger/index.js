@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../back.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Swagger() {
     return (
-        <body style={{ backgroundColor: 'var(--preto-cinza)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>Swagger</span>
-                </div>
-            </div>
+        <body style={{ backgroundColor: 'var(--preto-cinza)' }}>
+            <CustomComponent linguagem="Swagger" />
         </body>
     );
 }

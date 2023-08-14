@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../back.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Spring() {
     return (
-        <body style={{ backgroundColor: 'var(--preto-cinza)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>Spring</span>
-                </div>
-            </div>
-        </body>
+        <body style={{ backgroundColor: 'var(--preto-cinza)' }}>
+        <CustomComponent linguagem="Spring" />
+    </body>
     );
 }
