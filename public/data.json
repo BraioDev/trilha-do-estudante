@@ -1678,5 +1678,427 @@
         "conteudo": "https://www.sqlite.org/docs.html"
       }
     ]
-  }
+  },
+
+  {
+    "nome": "Figma",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Figma é uma ferramenta de design baseada na web que permite aos usuários criar, colaborar e prototipar interfaces de usuário e designs interativos. Ele oferece recursos avançados para design de interface, permitindo que equipes colaborem em tempo real em projetos de design."
+      },
+      {
+        "id": 2,
+        "Titulo": "Arquitetura",
+        "conteudo": "Figma utiliza uma arquitetura de design baseada na web, onde os projetos são armazenados na nuvem e podem ser acessados através de um navegador da web. Isso permite uma colaboração eficaz, onde várias pessoas podem trabalhar no mesmo projeto simultaneamente, independentemente da localização."
+      },
+      {
+        "id": 3,
+        "Titulo": "Uso",
+        "conteudo": "Figma é amplamente utilizado por designers de interface e equipes de design para criar wireframes, layouts, protótipos interativos e até mesmo designs de aplicativos completos. Sua interface intuitiva e recursos de colaboração o tornam uma escolha popular no campo do design de interface."
+      },
+      {
+        "id": 4,
+        "Titulo": "Recursos de Colaboração",
+        "conteudo": "Figma oferece recursos avançados de colaboração, permitindo que várias pessoas trabalhem no mesmo projeto em tempo real. Os usuários podem comentar diretamente nos designs, compartilhar links para visualização e edição, e acompanhar as revisões do design ao longo do tempo."
+      },
+      {
+        "id": 5,
+        "Titulo": "Prototipagem",
+        "conteudo": "A funcionalidade de prototipagem do Figma permite que os designers criem protótipos interativos e fluxos de usuário. Isso ajuda a visualizar a experiência do usuário e testar a usabilidade do design antes da implementação."
+      },
+      {
+        "id": 6,
+        "Titulo": "Componentes Reutilizáveis",
+        "conteudo": "Figma permite aos designers criar componentes reutilizáveis, como botões, barras de navegação e ícones, que podem ser facilmente replicados e atualizados em todo o design. Isso ajuda a manter a consistência e eficiência no processo de design."
+      },
+      {
+        "id": 7,
+        "Titulo": "Multiplataforma",
+        "conteudo": "Figma é uma ferramenta multiplataforma e pode ser acessada a partir de qualquer dispositivo com um navegador da web, incluindo Windows, macOS e sistemas operacionais baseados em Linux. Ele também oferece aplicativos móveis para visualização e feedback em dispositivos móveis."
+      },
+      {
+        "id": 8,
+        "Titulo": "Integrações",
+        "conteudo": "Figma oferece integrações com várias outras ferramentas de design e desenvolvimento, como Slack, Jira e GitHub. Isso ajuda as equipes a incorporar o Figma em seus fluxos de trabalho existentes."
+      },
+      {
+        "id": 9,
+        "Titulo": "Segurança",
+        "conteudo": "Figma prioriza a segurança dos dados dos usuários e oferece recursos como autenticação de dois fatores (2FA) e criptografia de dados em trânsito. Os projetos são armazenados de forma segura na nuvem da Figma."
+      },
+      {
+        "id": 10,
+        "Titulo": "Planos",
+        "conteudo": "Figma oferece diferentes planos, incluindo um plano gratuito com recursos limitados e planos pagos com recursos avançados, como histórico ilimitado de versões e bibliotecas de componentes compartilhados."
+      },
+      {
+        "id": 11,
+        "Titulo": "Aprendizado",
+        "conteudo": "Para aprender a usar o Figma, existem muitos recursos educacionais disponíveis, incluindo tutoriais em vídeo, documentação oficial e cursos online oferecidos por diversos provedores."
+      },
+      {
+        "id": 12,
+        "Titulo": "Exemplos de Uso",
+        "conteudo": "Figma é usado para uma variedade de projetos de design, como design de aplicativos móveis, websites, interfaces de usuário de software e até mesmo ilustrações vetoriais. Ele se adapta a diferentes tipos de projetos de design."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://www.figma.com/resources/docs/"
+      }
+    ]
+  },
+
+  {
+    "nome": "Canva",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "O Canva é uma plataforma de design gráfico baseada na web que permite aos usuários criar uma variedade de conteúdos visuais, incluindo gráficos, posts para redes sociais, apresentações, pôsteres, convites e muito mais. Ele oferece uma ampla gama de ferramentas e recursos para simplificar o processo de design."
+      },
+      {
+        "id": 2,
+        "Titulo": "Recursos de Design",
+        "conteudo": "O Canva oferece uma vasta coleção de modelos personalizáveis e elementos gráficos, como imagens, ícones, fontes e ilustrações. Os usuários podem arrastar e soltar esses elementos em um espaço de trabalho para criar designs únicos."
+      },
+      {
+        "id": 3,
+        "Titulo": "Facilidade de Uso",
+        "conteudo": "Uma das principais características do Canva é sua interface intuitiva e fácil de usar. Mesmo aqueles sem experiência em design podem criar designs visualmente atraentes devido à sua abordagem simplificada."
+      },
+      {
+        "id": 4,
+        "Titulo": "Modelos Prontos",
+        "conteudo": "O Canva oferece uma ampla variedade de modelos pré-desenvolvidos para várias finalidades, desde postagens em redes sociais até materiais de marketing. Isso economiza tempo e permite que os usuários iniciem seus projetos com uma base sólida."
+      },
+      {
+        "id": 5,
+        "Titulo": "Colaboração",
+        "conteudo": "O Canva permite a colaboração em tempo real entre membros da equipe. Os usuários podem compartilhar designs, fazer comentários e trabalhar juntos em projetos, tornando-o útil para equipes distribuídas."
+      },
+      {
+        "id": 6,
+        "Titulo": "Biblioteca de Mídia",
+        "conteudo": "Os usuários podem fazer upload de suas próprias imagens e mídia, ou escolher entre uma ampla seleção de elementos da biblioteca do Canva, incluindo fotos, ilustrações, ícones e vídeos."
+      },
+      {
+        "id": 7,
+        "Titulo": "Planos e Preços",
+        "conteudo": "O Canva oferece uma variedade de planos, incluindo uma opção gratuita com recursos básicos e planos pagos com recursos avançados, como acesso a mais elementos da biblioteca, ferramentas de dimensionamento e colaboração aprimorada."
+      },
+      {
+        "id": 8,
+        "Titulo": "Uso Diversificado",
+        "conteudo": "O Canva é usado por indivíduos e empresas para criar diversos tipos de conteúdo, incluindo posts de redes sociais, anúncios, apresentações, cartões de visita, logotipos, panfletos e muito mais."
+      },
+      {
+        "id": 9,
+        "Titulo": "Exportação e Compartilhamento",
+        "conteudo": "Após a conclusão de um design, os usuários podem exportá-lo em diferentes formatos, como PDF, PNG ou JPG. O Canva também oferece opções de compartilhamento direto em mídias sociais ou via link."
+      },
+      {
+        "id": 10,
+        "Titulo": "Aprendizado",
+        "conteudo": "Para ajudar os usuários a se familiarizarem com a plataforma, o Canva oferece tutoriais, cursos online e recursos educacionais para aprimorar suas habilidades de design."
+      },
+      {
+        "id": 11,
+        "Titulo": "Integrações",
+        "conteudo": "O Canva oferece integrações com várias outras ferramentas, como o Dropbox e o Google Drive, facilitando o acesso a arquivos e recursos armazenados nessas plataformas."
+      },
+      {
+        "id": 12,
+        "Titulo": "Acessibilidade",
+        "conteudo": "O Canva se esforça para tornar seu design acessível a todos, com recursos como a capacidade de adicionar descrições a imagens para pessoas com deficiência visual."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://support.canva.com/"
+      }
+    ]
+  },
+  {
+    "nome": "Illustrator",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Adobe Illustrator é um software de design vetorial amplamente utilizado na indústria criativa. Ele permite que os designers criem gráficos escaláveis, como logotipos, ilustrações, ícones e arte tipográfica, usando curvas e formas geométricas definidas por equações matemáticas."
+      },
+      {
+        "id": 2,
+        "Titulo": "Recursos de Design",
+        "conteudo": "O Illustrator oferece uma ampla gama de ferramentas de desenho e edição, incluindo ferramentas de pincel, caneta e formas geométricas. Os designers podem criar designs complexos, aplicar efeitos, misturar cores e trabalhar com camadas para obter resultados precisos."
+      },
+      {
+        "id": 3,
+        "Titulo": "Ilustrações Vetoriais",
+        "conteudo": "Uma das principais características do Illustrator é sua capacidade de criar ilustrações vetoriais. Isso significa que as imagens podem ser escaladas sem perda de qualidade, tornando-o ideal para projetos que exigem flexibilidade de tamanho."
+      },
+      {
+        "id": 4,
+        "Titulo": "Tipografia",
+        "conteudo": "O Illustrator oferece recursos avançados para manipulação de texto e criação de arte tipográfica. Os designers podem ajustar a fonte, o espaçamento, a forma e os efeitos do texto para criar composições visuais impactantes."
+      },
+      {
+        "id": 5,
+        "Titulo": "Arte Gráfica",
+        "conteudo": "Além de ilustrações e design de logotipos, o Illustrator é amplamente utilizado para criar arte gráfica, como cartazes, embalagens, capas de livros e designs de produtos."
+      },
+      {
+        "id": 6,
+        "Titulo": "Ferramentas Avançadas",
+        "conteudo": "O Illustrator oferece ferramentas avançadas de precisão, como grade de perspectiva, malha de degradê e ferramentas de criação de padrões. Essas ferramentas permitem criar designs complexos e detalhados."
+      },
+      {
+        "id": 7,
+        "Titulo": "Integração com Outros Softwares",
+        "conteudo": "O Illustrator faz parte da suíte Adobe Creative Cloud e pode ser integrado com outros softwares da Adobe, como o Photoshop e o InDesign. Isso facilita o fluxo de trabalho entre diferentes aplicativos de design."
+      },
+      {
+        "id": 8,
+        "Titulo": "Exportação e Formatos",
+        "conteudo": "Os projetos criados no Illustrator podem ser exportados em uma variedade de formatos, incluindo AI (formato nativo do Illustrator), PDF, SVG e imagens rasterizadas como PNG e JPG."
+      },
+      {
+        "id": 9,
+        "Titulo": "Indústrias e Usos",
+        "conteudo": "O Illustrator é usado por designers gráficos, ilustradores, artistas digitais, designers de moda, designers de embalagens e profissionais de diversas indústrias para criar uma ampla gama de materiais visuais."
+      },
+      {
+        "id": 10,
+        "Titulo": "Aprendizado",
+        "conteudo": "Para aprender a usar o Adobe Illustrator, a Adobe oferece tutoriais em vídeo, recursos educacionais online e cursos presenciais ou online em diversas plataformas de aprendizado."
+      },
+      {
+        "id": 11,
+        "Titulo": "Comunidade e Recursos",
+        "conteudo": "Há uma comunidade ativa de designers e ilustradores que compartilham dicas, tutoriais e recursos relacionados ao Illustrator. Isso proporciona um ambiente de aprendizado e inspiração."
+      },
+      {
+        "id": 12,
+        "Titulo": "História",
+        "conteudo": "O Adobe Illustrator foi lançado pela primeira vez em 1987 e desempenhou um papel significativo na revolução do design gráfico digital. Ao longo dos anos, ele evoluiu com recursos avançados e se tornou uma ferramenta indispensável para muitos profissionais criativos."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://helpx.adobe.com/illustrator/user-guide.html"
+      }
+    ]
+  },    
+  {
+    "nome": "Invision",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "InVision é uma plataforma de design colaborativo e prototipagem que permite que equipes de design criem, compartilhem e colaborem em projetos interativos. Ele é amplamente usado para criar protótipos de interfaces de usuário e experiências de usuário, permitindo testar e validar designs antes da implementação."
+      },
+      {
+        "id": 2,
+        "Titulo": "Prototipagem Interativa",
+        "conteudo": "Uma das principais características do InVision é sua capacidade de criar protótipos interativos clicáveis. Os designers podem vincular telas, adicionar transições e animações para simular a experiência do usuário final."
+      },
+      {
+        "id": 3,
+        "Titulo": "Colaboração em Equipe",
+        "conteudo": "O InVision permite que equipes trabalhem juntas em projetos de design, independentemente da localização geográfica. Os membros da equipe podem comentar diretamente nas telas, revisar versões e fornecer feedback em tempo real."
+      },
+      {
+        "id": 4,
+        "Titulo": "Gerenciamento de Design",
+        "conteudo": "Além da prototipagem, o InVision oferece recursos para o gerenciamento de design, incluindo a criação de fluxos de trabalho, organização de ativos e colaboração eficaz entre designers, desenvolvedores e partes interessadas."
+      },
+      {
+        "id": 5,
+        "Titulo": "Teste de Usuário",
+        "conteudo": "Os protótipos criados no InVision podem ser usados para testes de usabilidade e pesquisa com usuários. Os designers podem coletar feedback dos usuários e fazer ajustes antes de finalizar o design."
+      },
+      {
+        "id": 6,
+        "Titulo": "Integração com Ferramentas de Design",
+        "conteudo": "O InVision pode ser integrado com várias ferramentas de design, como o Sketch e o Adobe XD, permitindo que os designers importem seus projetos diretamente para a plataforma e adicionem interatividade."
+      },
+      {
+        "id": 7,
+        "Titulo": "Aplicativos Móveis",
+        "conteudo": "O InVision oferece aplicativos móveis para dispositivos iOS e Android, permitindo que os usuários visualizem e interajam com os protótipos em seus dispositivos móveis."
+      },
+      {
+        "id": 8,
+        "Titulo": "Gestão de Ativos",
+        "conteudo": "Os designers podem armazenar e gerenciar ativos, como imagens e ícones, diretamente na plataforma InVision, facilitando o acesso e compartilhamento entre membros da equipe."
+      },
+      {
+        "id": 9,
+        "Titulo": "Feedback Contextual",
+        "conteudo": "O InVision permite que os revisores deixem feedback contextual diretamente nas telas do protótipo, tornando mais claro qual aspecto do design está sendo discutido."
+      },
+      {
+        "id": 10,
+        "Titulo": "Planos e Preços",
+        "conteudo": "O InVision oferece diferentes planos, incluindo um plano gratuito com recursos básicos e planos pagos com recursos avançados, como colaboração ilimitada, prototipagem avançada e gerenciamento de design."
+      },
+      {
+        "id": 11,
+        "Titulo": "Segurança e Privacidade",
+        "conteudo": "O InVision prioriza a segurança dos dados dos usuários e oferece recursos como autenticação de dois fatores (2FA) e opções de controle de privacidade para proteger informações sensíveis."
+      },
+      {
+        "id": 12,
+        "Titulo": "Aprendizado",
+        "conteudo": "Para aprender a usar o InVision, a plataforma oferece tutoriais em vídeo, webinars e recursos educacionais online para ajudar os usuários a tirar o máximo proveito de suas funcionalidades."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://support.invisionapp.com/"
+      }
+    ]
+  },
+  {
+    "nome": "Sketch",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Sketch é um software de design vetorial exclusivo para macOS, amplamente utilizado por designers para criar interfaces de usuário, ícones, ilustrações e outros elementos gráficos. Ele é conhecido por sua simplicidade e foco no design de interfaces e experiências digitais."
+      },
+      {
+        "id": 2,
+        "Titulo": "Design Vetorial",
+        "conteudo": "Uma das principais características do Sketch é sua natureza vetorial, permitindo que os designs sejam escalados para diferentes tamanhos sem perder qualidade. Isso o torna ideal para criar elementos de interface e ícones para aplicativos e sites."
+      },
+      {
+        "id": 3,
+        "Titulo": "Interface Intuitiva",
+        "conteudo": "O Sketch oferece uma interface simples e intuitiva, com uma variedade de ferramentas de desenho e edição que permitem que os designers criem rapidamente layouts, componentes e interações."
+      },
+      {
+        "id": 4,
+        "Titulo": "Componentes Reutilizáveis",
+        "conteudo": "Uma característica poderosa do Sketch é a capacidade de criar componentes reutilizáveis, como botões, barras de navegação e caixas de diálogo, que podem ser facilmente replicados e atualizados em todo o design."
+      },
+      {
+        "id": 5,
+        "Titulo": "Prototipagem Simples",
+        "conteudo": "Embora o Sketch seja principalmente um software de design estático, ele também oferece recursos básicos de prototipagem, permitindo que os designers criem links entre telas para demonstrar fluxos de interação."
+      },
+      {
+        "id": 6,
+        "Titulo": "Integração com Outras Ferramentas",
+        "conteudo": "O Sketch oferece integrações com outras ferramentas populares, como o InVision, para aprimorar a prototipagem e testes de usabilidade. Isso permite que os designs do Sketch se tornem interativos e testáveis."
+      },
+      {
+        "id": 7,
+        "Titulo": "Plugins e Extensões",
+        "conteudo": "A comunidade do Sketch desenvolve uma ampla variedade de plugins e extensões que estendem suas capacidades e automatizam tarefas comuns, melhorando o fluxo de trabalho dos designers."
+      },
+      {
+        "id": 8,
+        "Titulo": "Exportação e Formatos",
+        "conteudo": "Os designs criados no Sketch podem ser exportados em vários formatos, incluindo PNG, JPG, SVG e arquivos nativos do Sketch. Isso facilita a colaboração com desenvolvedores e a preparação para desenvolvimento."
+      },
+      {
+        "id": 9,
+        "Titulo": "Pixel-Perfect Design",
+        "conteudo": "O Sketch é altamente valorizado por sua capacidade de criar designs precisos em nível de pixel, o que é crucial para garantir que os elementos de interface se alinhem corretamente nas diferentes telas de dispositivos."
+      },
+      {
+        "id": 10,
+        "Titulo": "Comunidade e Recursos",
+        "conteudo": "Existem muitos recursos educacionais disponíveis para aprender o Sketch, incluindo tutoriais em vídeo, blogs e cursos online. A comunidade do Sketch é ativa e compartilha dicas, truques e recursos."
+      },
+      {
+        "id": 11,
+        "Titulo": "Planos e Preços",
+        "conteudo": "O Sketch oferece um modelo de pagamento único para obter uma licença vitalícia da versão atual do software, o que pode ser mais acessível a longo prazo em comparação com modelos de assinatura."
+      },
+      {
+        "id": 12,
+        "Titulo": "Uso em Design de UI/UX",
+        "conteudo": "O Sketch é amplamente utilizado por designers de interface e experiência do usuário para criar designs de aplicativos, websites e outras plataformas digitais. Sua simplicidade e recursos específicos de UI/UX o tornam uma escolha popular nessa área."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://www.sketch.com/docs/"
+      }
+    ]
+  },
+  {
+    "nome": "Adobephotoshop",
+    "topicos": [
+      {
+        "id": 1,
+        "Titulo": "O que é",
+        "conteudo": "Adobe Photoshop é um software de edição de imagens líder na indústria que permite aos usuários criar, manipular e aprimorar imagens digitais. Ele é amplamente usado por fotógrafos, designers gráficos, artistas digitais e profissionais de mídia para editar fotos e criar ilustrações."
+      },
+      {
+        "id": 2,
+        "Titulo": "Edição de Imagens",
+        "conteudo": "Uma das principais características do Photoshop é sua ampla gama de ferramentas de edição de imagens, que incluem ajustes de cor, retoque, remoção de fundo, manipulação de camadas, filtros e muito mais."
+      },
+      {
+        "id": 3,
+        "Titulo": "Manipulação de Camadas",
+        "conteudo": "O uso de camadas é uma parte fundamental do Photoshop. Ele permite que os usuários editem partes individuais de uma imagem sem afetar o restante, possibilitando a criação de composições complexas."
+      },
+      {
+        "id": 4,
+        "Titulo": "Fotografia",
+        "conteudo": "O Photoshop é uma ferramenta essencial para fotógrafos, oferecendo recursos para ajustes de exposição, correção de cor, retoque de retratos, criação de efeitos especiais e muito mais."
+      },
+      {
+        "id": 5,
+        "Titulo": "Design Gráfico",
+        "conteudo": "Além da edição de fotos, o Photoshop é usado para criar gráficos, ilustrações, logotipos e outros elementos visuais usados em design gráfico, impressão e mídia digital."
+      },
+      {
+        "id": 6,
+        "Titulo": "Ferramentas de Pincel",
+        "conteudo": "O Photoshop oferece uma ampla variedade de pincéis personalizáveis, que podem ser usados para pintura digital, retoque e aplicação de efeitos artísticos."
+      },
+      {
+        "id": 7,
+        "Titulo": "Texto e Tipografia",
+        "conteudo": "Os designers podem adicionar texto às suas imagens usando uma variedade de opções de formatação e estilos de tipografia, tornando o Photoshop útil para criar designs de pôsteres, cartões e material promocional."
+      },
+      {
+        "id": 8,
+        "Titulo": "Integração com Outras Ferramentas",
+        "conteudo": "O Photoshop faz parte da suíte Adobe Creative Cloud e pode ser integrado com outros aplicativos, como o Adobe Illustrator, InDesign e Lightroom, para fluxos de trabalho mais eficientes."
+      },
+      {
+        "id": 9,
+        "Titulo": "Exportação e Formatos",
+        "conteudo": "As imagens criadas ou editadas no Photoshop podem ser exportadas em vários formatos, incluindo JPEG, PNG, GIF e PSD (formato nativo do Photoshop), mantendo a qualidade e a compatibilidade."
+      },
+      {
+        "id": 10,
+        "Titulo": "Recursos 3D",
+        "conteudo": "O Photoshop oferece recursos 3D que permitem a criação e manipulação de objetos 3D, bem como a aplicação de texturas e efeitos de iluminação para criar cenas realistas."
+      },
+      {
+        "id": 11,
+        "Titulo": "Aprendizado",
+        "conteudo": "A Adobe oferece tutoriais em vídeo, webinars e recursos educacionais online para ajudar os usuários a aprender a usar o Photoshop e explorar suas funcionalidades."
+      },
+      {
+        "id": 12,
+        "Titulo": "História",
+        "conteudo": "O Adobe Photoshop foi lançado pela primeira vez em 1990 e desempenhou um papel fundamental na transformação da edição de imagens digitais. Ao longo dos anos, evoluiu com recursos avançados e se tornou uma ferramenta indispensável para muitos profissionais criativos."
+      },
+      {
+        "id": 13,
+        "Titulo": "Documentação",
+        "conteudo": "https://helpx.adobe.com/photoshop/user-guide.html"
+      }
+    ]
+  }    
 ]
