@@ -350,6 +350,7 @@ button:focus {
     width: 8px;
     width: 8px;
 }
+
 .barra-lateral::-webkit-scrollbar-thumb {
     background-color: var(--cinza);
     border-radius: 8px;
@@ -404,4 +405,269 @@ h3 {
 .alinhar-fim {
     display: flex;
     justify-content: end;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .box-conteudo {
+        width: 800px;
+        margin-left: 100px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-pesquisa {
+        width: 400px;
+    }
+
+    .barra-lateral {
+        height: 100vh;
+        width: 200px;
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+/* Tela entre 769px e 1024px */
+@media (min-width: 760px) and (max-width: 1000px) {
+    .box-conteudo {
+        width: 600px;
+        margin-left: 100px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    .input-pesquisa {
+        width: 400px;
+    }
+
+    .barra-lateral {
+        height: 100vh;
+        padding: 5px;
+    }
+
+    li {
+        font-size: 11px;
+    }
+
+    .botao {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 760px) {
+    .box-conteudo {
+        width: 600px;
+        margin-left: -50px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    .input-pesquisa {
+        width: 400px;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+
+    li {
+        font-size: 11px;
+    }
+
+    .botao {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+    }
+
+    .topo {
+        left: 20%;
+    }
+}
+
+@media (max-width: 650px) {
+    .box-conteudo {
+        width: 450px;
+        margin-left: -50px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    .input-pesquisa {
+        width: 350px;
+    }
+
+    li {
+        font-size: 11px;
+    }
+
+    .botao {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+    }
+
+    .topo {
+        left: 17%;
+    }
+}
+
+@media (max-width: 550px) {
+    .box-conteudo {
+        width: 450px;
+        margin-left: -50px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    .input-pesquisa {
+        width: 350px;
+    }
+
+    li {
+        font-size: 11px;
+    }
+
+    .botao {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+    }
+
+    .topo {
+        left: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .box-conteudo {
+        width: 350px;
+        margin-left: -30px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-pesquisa {
+        width: 300px;
+    }
+
+    .botao {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+    }
+
+    .topo {
+        left: 10%;
+    }
+}
+
+@media (max-width: 450px) {
+    .box-conteudo {
+        width: 350px;
+        margin-left: -30px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-pesquisa {
+        width: 250px;
+    }
+
+    .botao {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+    }
+
+    .topo {
+        left: 10%;
+    }
+}
+
+@media (max-width: 380px) {
+    .box-conteudo {
+        width: 320px;
+        margin-left: -30px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-pesquisa {
+        width: 220px;
+    }
+
+    .botao {
+        max-width: 28px;
+        max-height: 28px;
+    }
+
+    .icon {
+        margin-bottom: 3px;
+        padding-right: 2px;
+    }
+
+    .topo {
+        left: 10%;
+    }
 }
