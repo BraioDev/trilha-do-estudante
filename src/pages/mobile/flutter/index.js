@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../mobile.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Flutter() {
     return (
-        <body style={{ backgroundColor: 'var(--verde-claro)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>Flutter</span>
-                </div>
-            </div>
+        <body style={{ backgroundColor: 'var(--verde-claro)' }}>
+            <CustomComponent linguagem="Flutter" />
         </body>
     );
 }

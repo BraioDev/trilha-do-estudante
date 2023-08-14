@@ -1,14 +1,11 @@
 import '../../../style.css';
 import '../mobile.css';
+import CustomComponent from '../../../components/customJson/customJson';
 
 export default function Android() {
     return (
         <body style={{ backgroundColor: 'var(--verde-claro)'}}>
-            <div className="container">
-                <div className="row">
-                    <span>Android</span>
-                </div>
-            </div>
+            <CustomComponent linguagem="Android" />
         </body>
     );
 }
