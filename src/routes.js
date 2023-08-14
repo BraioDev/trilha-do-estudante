@@ -35,6 +35,13 @@ import Pgadmin from './pages/banco/pgadmin';
 import Mysql from './pages/banco/mysql';
 import Sqlite from './pages/banco/sqlite';
 import Mongodb from './pages/banco/mongodb';
+/* Design */
+import Figma from './pages/design/figma';
+import Canva from './pages/design/canva';
+import Illustrator from './pages/design/illustrator';
+import Invision from './pages/design/invision';
+import Sketch from './pages/design/sketch';
+import Adobephotoshop from './pages/design/adobephotohop';
 
 export default function RoutesAPP(){
     return(
@@ -80,6 +87,14 @@ export default function RoutesAPP(){
             <Route path="/mysql" element={<Mysql/>}/>   
             <Route path="/sqlite" element={<Sqlite/>}/>   
             <Route path="/mongodb" element={<Mongodb/>}/>
+            
+            {/* Rotas Design */}
+            <Route path="/figma" element={<Figma/>}/>
+            <Route path="/canva" element={<Canva/>}/>
+            <Route path="/illustrator" element={<Illustrator/>}/>
+            <Route path="/invision" element={<Invision/>}/>   
+            <Route path="/sketch" element={<Sketch/>}/>   
+            <Route path="/adobephotoshop" element={<Adobephotoshop/>}/>
         </Routes>
         </BrowserRouter>
     );

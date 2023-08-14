@@ -1,3 +1,23 @@
-body{
-    background-color: var(--azul-roxo);
+.box_figma:hover {
+    color: var(--azul-roxo);
+}
+
+.box_canva:hover{
+    color: var(--azul-canva);
+}
+
+.box_illustrator:hover{
+    color: var(--marrom-illustrator);
+}
+
+.box_invision:hover{
+    color: var(--rosa-invision);
+}
+
+.box_sketch:hover{
+    color: var(--amarelo-sketch);
+}
+
+.box_adobephotoshop:hover{
+    color: var(--azul-adobephotoshop);
 }

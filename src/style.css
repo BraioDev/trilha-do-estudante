@@ -70,8 +70,11 @@ header {
     --azul-pgadmin: #336791;
     --azul-mysql: #00556C;
     --azul-sqlite: #329AD9;
+    --azul-canva: #119ED5;
+    --azul-adobephotoshop: #5596DA;
     /* roxo */
     --azul-roxo: #aa67e9;
+    --roxo-figma: #aa67e9;
     /* verde */
     --verde-claro: #38ce6a;
     --verde-musgo: #6D9A00;
@@ -80,14 +83,18 @@ header {
     --vermelho: #E51C20;
     --vermelho-claro: #e94144;
     --vermelho-bordo: #C40030;
+    /* rosa */
+    --rosa-invision: #FF427A;
     /* laranja */
     --vermelho-laranja: #DB380E;
     --laranja: #FF9100;
     --laranja-forte: #FD6C35;
     /* amarelo */
     --amarelo-claro: #F0DC4E;
+    --amarelo-sketch: #FDAD00;
     --amarelo-rgb: rgba(255, 204, 0, 0.9);
     --amarelo: #F9C63D;
+    --marrom-illustrator: #FF9A00;
 }
 
 /* Input*/
