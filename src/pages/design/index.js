@@ -10,6 +10,7 @@ import invision from '../../assets/imagens/invision.png';
 import sketch from '../../assets/imagens/sketch.png';
 import adobephotoshop from '../../assets/imagens/adobephotoshop.png';
 import BackButton from "../../components/backButton";
+import LoginButton from "../../components/loginButton";
 
 export default function Design() {
 
@@ -19,6 +20,7 @@ export default function Design() {
                 <div className="row">
                     <div className="w-100 alinhar-fim">
                         <BackButton />
+                        <LoginButton />
                     </div>
                     {/* -------------------Inicio dos cards----------------------- */}
                     <div

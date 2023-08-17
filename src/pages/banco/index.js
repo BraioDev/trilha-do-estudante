@@ -10,6 +10,7 @@ import mongodb from '../../assets/imagens/mongodb.png';
 import mysql from '../../assets/imagens/mysql.png';
 import sqlite from '../../assets/imagens/sqlite.png';
 import BackButton from "../../components/backButton";
+import LoginButton from "../../components/loginButton";
 
 export default function Banco() {
 
@@ -19,6 +20,7 @@ export default function Banco() {
         <div className="row">
           <div className="w-100 alinhar-fim">
             <BackButton />
+            <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div

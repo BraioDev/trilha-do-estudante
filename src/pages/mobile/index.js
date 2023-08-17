@@ -10,6 +10,7 @@ import reactNative from '../../assets/imagens/react.png';
 import xamarin from '../../assets/imagens/xamarin.png';
 import xcode from '../../assets/imagens/xcode.png';
 import BackButton from "../../components/backButton";
+import LoginButton from "../../components/loginButton";
 
 export default function Mobile() {
 
@@ -19,6 +20,7 @@ export default function Mobile() {
         <div className="row">
           <div className="w-100 alinhar-fim">
             <BackButton />
+            <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div

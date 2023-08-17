@@ -10,6 +10,7 @@ import java from '../../assets/imagens/java.png';
 import python from '../../assets/imagens/python.png';
 import csharp from '../../assets/imagens/csharp.png';
 import BackButton from "../../components/backButton";
+import LoginButton from "../../components/loginButton";
 
 export default function Back() {
 
@@ -19,6 +20,7 @@ export default function Back() {
         <div className="row">
           <div className="w-100 alinhar-fim">
             <BackButton />
+            <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div

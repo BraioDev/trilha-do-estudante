@@ -42,11 +42,16 @@ import Illustrator from './pages/design/illustrator';
 import Invision from './pages/design/invision';
 import Sketch from './pages/design/sketch';
 import Adobephotoshop from './pages/design/adobephotohop';
+/* Login */
+import Login from './pages/login/index'
 
 export default function RoutesAPP(){
     return(
         <BrowserRouter>
         <Routes>
+            {/* tela login */}
+            <Route path="/login" element={<Login/>}/> 
+
             {/* Rotas principais */}
             <Route path="/" element={<Home/>}/>
             <Route path="*" element={<Erro/>}/>

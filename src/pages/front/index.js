@@ -10,6 +10,7 @@ import javaScript from '../../assets/imagens/js_icon.png';
 import react from '../../assets/imagens/react.png';
 import bootstrap from '../../assets/imagens/bootstrap_icon.png';
 import BackButton from "../../components/backButton";
+import LoginButton from "../../components/loginButton";
 
 export default function Front() {
 
@@ -19,6 +20,7 @@ export default function Front() {
         <div className="row">
           <div className="w-100 alinhar-fim">
           <BackButton />
+          <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
