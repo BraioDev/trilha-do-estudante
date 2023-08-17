@@ -9,6 +9,7 @@ import swagger from '../../assets/imagens/swagger.png';
 import java from '../../assets/imagens/java.png';
 import python from '../../assets/imagens/python.png';
 import csharp from '../../assets/imagens/csharp.png';
+import BackButton from "../../components/backButton";
 
 export default function Back() {
 
@@ -17,9 +18,7 @@ export default function Back() {
       <div className="container">
         <div className="row">
           <div className="w-100 alinhar-fim">
-            <Link to="/" className='link-invisivel'>
-              <button className='button-dark'>Voltar</button>
-            </Link>
+            <BackButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div

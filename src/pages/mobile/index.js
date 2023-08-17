@@ -9,6 +9,7 @@ import ionic from '../../assets/imagens/ionic.png';
 import reactNative from '../../assets/imagens/react.png';
 import xamarin from '../../assets/imagens/xamarin.png';
 import xcode from '../../assets/imagens/xcode.png';
+import BackButton from "../../components/backButton";
 
 export default function Mobile() {
 
@@ -17,9 +18,7 @@ export default function Mobile() {
       <div className="container">
         <div className="row">
           <div className="w-100 alinhar-fim">
-            <Link to="/" className='link-invisivel'>
-              <button className='button-dark'>Voltar</button>
-            </Link>
+            <BackButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div

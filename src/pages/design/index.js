@@ -9,6 +9,7 @@ import illustrator from '../../assets/imagens/illustrator.png';
 import invision from '../../assets/imagens/invision.png';
 import sketch from '../../assets/imagens/sketch.png';
 import adobephotoshop from '../../assets/imagens/adobephotoshop.png';
+import BackButton from "../../components/backButton";
 
 export default function Design() {
 
@@ -17,9 +18,7 @@ export default function Design() {
             <div className="container">
                 <div className="row">
                     <div className="w-100 alinhar-fim">
-                        <Link to="/" className='link-invisivel'>
-                            <button className='button-dark'>Voltar</button>
-                        </Link>
+                        <BackButton />
                     </div>
                     {/* -------------------Inicio dos cards----------------------- */}
                     <div

@@ -9,6 +9,7 @@ import pgadmin from '../../assets/imagens/pgadmin.png';
 import mongodb from '../../assets/imagens/mongodb.png';
 import mysql from '../../assets/imagens/mysql.png';
 import sqlite from '../../assets/imagens/sqlite.png';
+import BackButton from "../../components/backButton";
 
 export default function Banco() {
 
@@ -17,9 +18,7 @@ export default function Banco() {
       <div className="container">
         <div className="row">
           <div className="w-100 alinhar-fim">
-            <Link to="/" className='link-invisivel'>
-              <button className='button-dark'>Voltar</button>
-            </Link>
+            <BackButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
