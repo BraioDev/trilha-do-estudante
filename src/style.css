@@ -320,7 +320,15 @@ button:focus {
     background-color: var(--branco-base);
     margin-bottom: 20px;
     margin-left: 100px;
+    transition: ease-in-out 0.3s;
 }
+
+.box-conteudo:hover {
+    background-color: var(--cinza-padrao);
+    color: var(--branco-base);
+    transform: scale(1.1);
+}
+
 
 .icon {
     margin-bottom: 2px;
@@ -500,8 +508,8 @@ h3 {
     }
 
     .botao {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
@@ -509,13 +517,13 @@ h3 {
     }
 
     .box {
-        height: 120px;
-        max-width: 120px;
+        height: 150px;
+        max-width: 150px;
     }
 
     img {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         margin: 20px 0 20px 0 !important;
     }
 }
@@ -548,8 +556,8 @@ h3 {
     }
 
     .botao {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
@@ -596,8 +604,8 @@ h3 {
     }
 
     .botao {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
@@ -633,8 +641,8 @@ h3 {
     }
 
     .botao {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
@@ -673,8 +681,8 @@ h3 {
     }
 
     .botao {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
@@ -713,8 +721,8 @@ h3 {
     }
 
     .botao {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
@@ -723,6 +731,11 @@ h3 {
 
     .topo {
         left: 10%;
+    }
+
+    .box {
+        height: 150px;
+        max-width: 150px;
     }
 }
 
@@ -742,8 +755,8 @@ h3 {
     }
 
     .botao {
-        max-width: 28px;
-        max-height: 28px;
+        max-width: 32px;
+        max-height: 32px;
     }
 
     .icon {
