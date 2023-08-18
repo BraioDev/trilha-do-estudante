@@ -31,7 +31,27 @@ header {
     height: 95vh;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: var(--branco-base);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -117,6 +137,7 @@ input {
 input:hover,
 input:focus {
     background-color: var(--cinza-input);
+    color: var(--branco-base);
 }
 
 input::placeholder {
@@ -132,6 +153,14 @@ input::placeholder {
 input:focus::placeholder {
     transition: all 0.1s;
     color: transparent;
+}
+
+.input-login{
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 300px;
+    background: var(--branco-cinza);
+    margin-bottom: 10px;
 }
 
 /*Topo do site*/
@@ -413,6 +442,52 @@ h3 {
 .alinhar-fim {
     display: flex;
     justify-content: end;
+}
+
+/* Calendar */
+.simple-calendar {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-header-cell,
+.calendar-cell {
+    text-align: center;
+    padding: 5px;
+}
+
+.calendar-cell:hover {
+    background-color: var(--cinza-escuro);
+    border-radius: 8px;
+}
+
+.selected {
+    background-color: #66cc99;
+    /* Cor de fundo para datas selecionadas */
+    border-radius: 50%;
+}
+
+.button-inerith {
+    background-color: inherit !important;
+}
+
+.empty {
+    background-color: inherit;
 }
 
 @media (min-width: 1400px) {

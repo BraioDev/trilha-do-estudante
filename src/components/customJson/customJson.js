@@ -7,6 +7,7 @@ import { FaTrash } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
+import LoginButton from "../../components/loginButton";
 
 export default function CustomComponent({ linguagem }) {
     /*Simula a chamada de api*/
@@ -19,7 +20,6 @@ export default function CustomComponent({ linguagem }) {
         fetch(process.env.PUBLIC_URL + '/data.json')
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 setJsonData(data);
             })
             .catch(error => console.error('Erro ao buscar dados JSON:', error));
@@ -100,6 +100,7 @@ export default function CustomComponent({ linguagem }) {
                                 <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
                             </button>
                         </Tooltip>
+                        <LoginButton />
                     </div>
                     {/*Barra lateral que pega o titulo de cada json para a pessoa clicar*/}
                     {!showAlert && (
