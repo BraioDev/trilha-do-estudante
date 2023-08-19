@@ -155,7 +155,7 @@ input:focus::placeholder {
     color: transparent;
 }
 
-.input-login{
+.input-login {
     font-size: 14px;
     font-weight: bold;
     max-width: 300px;
@@ -488,6 +488,53 @@ h3 {
 
 .empty {
     background-color: inherit;
+}
+
+/*Profile*/
+.profile-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--branco-cinza);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+.input-button{
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 35px;
+    width: 83px;
+    background: transparent;
+    transition: ease-in-out 0.3s;
+    user-select: none;
+    color: var(--preto-cinza);
+    background-color: var(--branco-base);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-button:hover {
+    transform: scale(1.1);
+    outline: none;
+    transition: ease-in-out 0.3s;
+    background-color: var(--preto-cinza);
+    color: var(--branco-base);
+    cursor: pointer;
+    font-weight: bold;
 }
 
 @media (min-width: 1400px) {
