@@ -7,10 +7,15 @@ import {
     signOut, onAuthStateChanged
 } from 'firebase/auth';
 import userIcon from '../../assets/imagens/user.png'
+import InputMask from "react-input-mask";
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [nome, setNome] = useState('');
+    const [idade, setIdade] = useState('');
+    const [telefone, setTelefone] = useState('');
+
     const [user, setUser] = useState(false);
     const [userDetail, setUserDetail] = useState({})
     const [IsButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -44,10 +49,13 @@ export default function Login() {
     }, [])
 
     async function novoUsuario() {
-        await createUserWithEmailAndPassword(auth, email, senha)
+        await createUserWithEmailAndPassword(auth, email, senha, nome, idade, telefone)
             .then(() => {
                 setEmail('')
                 setSenha('')
+                setNome('')
+                setIdade('')
+                setTelefone('')
             })
             .catch((error) => {
                 if (error.code === 'auth/weak-password') {
@@ -130,10 +138,10 @@ export default function Login() {
                     <div className="login-card">
                         <h2>Login</h2>
                         <input
-                            type="email"
-                            placeholder="Informe seu email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            type="nome"
+                            placeholder="Informe seu nome"
+                            value={nome}
+                            onChange={(e) => setNome(e.target.value)}
                             className="input-login"
                         />
 
@@ -142,6 +150,32 @@ export default function Login() {
                             placeholder="Informe sua senha"
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)}
+                            className="input-login"
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Informe seu email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="input-login"
+                        />
+
+                        <input
+                            type="idade"
+                            placeholder="Informe sua idade"
+                            value={idade}
+                            onChange={(e) => setIdade(e.target.value)}
+                            className="input-login"
+                            maxLength={3}
+                        />
+
+                        <InputMask
+                            type="telefone"
+                            mask="+55 (99) 99999-9999"
+                            placeholder="Informe seu telefone"
+                            value={telefone}
+                            onChange={(e) => setTelefone(e.target.value)}
                             className="input-login"
                         />
 
