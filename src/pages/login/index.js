@@ -3,18 +3,16 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { auth } from '../../firebaseConection';
 import {
-    createUserWithEmailAndPassword, signInWithEmailAndPassword,
+    signInWithEmailAndPassword,
     signOut, onAuthStateChanged
 } from 'firebase/auth';
-import userIcon from '../../assets/imagens/user.png'
-import InputMask from "react-input-mask";
+import userIcon from '../../assets/imagens/user.png';
+import { Link } from 'react-router-dom';
+import 'react-tippy/dist/tippy.css';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [nome, setNome] = useState('');
-    const [idade, setIdade] = useState('');
-    const [telefone, setTelefone] = useState('');
 
     const [user, setUser] = useState(false);
     const [userDetail, setUserDetail] = useState({})
@@ -43,29 +41,8 @@ export default function Login() {
                 }
             })
         }
-
         checkLogin();
-
     }, [])
-
-    async function novoUsuario() {
-        await createUserWithEmailAndPassword(auth, email, senha, nome, idade, telefone)
-            .then(() => {
-                setEmail('')
-                setSenha('')
-                setNome('')
-                setIdade('')
-                setTelefone('')
-            })
-            .catch((error) => {
-                if (error.code === 'auth/weak-password') {
-                    toast.error('Senha muito fraca, por favor insira outra');
-                } else if (error.code === 'auth/email-already-in-use') {
-                    toast.error('Email já existente');
-                }
-
-            })
-    }
 
     async function logarUsuario() {
         await signInWithEmailAndPassword(auth, email, senha)
@@ -138,14 +115,6 @@ export default function Login() {
                     <div className="login-card">
                         <h2>Login</h2>
                         <input
-                            type="nome"
-                            placeholder="Informe seu nome"
-                            value={nome}
-                            onChange={(e) => setNome(e.target.value)}
-                            className="input-login"
-                        />
-
-                        <input
                             type="password"
                             placeholder="Informe sua senha"
                             value={senha}
@@ -161,26 +130,11 @@ export default function Login() {
                             className="input-login"
                         />
 
-                        <input
-                            type="idade"
-                            placeholder="Informe sua idade"
-                            value={idade}
-                            onChange={(e) => setIdade(e.target.value)}
-                            className="input-login"
-                            maxLength={3}
-                        />
-
-                        <InputMask
-                            type="telefone"
-                            mask="+55 (99) 99999-9999"
-                            placeholder="Informe seu telefone"
-                            value={telefone}
-                            onChange={(e) => setTelefone(e.target.value)}
-                            className="input-login"
-                        />
-
+                        {/* botões */}
                         <button className="button-dark espacamento" onClick={logarUsuario}>Login</button>
-                        <button className="button-dark espacamento" onClick={novoUsuario}>Cadastrar</button>
+                        <Link to="/auto-cadastro" className='link-invisivel'>
+                            <button className="button-dark espacamento">Cadastrar</button>
+                        </Link>
                         <button className="button-dark espacamento" onClick={handleBack}>Voltar</button>
                     </div>
                 </div>

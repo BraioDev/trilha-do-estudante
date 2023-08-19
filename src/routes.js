@@ -44,6 +44,7 @@ import Sketch from './pages/design/sketch';
 import Adobephotoshop from './pages/design/adobephotohop';
 /* Login */
 import Login from './pages/login/index'
+import AutoCadastro from "./pages/autoCadastro";
 
 export default function RoutesAPP(){
     return(
@@ -51,6 +52,7 @@ export default function RoutesAPP(){
         <Routes>
             {/* tela login */}
             <Route path="/login" element={<Login/>}/> 
+            <Route path="/auto-cadastro" element={<AutoCadastro/>}/>
 
             {/* Rotas principais */}
             <Route path="/" element={<Home/>}/>
