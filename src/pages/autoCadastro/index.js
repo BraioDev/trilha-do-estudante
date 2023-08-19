@@ -7,7 +7,6 @@ import {
 } from 'firebase/auth';
 import InputMask from "react-input-mask";
 import 'react-tippy/dist/tippy.css';
-import { Link } from 'react-router-dom';
 
 export default function AutoCadastro() {
 

@@ -537,6 +537,20 @@ h3 {
     font-weight: bold;
 }
 
+.span-button{
+    text-align: center;
+    font-size: 16px;
+    height: 35px;
+    background: transparent;
+    transition: ease-in-out 0.3s;
+    color: var(--preto-cinza);
+    background-color: var(--branco-base);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 1400px) {
     .box-conteudo {
         width: 1200px;

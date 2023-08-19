@@ -31,9 +31,8 @@ export default function Login() {
                     setUser(true);
                     setUserDetail({
                         uid: user.uid,
-                        email: user.email
+                        email: user.email,
                     })
-
                 } else {
                     // nao possui nenhum user logado.
                     setUser(false);
@@ -104,8 +103,7 @@ export default function Login() {
                                 onChange={handleImageChange}
                             />
                         </label>
-                        <span>nome: {userDetail.email}</span>
-                        <span>Email: {userDetail.email}</span>
+                        <span className='span-button'>Olá {userDetail.email}</span>
                         <button className="button-dark espacamento" onClick={fazerLogout}>Logout</button>
                         <button className="button-dark espacamento" onClick={handleBack}>Voltar</button>
                     </div>
@@ -115,21 +113,19 @@ export default function Login() {
                     <div className="login-card">
                         <h2>Login</h2>
                         <input
-                            type="password"
-                            placeholder="Informe sua senha"
-                            value={senha}
-                            onChange={(e) => setSenha(e.target.value)}
-                            className="input-login"
-                        />
-
-                        <input
                             type="email"
                             placeholder="Informe seu email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className="input-login"
                         />
-
+                        <input
+                            type="password"
+                            placeholder="Informe sua senha"
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
+                            className="input-login"
+                        />
                         {/* botões */}
                         <button className="button-dark espacamento" onClick={logarUsuario}>Login</button>
                         <Link to="/auto-cadastro" className='link-invisivel'>
