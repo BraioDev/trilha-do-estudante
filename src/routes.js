@@ -46,6 +46,8 @@ import Adobephotoshop from './pages/design/adobephotohop';
 import Login from './pages/login/index'
 import AutoCadastro from "./pages/autoCadastro";
 
+import Private from './private'
+
 export default function RoutesAPP(){
     return(
         <BrowserRouter>

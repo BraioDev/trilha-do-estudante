@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import back from '../../assets/imagens/python.png';
+import back from '../../assets/imagens/csharp.png';
 import front from '../../assets/imagens/ts_icon.png';
 import mobile from '../../assets/imagens/android_icon.png';
 import design from '../../assets/imagens/ux.png';

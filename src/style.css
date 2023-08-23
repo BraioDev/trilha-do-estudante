@@ -70,6 +70,8 @@ header {
     /* cinza */
     --cinza: #bbbbbb;
     --cinza-escuro: #999999;
+    --cinza-box: #D0D1D3;
+    --branco-80:rgba(255, 255, 255, 0.8);
     /* preto */
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
@@ -180,7 +182,12 @@ input:focus::placeholder {
     resize: none;
 }
 
-.comentarios{
+.text-area::placeholder {
+    color: var(--cinza-transparente);
+}
+
+
+.comentarios {
     margin-top: 20px;
 }
 
@@ -373,11 +380,10 @@ button:focus {
     transition: ease-in-out 0.3s;
 }
 
-.box-conteudo:hover {
+/* .box-conteudo:hover {
     background-color: var(--cinza-padrao);
     color: var(--branco-base);
-    transform: scale(1.1);
-}
+} */
 
 .box-comentario {
     text-align: center;
@@ -390,11 +396,6 @@ button:focus {
     margin-bottom: 20px;
     margin-left: 100px;
     transition: ease-in-out 0.3s;
-}
-
-.box-comentario:hover {
-    background-color: var(--cinza-padrao);
-    color: var(--branco-base);
 }
 
 
@@ -415,21 +416,37 @@ button:focus {
     position: fixed;
     border-radius: 0 8px 8px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    background-color: var(--branco-base);
+    background-color: var(--branco-80);
     top: 0;
     bottom: 0;
     left: 0;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--branco-base);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--branco-80);
+}
+
 /* barra de rolagem */
 .barra-lateral::-webkit-scrollbar {
-    width: 8px;
     width: 8px;
 }
 
 .barra-lateral::-webkit-scrollbar-thumb {
-    background-color: var(--cinza);
+    background-color: var(--branco-base);
     border-radius: 8px;
+}
+
+.barra-lateral::-webkit-scrollbar-track {
+    background-color: var(--cinza-escuro);
 }
 
 ul {
@@ -547,7 +564,7 @@ h3 {
     margin-bottom: 40px;
 }
 
-.input-button{
+.input-button {
     margin-top: 10px;
     text-align: center;
     border: none;
@@ -576,7 +593,7 @@ h3 {
     font-weight: bold;
 }
 
-.span-button{
+.span-button {
     text-align: center;
     font-size: 16px;
     height: 35px;
@@ -614,18 +631,6 @@ h3 {
     li {
         margin-top: 25px;
         font-size: 18px;
-    }
-
-    .box {
-        height: 250px;
-        max-width: 250px;
-    }
-
-    img {
-        border-radius: 8px;
-        width: 120px;
-        height: 120px;
-        -webkit-user-drag: none;
     }
 
 }
