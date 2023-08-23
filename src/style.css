@@ -75,6 +75,7 @@ header {
     /* preto */
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
+    --preto-50: rgba(0, 0, 0, 0.5);
     --cinza-padrao: #202124;
     --cinza-input: #303134;
     --cinza-transparente: rgba(48, 49, 52, 0.5);
@@ -297,7 +298,7 @@ button {
     transition: ease-in-out 0.3s;
     user-select: none;
     color: var(--preto-cinza);
-    background-color: var(--branco-base);
+    background-color: var(--branco-80) !important;
     font-weight: bold;
 }
 
@@ -309,7 +310,7 @@ button:hover {
 
 .button-dark:hover {
     background-color: var(--preto-cinza);
-    color: var(--branco-base);
+    color: var(--cinza-padrao);
     cursor: pointer;
     font-weight: bold;
 }
@@ -331,7 +332,7 @@ button:focus {
     max-width: 200px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    background-color: var(--branco-base);
+    background-color: var(--branco-80);
 }
 
 .box:hover {
@@ -374,16 +375,16 @@ button:focus {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    background-color: var(--branco-base);
+    background-color: var(--branco-80);
     margin-bottom: 20px;
     margin-left: 100px;
     transition: ease-in-out 0.3s;
 }
 
-/* .box-conteudo:hover {
-    background-color: var(--cinza-padrao);
+.box-conteudo:hover {
+    background-color: var(--preto-50);
     color: var(--branco-base);
-} */
+}
 
 .box-comentario {
     text-align: center;
@@ -470,9 +471,8 @@ li:hover {
     text-decoration: none !important;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
     padding: 5px;
-    background-color: var(--preto-cinza);
+    background-color: var(--preto-50);
     color: var(--branco-base);
     border-radius: 8px;
 }

@@ -138,7 +138,7 @@ export default function CustomComponent({ linguagem }) {
                             const marginTop = lowerCaseTitulo.includes("o que é") ? "50px" : "0"; // Adiciona a margem apenas se o título contiver "O que é"
 
                             return (
-                                <div key={topico.id} id={topico.id} className="box-conteudo" style={{ marginTop, backgroundColor: 'var(--branco-80)' }}>
+                                <div key={topico.id} id={topico.id} className="box-conteudo" style={{ marginTop}}>
                                     <h2>{topico.Titulo}</h2>
                                     <span>
                                         {conteudoArray.map((linha, index) => {

@@ -54,7 +54,7 @@ export default function RoutesAPP(){
         <Routes>
             {/* tela login */}
             <Route path="/login" element={<Login/>}/> 
-            <Route path="/auto-cadastro" element={<AutoCadastro/>}/>
+            <Route path="/auto-cadastro" element={<Private><AutoCadastro/></Private>}/>
 
             {/* Rotas principais */}
             <Route path="/" element={<Home/>}/>
