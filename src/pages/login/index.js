@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { auth } from '../../firebaseConection';
+import { auth, storage, db } from '../../firebaseConection';
 import {
     signInWithEmailAndPassword,
     signOut, onAuthStateChanged
@@ -9,12 +9,16 @@ import {
 import userIcon from '../../assets/imagens/user.png';
 import { Link } from 'react-router-dom';
 import 'react-tippy/dist/tippy.css';
+import '../../style.css';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { doc, updateDoc } from 'firebase/firestore';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
     const [user, setUser] = useState(false);
+    const [storageUser, setStorageUser] = useState(false);
     const [userDetail, setUserDetail] = useState({})
     const [IsButtonDisabled, setIsButtonDisabled] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -81,6 +85,41 @@ export default function Login() {
         }
     };
 
+    async function salvar() {
+        const currentUid = user.uid;
+
+        const uploadRef = ref(storage, `images/${currentUid}/${imagePreview}`)
+
+        const uploadTask = uploadBytes(uploadRef, imagePreview)
+            .then((snapshot) => {
+
+                getDownloadURL(snapshot.ref).then(async (downloadURL) => {
+                    let urlFoto = downloadURL;
+
+                    const docRef = doc(db, "usuários", user.uid)
+                    await updateDoc(docRef, {
+                        avatarUrl: urlFoto,
+                        email: email,
+                    })
+                        .then(() => {
+                            let data = {
+                                ...user,
+                                email: email,
+                                avatarUrl: urlFoto,
+                            }
+
+                            setUser(data);
+                            storageUser(data);
+                            toast.success("Atualizado com sucesso!")
+
+                    })
+
+               })
+
+        })
+    }
+
+
     return (
         <body style={{ backgroundColor: 'var(--branco-cinza)' }}>
             {user ? (
@@ -103,9 +142,12 @@ export default function Login() {
                                 onChange={handleImageChange}
                             />
                         </label>
-                        <span className='span-button'>Olá {userDetail.email}</span>
-                        <button className="button-dark espacamento" onClick={fazerLogout}>Logout</button>
+                        <input type="email" value={email} placeholder={userDetail.email} onChange={(e) => setEmail(e.target.value)} className="input-login" />
+                    </div>
+                    <div>
                         <button className="button-dark espacamento" onClick={handleBack}>Voltar</button>
+                        <button className="button-dark espacamento cancelar" onClick={fazerLogout}>Logout</button>
+                        <button className="button-dark espacamento cadastrar" onClick={salvar}>Salvar</button>
                     </div>
                 </div>
             ) : (
@@ -127,7 +169,7 @@ export default function Login() {
                             className="input-login"
                         />
                         {/* botões */}
-                        <button className="button-dark espacamento" onClick={logarUsuario}>Login</button>
+                        <button className="button-dark espacamento cadastrar" onClick={logarUsuario}>Login</button>
                         <Link to="/auto-cadastro" className='link-invisivel'>
                             <button className="button-dark espacamento">Cadastrar</button>
                         </Link>

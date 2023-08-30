@@ -43,7 +43,7 @@ import Invision from './pages/design/invision';
 import Sketch from './pages/design/sketch';
 import Adobephotoshop from './pages/design/adobephotohop';
 /* Login */
-import Login from './pages/login/index'
+import Login from './pages/login'
 import AutoCadastro from "./pages/autoCadastro";
 
 import Private from './private'
@@ -54,7 +54,7 @@ export default function RoutesAPP(){
         <Routes>
             {/* tela login */}
             <Route path="/login" element={<Login/>}/> 
-            <Route path="/auto-cadastro" element={<Private><AutoCadastro/></Private>}/>
+            <Route path="/auto-cadastro" element={<AutoCadastro/>}/>
 
             {/* Rotas principais */}
             <Route path="/" element={<Home/>}/>

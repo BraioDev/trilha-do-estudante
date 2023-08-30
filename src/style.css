@@ -7,6 +7,8 @@ body {
     overflow-x: hidden;
     transition: background-color 0.5s ease;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -38,6 +40,7 @@ header {
 /* Login */
 .login-container {
     display: flex;
+     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -50,6 +53,7 @@ header {
     padding: 20px;
     text-align: center;
     width: 350px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +75,7 @@ header {
     --cinza: #bbbbbb;
     --cinza-escuro: #999999;
     --cinza-box: #D0D1D3;
-    --branco-80:rgba(255, 255, 255, 0.8);
+    --branco-80: rgba(255, 255, 255, 0.8);
     /* preto */
     --preto: rgba(0, 0, 0, 0.15);
     --preto-cinza: rgba(0, 0, 0, 0.8);
@@ -118,6 +122,12 @@ header {
     --amarelo-rgb: rgba(255, 204, 0, 0.9);
     --amarelo: #F9C63D;
     --marrom-illustrator: #FF9A00;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+    /* Adicione outros estilos específicos para o tema escuro aqui */
 }
 
 /* Input*/
@@ -300,6 +310,7 @@ button {
     color: var(--preto-cinza);
     background-color: var(--branco-80) !important;
     font-weight: bold;
+    font-family: 'Cera Round Pro', sans-serif;
 }
 
 button:hover {
@@ -309,7 +320,7 @@ button:hover {
 }
 
 .button-dark:hover {
-    background-color: var(--preto-cinza);
+    background-color: var(--preto-50) !important;
     color: var(--cinza-padrao);
     cursor: pointer;
     font-weight: bold;
@@ -605,6 +616,16 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cancelar{
+    background-color: var(--vermelho-bordo) !important;
+    color: var(--branco-base)
+}
+
+.cadastrar{
+    background-color: var(--verde-mongodb) !important;
+    color: var(--branco-base)
 }
 
 @media (min-width: 1400px) {

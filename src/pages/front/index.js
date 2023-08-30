@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../../style.css';
 import './front.css';
@@ -19,8 +19,8 @@ export default function Front() {
       <div className="container">
         <div className="row">
           <div className="w-100 alinhar-fim">
-          <BackButton />
-          <LoginButton />
+            <BackButton />
+            <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
