@@ -45,7 +45,8 @@ import Adobephotoshop from './pages/design/adobephotohop';
 /* Login */
 import Login from './pages/login'
 import AutoCadastro from "./pages/autoCadastro";
-
+/* Histórico */
+import Historico from './pages/historico';
 import Private from './private'
 
 export default function RoutesAPP(){
@@ -104,6 +105,9 @@ export default function RoutesAPP(){
             <Route path="/invision" element={<Invision/>}/>   
             <Route path="/sketch" element={<Sketch/>}/>   
             <Route path="/adobephotoshop" element={<Adobephotoshop/>}/>
+
+            {/* Private */}
+            {<Route path="/historico" element={<Private><Historico/></Private>}/>}
         </Routes>
         </BrowserRouter>
     );

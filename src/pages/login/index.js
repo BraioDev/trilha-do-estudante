@@ -12,6 +12,12 @@ import 'react-tippy/dist/tippy.css';
 import '../../style.css';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { doc, updateDoc } from 'firebase/firestore';
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
+import { FaClockRotateLeft } from "react-icons/fa6";
+import { FaAngleLeft } from "react-icons/fa6";
+import { FaRightToBracket } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -86,9 +92,14 @@ export default function Login() {
     };
 
     async function salvar() {
+        if (!user || !user.uid) {
+            console.error("User or user's uid is undefined");
+            return;
+        }
+
         const currentUid = user.uid;
 
-        const uploadRef = ref(storage, `images/${currentUid}/${imagePreview}`)
+        const uploadRef = ref(storage, `images/${currentUid}/${imagePreview}`);
 
         const uploadTask = uploadBytes(uploadRef, imagePreview)
             .then((snapshot) => {
@@ -112,11 +123,14 @@ export default function Login() {
                             storageUser(data);
                             toast.success("Atualizado com sucesso!")
 
-                    })
+                        }).catch((error) => {
+                            toast.error("Não foi possível finalizar a edição");
+                            console.log("GEROU ERRO" + error)
+                        });
 
-               })
+                })
 
-        })
+            })
     }
 
 
@@ -145,9 +159,42 @@ export default function Login() {
                         <input type="email" value={email} placeholder={userDetail.email} onChange={(e) => setEmail(e.target.value)} className="input-login" />
                     </div>
                     <div>
-                        <button className="button-dark espacamento" onClick={handleBack}>Voltar</button>
-                        <button className="button-dark espacamento cancelar" onClick={fazerLogout}>Logout</button>
-                        <button className="button-dark espacamento cadastrar" onClick={salvar}>Salvar</button>
+                        <Tooltip
+                            title="voltar"
+                            position="bottom"
+                            trigger="mouseenter"
+                            className="tool"
+                        >
+                            <button className="botao button-dark espacamento" onClick={handleBack}>
+                                <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
+                            </button>
+                        </Tooltip>
+                        <Link to="/historico" className='espacamento link-invisivel'>
+                            <Tooltip
+                                title="histórico"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool"
+                            >
+                                <button className='botao button-dark home'> <FaClockRotateLeft size={20} className="icon" /></button>
+                            </Tooltip>
+                        </Link>
+                        <Tooltip
+                            title="logout"
+                            position="bottom"
+                            trigger="mouseenter"
+                            className="tool"
+                        >
+                            <button className='botao button-dark cancelar espacamento' onClick={fazerLogout}> <FaRightToBracket size={20} className="icon" /></button>
+                        </Tooltip>
+                        <Tooltip
+                            title="salvar"
+                            position="bottom"
+                            trigger="mouseenter"
+                            className="tool"
+                        >
+                            <button className='botao button-dark cadastrar espacamento' onClick={fazerLogout}> <FaCheck size={20} className="icon" /></button>
+                        </Tooltip>
                     </div>
                 </div>
             ) : (
