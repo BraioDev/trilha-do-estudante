@@ -7,8 +7,11 @@ import design from '../../assets/imagens/ux.png';
 import banco from '../../assets/imagens/banco_icon.png';
 import '../../style.css';
 import './home.css';
+import { connect } from 'react-redux';
+import { FaCircleCheck } from "react-icons/fa6";
+import { FaRegCircle } from "react-icons/fa6";
 
-export default function Home() {
+function Home(props) {
   // Definir o estado inicial para a cor do body
   const [bodyColor, setBodyColor] = useState('var(--cinza)');
 
@@ -27,7 +30,13 @@ export default function Home() {
             onMouseEnter={() => handleBoxHover('var(--azul-base)')}
             onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
-            <Link to="/front" className='link-invisivel'>
+            {props.languages.includes('FRONTEND') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('FRONTEND') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/front" className='link-invisivel' onClick={props.front}>
               <div class="col-12">
                 <img src={front} alt="back"></img>
               </div>
@@ -43,7 +52,13 @@ export default function Home() {
             onMouseEnter={() => handleBoxHover('var(--preto-cinza)')}
             onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
-            <Link to="/back" className="link-invisivel">
+            {props.languages.includes('BACKEND') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('BACKEND') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/back" className="link-invisivel" onClick={props.back}>
               <div className="col-12">
                 <img src={back} alt="back"></img>
               </div>
@@ -52,12 +67,19 @@ export default function Home() {
               </div>
             </Link>
           </div>
+
           <div
             className="col-3 box box_verde"
             onMouseEnter={() => handleBoxHover('var(--verde-claro)')}
             onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
-            <Link to="/mobile" className='link-invisivel'>
+            {props.languages.includes('MOBILE') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('MOBILE') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/mobile" className='link-invisivel' onClick={props.mobile}>
               <div class="col-12">
                 <img src={mobile} alt="mobile"></img>
               </div>
@@ -72,7 +94,13 @@ export default function Home() {
             onMouseEnter={() => handleBoxHover('var(--cinza-escuro)')}
             onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
-            <Link to="/banco" className='link-invisivel'>
+            {props.languages.includes('BANCODADOS') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('BANCODADOS') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/banco" className='link-invisivel' onClick={props.banco}>
               <div class="col-12">
                 <img src={banco} alt="Bd"></img>
               </div>
@@ -87,7 +115,13 @@ export default function Home() {
             onMouseEnter={() => handleBoxHover('var(--azul-roxo)')}
             onMouseLeave={() => handleBoxHover('var(--cinza)')}
           >
-            <Link to="/design" className='link-invisivel'>
+             {props.languages.includes('DESIGN') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('DESIGN') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/design" className='link-invisivel' onClick={props.design}>
               <div class="col-12">
                 <img src={design} alt="design"></img>
               </div>
@@ -100,5 +134,24 @@ export default function Home() {
 
       </div>
     </body>
+
+
   );
 }
+
+const mapState = (state) => {
+  return {
+    languages: state.languages,
+  };
+}
+
+const mapAssociate = (dispatch) => {
+  return {
+    front: () => dispatch({ type: 'FRONTEND' }),
+    back: () => dispatch({ type: 'BACKEND' }),
+    mobile: () => dispatch({ type: 'MOBILE' }),
+    banco: () => dispatch({ type: 'BANCODADOS' }),
+    design: () => dispatch({ type: 'DESIGN' }),
+  };
+}
+export default connect(mapState, mapAssociate)(Home)

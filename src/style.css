@@ -628,6 +628,20 @@ h3 {
     color: var(--branco-base)
 }
 
+.iconCheck{
+    position: absolute;
+    right: 15px;
+    font-size: 28px;
+    color: var(--verde-claro);
+}
+
+.iconDontCheck{
+    position: absolute;
+    right: 15px;
+    font-size: 28px;
+    color: var(--cinza-transparente);
+}
+
 @media (min-width: 1400px) {
     .box-conteudo {
         width: 1200px;

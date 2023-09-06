@@ -3,14 +3,10 @@ import { connect } from "react-redux";
 
 const Counter = (props) => {
     return (
-        <body>
             <div>
-                <h3>Contador Redux</h3>
+                {props.languages.includes('FRONTEND')}
                 <span>Contagem: {props.count}</span>
-                <button onClick={props.incremento}>Incrementar</button>
-                <button onClick={props.decremento}>Decrementar</button>
             </div>
-        </body>
     );
 }
 
