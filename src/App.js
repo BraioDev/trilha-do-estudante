@@ -1,15 +1,14 @@
 import React from 'react';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { BackgroundColorProvider } from './components/BackgroundColorContext/BackgroundColorContext';
 import RoutesApp from './routes';
+import { AccessibilityProvider } from './components/AccessibilityContext/AccessibilityContext';
 
 function App() {
   return (
-    <div className="App">
-      <ToastContainer autoClose={10} />
-      <RoutesApp />
-    </div>
+    <AccessibilityProvider>
+      <div>
+        <RoutesApp />
+      </div>
+    </AccessibilityProvider>
   );
 }
 

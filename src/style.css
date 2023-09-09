@@ -40,10 +40,10 @@ header {
 /* Login */
 .login-container {
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .login-card {
@@ -174,6 +174,11 @@ input:focus::placeholder {
     max-width: 300px;
     background: var(--branco-cinza);
     margin-bottom: 10px;
+}
+
+.input-login::placeholder {
+    transition: all 0.1s;
+    color: var(--cinza-escuro);
 }
 
 .text-area {
@@ -308,7 +313,7 @@ button {
     transition: ease-in-out 0.3s;
     user-select: none;
     color: var(--preto-cinza);
-    background-color: var(--branco-80) !important;
+    background-color: var(--branco-base) !important;
     font-weight: bold;
     font-family: 'Cera Round Pro', sans-serif;
 }
@@ -321,7 +326,7 @@ button:hover {
 
 .button-dark:hover {
     background-color: var(--preto-50) !important;
-    color: var(--cinza-padrao);
+    color: var(--branco-base);
     cursor: pointer;
     font-weight: bold;
 }
@@ -410,6 +415,17 @@ button:focus {
     transition: ease-in-out 0.3s;
 }
 
+.normal-font {
+    font-size: 11px;
+}
+
+.small-font {
+    font-size: 22px;
+}
+
+.large-font {
+    font-size: 33px;
+}
 
 .icon {
     margin-bottom: 2px;
@@ -618,24 +634,24 @@ h3 {
     align-items: center;
 }
 
-.cancelar{
+.cancelar {
     background-color: var(--vermelho-bordo) !important;
     color: var(--branco-base)
 }
 
-.cadastrar{
-    background-color: var(--verde-mongodb) !important;
+.cadastrar {
+    background-color: var(--verde-claro) !important;
     color: var(--branco-base)
 }
 
-.iconCheck{
+.iconCheck {
     position: absolute;
     right: 15px;
     font-size: 28px;
     color: var(--verde-claro);
 }
 
-.iconDontCheck{
+.iconDontCheck {
     position: absolute;
     right: 15px;
     font-size: 28px;

@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { auth, storage, db } from '../../firebaseConection';
 import {
-    signInWithEmailAndPassword,
-    signOut, onAuthStateChanged
+    onAuthStateChanged, signInWithEmailAndPassword, updateEmail,
+    signOut
 } from 'firebase/auth';
-import userIcon from '../../assets/imagens/user.png';
+import React, { useEffect, useState } from 'react';
+import { FaAngleLeft, FaCheck, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import 'react-tippy/dist/tippy.css';
-import '../../style.css';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { doc, updateDoc } from 'firebase/firestore';
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
-import { FaClockRotateLeft } from "react-icons/fa6";
-import { FaAngleLeft } from "react-icons/fa6";
-import { FaRightToBracket } from "react-icons/fa6";
-import { FaCheck } from "react-icons/fa6";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import userIcon from '../../assets/imagens/user.png';
+import { auth } from '../../firebaseConection';
+import '../../style.css';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -29,6 +23,7 @@ export default function Login() {
     const [IsButtonDisabled, setIsButtonDisabled] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [imagePreview, setImagePreview] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     const handleBack = () => {
         window.history.back();
@@ -67,9 +62,24 @@ export default function Login() {
             .catch(() => {
                 toast.error('Usuário ou senha inválidos');
                 setTimeout(() => {
-                    setIsButtonDisabled(false); // Re-enable the button after 2 seconds
+                    setIsButtonDisabled(false);
                 }, 2000);
             })
+    }
+
+    async function salvar() {
+        try {
+            const user = auth.currentUser;
+            console.log(email)
+
+            if (user) {
+                await updateEmail(user, email)
+                toast.info("Perfil atualizado com sucesso!");
+            }
+        } catch (error) {
+            toast.error("Não foi possível atualizar o perfil. Erro: " + error.message);
+            console.error('Erro ao atualizar perfil do usuário:', error);
+        }
     }
 
 
@@ -77,6 +87,22 @@ export default function Login() {
         await signOut(auth)
         setUser(false);
         setUserDetail({})
+    }
+
+    async function excluirUsuario() {
+        setShowModal(true);
+        
+        try {
+            const user = auth.currentUser;
+            if (user) {
+                await user.delete();
+                toast.success('Usuário excluído com sucesso');
+            } else {
+                toast.error('Você precisa estar autenticado para excluir sua conta');
+            }
+        } catch (error) {
+            console.error('Erro ao excluir usuário:', error);
+        }
     }
 
     const handleImageChange = (e) => {
@@ -90,49 +116,6 @@ export default function Login() {
             reader.readAsDataURL(file);
         }
     };
-
-    async function salvar() {
-        if (!user || !user.uid) {
-            console.error("User or user's uid is undefined");
-            return;
-        }
-
-        const currentUid = user.uid;
-
-        const uploadRef = ref(storage, `images/${currentUid}/${imagePreview}`);
-
-        const uploadTask = uploadBytes(uploadRef, imagePreview)
-            .then((snapshot) => {
-
-                getDownloadURL(snapshot.ref).then(async (downloadURL) => {
-                    let urlFoto = downloadURL;
-
-                    const docRef = doc(db, "usuários", user.uid)
-                    await updateDoc(docRef, {
-                        avatarUrl: urlFoto,
-                        email: email,
-                    })
-                        .then(() => {
-                            let data = {
-                                ...user,
-                                email: email,
-                                avatarUrl: urlFoto,
-                            }
-
-                            setUser(data);
-                            storageUser(data);
-                            toast.success("Atualizado com sucesso!")
-
-                        }).catch((error) => {
-                            toast.error("Não foi possível finalizar a edição");
-                            console.log("GEROU ERRO" + error)
-                        });
-
-                })
-
-            })
-    }
-
 
     return (
         <body style={{ backgroundColor: 'var(--branco-cinza)' }}>
@@ -160,7 +143,7 @@ export default function Login() {
                     </div>
                     <div>
                         <Tooltip
-                            title="voltar"
+                            title="Voltar"
                             position="bottom"
                             trigger="mouseenter"
                             className="tool"
@@ -169,38 +152,36 @@ export default function Login() {
                                 <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
                             </button>
                         </Tooltip>
-                        <Link to="/historico" className='espacamento link-invisivel'>
-                            <Tooltip
-                                title="histórico"
-                                position="bottom"
-                                trigger="mouseenter"
-                                className="tool"
-                            >
-                                <button className='botao button-dark home'> <FaClockRotateLeft size={20} className="icon" /></button>
-                            </Tooltip>
-                        </Link>
                         <Tooltip
-                            title="logout"
+                            title="Excluir usuário"
                             position="bottom"
                             trigger="mouseenter"
                             className="tool"
                         >
-                            <button className='botao button-dark cancelar espacamento' onClick={fazerLogout}> <FaRightToBracket size={20} className="icon" /></button>
+                            <button className='botao button-dark home espacamento cancelar' onClick={excluirUsuario}> <FaXmark size={20} className="icon" /></button>
                         </Tooltip>
                         <Tooltip
-                            title="salvar"
+                            title="Logout"
                             position="bottom"
                             trigger="mouseenter"
                             className="tool"
                         >
-                            <button className='botao button-dark cadastrar espacamento' onClick={fazerLogout}> <FaCheck size={20} className="icon" /></button>
+                            <button className='botao button-dark espacamento' onClick={fazerLogout}> <FaRightToBracket size={20} className="icon" /></button>
+                        </Tooltip>
+                        <Tooltip
+                            title="Salvar"
+                            position="bottom"
+                            trigger="mouseenter"
+                            className="tool"
+                        >
+                            <button className='botao button-dark cadastrar espacamento' onClick={salvar}> <FaCheck size={20} className="icon" /></button>
                         </Tooltip>
                     </div>
                 </div>
             ) : (
                 <div className="login-container">
                     <div className="login-card">
-                        <h2>Login</h2>
+                        <h2 style={{ marginBottom: '13%' }}><strong>Login</strong></h2>
                         <input
                             type="email"
                             placeholder="Informe seu email"
@@ -215,12 +196,42 @@ export default function Login() {
                             onChange={(e) => setSenha(e.target.value)}
                             className="input-login"
                         />
-                        {/* botões */}
-                        <button className="button-dark espacamento cadastrar" onClick={logarUsuario}>Login</button>
-                        <Link to="/auto-cadastro" className='link-invisivel'>
-                            <button className="button-dark espacamento">Cadastrar</button>
-                        </Link>
-                        <button className="button-dark espacamento" onClick={handleBack}>Voltar</button>
+                        <div style={{ marginTop: '8%' }}>
+                            <Tooltip
+                                title="Voltar"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool"
+                            >
+                                <button className="botao button-dark espacamento" onClick={handleBack}>
+                                    <FaAngleLeft size={20} className="icon" />
+                                </button>
+                            </Tooltip>
+
+                            <Tooltip
+                                title="Cadastrar"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool"
+                            >
+                                <Link to="/auto-cadastro" className='link-invisivel'>
+                                    <button className="botao button-dark espacamento">
+                                        <FaUserPlus size={20} className="icon" />
+                                    </button>
+                                </Link>
+                            </Tooltip>
+
+                            <Tooltip
+                                title="Login"
+                                position="bottom"
+                                trigger="mouseenter"
+                                className="tool"
+                            >
+                                <button className="botao button-dark espacamento cadastrar" onClick={logarUsuario}>
+                                    <FaRightFromBracket size={20} className="icon" />
+                                </button>
+                            </Tooltip>
+                        </div>
                     </div>
                 </div>
             )}

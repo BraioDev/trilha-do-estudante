@@ -1,16 +1,17 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../style.css';
 import './front.css';
 
 import angular from '../../assets/imagens/angular_icon.png';
-import typeScript from '../../assets/imagens/ts_icon.png';
+import bootstrap from '../../assets/imagens/bootstrap_icon.png';
 import html from '../../assets/imagens/html_icon.png';
 import javaScript from '../../assets/imagens/js_icon.png';
 import react from '../../assets/imagens/react.png';
-import bootstrap from '../../assets/imagens/bootstrap_icon.png';
+import typeScript from '../../assets/imagens/ts_icon.png';
 import BackButton from "../../components/backButton";
 import LoginButton from "../../components/loginButton";
+import AccessibilityButton from "../../components/AccessibilityContext/AccessibillityButton";
 
 export default function Front() {
 
@@ -21,6 +22,7 @@ export default function Front() {
           <div className="w-100 alinhar-fim">
             <BackButton />
             <LoginButton />
+            <AccessibilityButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
