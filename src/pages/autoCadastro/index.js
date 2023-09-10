@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { auth } from '../../firebaseConection';
 import {
     createUserWithEmailAndPassword
 } from 'firebase/auth';
+import React, { useState } from 'react';
+import { FaAngleLeft, FaUserPlus } from "react-icons/fa6";
 import InputMask from "react-input-mask";
-import 'react-tippy/dist/tippy.css';
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
-import { FaAngleLeft, FaCheck, FaClockRotateLeft, FaRightToBracket, FaRightFromBracket, FaUserPlus } from "react-icons/fa6";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { auth } from '../../firebaseConection';
 
 export default function AutoCadastro() {
 

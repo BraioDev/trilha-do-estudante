@@ -1,9 +1,9 @@
 import {
-    onAuthStateChanged, signInWithEmailAndPassword, updateEmail,
-    signOut
+    onAuthStateChanged, signInWithEmailAndPassword, signOut, updateEmail
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { FaAngleLeft, FaCheck, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark, FaCircleExclamation } from "react-icons/fa6";
+import { FaAngleLeft, FaCheck, FaCircleExclamation, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark } from "react-icons/fa6";
+import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
@@ -12,7 +12,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import userIcon from '../../assets/imagens/user.png';
 import { auth } from '../../firebaseConection';
 import '../../style.css';
-import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 

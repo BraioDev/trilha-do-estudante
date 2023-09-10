@@ -1,9 +1,8 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
-import { AuthContext } from './pages/contexts/auth';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from './pages/contexts/auth';
 
 export default function Private({ children }) {
     const { signed, loading } = useContext(AuthContext);
