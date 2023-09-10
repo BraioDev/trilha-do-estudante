@@ -59,6 +59,10 @@ header {
     align-items: center;
 }
 
+.fundoModal{
+    background-color: var(--branco-base);
+}
+
 /*col*/
 .col-1-meio {
     flex: 0 0 12.5%;
@@ -522,6 +526,8 @@ h3 {
     color: inherit !important;
 }
 
+
+
 .alinhar-fim {
     display: flex;
     justify-content: end;
@@ -637,6 +643,14 @@ h3 {
 .cancelar {
     background-color: var(--vermelho-bordo) !important;
     color: var(--branco-base)
+}
+
+.margens{
+    margin: 25px 0;
+}
+
+.excluir{
+    color: var(--vermelho-bordo)
 }
 
 .cadastrar {

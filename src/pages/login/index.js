@@ -3,7 +3,7 @@ import {
     signOut
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { FaAngleLeft, FaCheck, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark } from "react-icons/fa6";
+import { FaAngleLeft, FaCheck, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark, FaCircleExclamation } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
@@ -12,6 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import userIcon from '../../assets/imagens/user.png';
 import { auth } from '../../firebaseConection';
 import '../../style.css';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -23,7 +26,7 @@ export default function Login() {
     const [IsButtonDisabled, setIsButtonDisabled] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [imagePreview, setImagePreview] = useState(null);
-    const [showModal, setShowModal] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const handleBack = () => {
         window.history.back();
@@ -89,9 +92,12 @@ export default function Login() {
         setUserDetail({})
     }
 
-    async function excluirUsuario() {
-        setShowModal(true);
-        
+    const excluirUsuario = () => {
+        // Abre o modal de confirmação quando o botão é clicado
+        setModalIsOpen(true);
+    };
+
+    const confirmarExclusao = async () => {
         try {
             const user = auth.currentUser;
             if (user) {
@@ -103,7 +109,15 @@ export default function Login() {
         } catch (error) {
             console.error('Erro ao excluir usuário:', error);
         }
-    }
+
+        // Fecha o modal após a exclusão do usuário
+        setModalIsOpen(false);
+    };
+
+    const cancelarExclusao = () => {
+        // Fecha o modal sem excluir o usuário
+        setModalIsOpen(false);
+    };
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -160,6 +174,21 @@ export default function Login() {
                         >
                             <button className='botao button-dark home espacamento cancelar' onClick={excluirUsuario}> <FaXmark size={20} className="icon" /></button>
                         </Tooltip>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={() => setModalIsOpen(false)}
+                            contentLabel="Modal de Confirmação"
+                            className="login-container"
+                        >
+                            <div className="login-card" style={{ marginBottom: "40px" }}>
+                                <FaCircleExclamation size={80} className="icon excluir margens" />
+                                <span>Tem certeza de que deseja excluir o usuário?</span>
+                                <div style={{ marginTop: "20px" }}>
+                                    <button className='button-dark espacamento cancelar' onClick={confirmarExclusao}>Sim</button>
+                                    <button className='button-dark espacamento' onClick={cancelarExclusao}>Não</button>
+                                </div>
+                            </div>
+                        </Modal>
                         <Tooltip
                             title="Logout"
                             position="bottom"
