@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 /* Page principal */
 import Home from './pages/home';
 import Back from './pages/back';
@@ -51,7 +51,6 @@ import Private from './private'
 
 export default function RoutesAPP(){
     return(
-        <BrowserRouter>
         <Routes>
             {/* tela login */}
             <Route path="/login" element={<Login/>}/> 
@@ -107,8 +106,7 @@ export default function RoutesAPP(){
             <Route path="/adobephotoshop" element={<Adobephotoshop/>}/>
 
             {/* Private */}
-            {<Route path="/historico" element={<Private><Historico/></Private>}/>}
+            <Route path="/historico" element={<Private><Historico/></Private>}/>
         </Routes>
-        </BrowserRouter>
     );
 }

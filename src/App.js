@@ -1,14 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AuthProvider from './pages/contexts/auth'; // Importe o seu AuthProvider
 import RoutesApp from './routes';
-import { AccessibilityProvider } from './components/AccessibilityContext/AccessibilityContext';
 
 function App() {
   return (
-    <AccessibilityProvider>
-      <div>
-        <RoutesApp />
-      </div>
-    </AccessibilityProvider>
+    <Router>
+      <AuthProvider>
+        <div>
+          <RoutesApp />
+        </div>
+      </AuthProvider>
+    </Router>
   );
 }
 

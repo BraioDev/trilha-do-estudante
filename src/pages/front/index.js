@@ -11,7 +11,9 @@ import react from '../../assets/imagens/react.png';
 import typeScript from '../../assets/imagens/ts_icon.png';
 import BackButton from "../../components/backButton";
 import LoginButton from "../../components/loginButton";
-import AccessibilityButton from "../../components/AccessibilityContext/AccessibillityButton";
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
+import { FaCalendar } from "react-icons/fa6";
 
 export default function Front() {
 
@@ -21,18 +23,29 @@ export default function Front() {
         <div className="row">
           <div className="w-100 alinhar-fim">
             <BackButton />
+            <Tooltip
+              title="Calendário"
+              position="bottom"
+              trigger="mouseenter"
+              className="tool"
+            >
+              <Link to="/historico" className='link-invisivel'>
+                <button className="botao button-dark espacamento">
+                  <FaCalendar size={20} className="icon" />
+                </button>
+              </Link>
+            </Tooltip>
             <LoginButton />
-            <AccessibilityButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
           <div
             className="col-3 box box_claro"
           >
             <Link to="/typeScript" className='link-invisivel'>
-              <div class="col-12">
+              <div className="col-12">
                 <img src={typeScript} alt="TypeScript"></img>
               </div>
-              <div class="col-12">
+              <div className="col-12">
                 <h3>TypeScript</h3>
               </div>
             </Link>
@@ -56,10 +69,10 @@ export default function Front() {
             className="col-3 box box_js"
           >
             <Link to="/javaScript" className='link-invisivel'>
-              <div class="col-12">
+              <div className="col-12">
                 <img src={javaScript} alt="javaScript"></img>
               </div>
-              <div class="col-12">
+              <div className="col-12">
                 <h3>JavaScript</h3>
               </div>
             </Link>
@@ -69,10 +82,10 @@ export default function Front() {
             className="col-3 box box_angular"
           >
             <Link to="/angular" className='link-invisivel'>
-              <div class="col-12">
+              <div className="col-12">
                 <img src={angular} alt="angular"></img>
               </div>
-              <div class="col-12">
+              <div className="col-12">
                 <h3>Angular</h3>
               </div>
             </Link>
@@ -82,10 +95,10 @@ export default function Front() {
             className="col-3 box box_react"
           >
             <Link to="/react" className='link-invisivel'>
-              <div class="col-12">
+              <div className="col-12">
                 <img src={react} alt="react"></img>
               </div>
-              <div class="col-12">
+              <div className="col-12">
                 <h3>React</h3>
               </div>
             </Link>
@@ -95,10 +108,10 @@ export default function Front() {
             className="col-3 box box_roxo"
           >
             <Link to="/bootstrap" className='link-invisivel'>
-              <div class="col-12">
+              <div className="col-12">
                 <img src={bootstrap} alt="bootstrap"></img>
               </div>
-              <div class="col-12">
+              <div className="col-12">
                 <h3>Bootstrap</h3>
               </div>
             </Link>

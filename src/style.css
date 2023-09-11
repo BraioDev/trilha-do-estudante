@@ -59,8 +59,72 @@ header {
     align-items: center;
 }
 
-.fundoModal{
+.calendar-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     background-color: var(--branco-base);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 360px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fundoModal {
+    background-color: var(--branco-base);
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: wave 0.5s linear infinite;
+}
+
+.dot-1 {
+    animation-delay: 0s;
+}
+
+.dot-2 {
+    animation-delay: 0.2s;
+}
+
+.dot-3 {
+    animation-delay: 0.3s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /*col*/
@@ -535,7 +599,7 @@ h3 {
 
 /* Calendar */
 .simple-calendar {
-    width: 300px;
+    width: 330px;
     border: 1px solid #ccc;
     padding: 10px;
     font-family: Arial, sans-serif;
@@ -645,11 +709,11 @@ h3 {
     color: var(--branco-base)
 }
 
-.margens{
+.margens {
     margin: 25px 0;
 }
 
-.excluir{
+.excluir {
     color: var(--vermelho-bordo)
 }
 
