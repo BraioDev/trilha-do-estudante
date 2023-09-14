@@ -11,6 +11,9 @@ import xamarin from '../../assets/imagens/xamarin.png';
 import xcode from '../../assets/imagens/xcode.png';
 import BackButton from "../../components/backButton";
 import LoginButton from "../../components/loginButton";
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
+import { FaCalendar } from "react-icons/fa6";
 
 export default function Mobile() {
 
@@ -20,6 +23,18 @@ export default function Mobile() {
         <div className="row">
           <div className="w-100 alinhar-fim">
             <BackButton />
+            <Tooltip
+              title="Calendário"
+              position="bottom"
+              trigger="mouseenter"
+              className="tool"
+            >
+              <Link to="/historico" className='link-invisivel'>
+                <button className="botao button-dark espacamento">
+                  <FaCalendar size={20} className="icon" />
+                </button>
+              </Link>
+            </Tooltip>
             <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}

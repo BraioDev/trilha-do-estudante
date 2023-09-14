@@ -1,10 +1,10 @@
 import '../../style.css';
-import Calendar from '../../components/calendar'
+import Calendar from '../calendar'
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
 import { Link } from 'react-router-dom';
 import { FaAngleLeft, FaHouse } from "react-icons/fa6";
-import LoginButton from "../../components/loginButton";
+import LoginButton from "../loginButton";
 
 export default function Historico() {
     const handleBack = () => {

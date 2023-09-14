@@ -1,8 +1,9 @@
+import { css } from "@emotion/react";
 import {
     onAuthStateChanged, signInWithEmailAndPassword, signOut, updateEmail
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { FaAngleLeft, FaCheck, FaCircleExclamation, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark } from "react-icons/fa6";
+import { FaAngleLeft, FaCheck, FaCircleExclamation, FaHouse, FaRightFromBracket, FaRightToBracket, FaUserPlus, FaXmark } from "react-icons/fa6";
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { Tooltip } from 'react-tippy';
@@ -10,10 +11,9 @@ import 'react-tippy/dist/tippy.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import userIcon from '../../assets/imagens/user.png';
-import { auth } from '../../firebaseConection';
+import { auth, db } from '../../firebaseConection';
 import '../../style.css';
-import { css } from "@emotion/react";
-import { ClipLoader } from "react-spinners";
+import { getDoc, doc, getFirestore } from "firebase/firestore";
 
 Modal.setAppElement('#root');
 
@@ -41,7 +41,7 @@ export default function Login() {
 
     useEffect(() => {
         async function checkLogin() {
-            onAuthStateChanged(auth, (user) => {
+            onAuthStateChanged(auth, async (user) => {
                 if (user) {
                     setUser(true);
                     setUserDetail({
@@ -52,6 +52,23 @@ export default function Login() {
                         uid: user.uid,
                         email: user.email,
                     }));
+
+                    // Aqui você busca os dados do usuário na tabela "users"
+                    const db = getFirestore();
+                    const userDocRef = doc(db, "users", user.uid);
+
+                    try {
+                        const userDocSnapshot = await getDoc(userDocRef);
+
+                        if (userDocSnapshot.exists()) {
+                            const userData = userDocSnapshot.data();
+                            console.log("Dados do usuário:", userData);
+                        } else {
+                            console.log("Usuário não encontrado na tabela 'users'");
+                        }
+                    } catch (error) {
+                        console.error("Erro ao buscar dados do usuário:", error);
+                    }
                 } else {
                     setUser(false);
                     setUserDetail({});
@@ -61,7 +78,6 @@ export default function Login() {
         }
         checkLogin();
     }, []);
-
     async function logarUsuario() {
         setIsLoading(true);
 
@@ -132,6 +148,7 @@ export default function Login() {
                 toast.error('Você precisa estar autenticado para excluir sua conta');
             }
         } catch (error) {
+            toast.error('Não foi possivél excluir sua conta, tente novamente mais tarde');
             console.error('Erro ao excluir usuário:', error);
         }
 
@@ -201,6 +218,16 @@ export default function Login() {
                                     <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
                                 </button>
                             </Tooltip>
+                            <Link to="/" className='espacamento link-invisivel'>
+                                <Tooltip
+                                    title="Home"
+                                    position="bottom"
+                                    trigger="mouseenter"
+                                    className="tool"
+                                >
+                                    <button className='botao button-dark home'> <FaHouse size={20} className="icon" /></button>
+                                </Tooltip>
+                            </Link>
                             <Tooltip
                                 title="Excluir usuário"
                                 position="bottom"
@@ -271,7 +298,16 @@ export default function Login() {
                                         <FaAngleLeft size={20} className="icon" />
                                     </button>
                                 </Tooltip>
-
+                                <Link to="/" className='espacamento link-invisivel'>
+                                    <Tooltip
+                                        title="Home"
+                                        position="bottom"
+                                        trigger="mouseenter"
+                                        className="tool"
+                                    >
+                                        <button className='botao button-dark home'> <FaHouse size={20} className="icon" /></button>
+                                    </Tooltip>
+                                </Link>
                                 <Tooltip
                                     title="Cadastrar"
                                     position="bottom"

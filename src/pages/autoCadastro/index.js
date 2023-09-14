@@ -8,7 +8,10 @@ import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { auth } from '../../firebaseConection';
+import { auth, db } from '../../firebaseConection';
+import { Link } from 'react-router-dom';
+import { FaHouse } from "react-icons/fa6";
+import { doc, setDoc } from 'firebase/firestore';
 
 export default function AutoCadastro() {
 
@@ -20,30 +23,41 @@ export default function AutoCadastro() {
 
     async function novoUsuario() {
         if (senha === senhaconf) {
-            await createUserWithEmailAndPassword(auth, email, senha, nome, senhaconf, telefone)
-                .then(() => {
-                    setEmail('');
-                    setSenha('');
-                    setSenhaconf('');
-                    setNome('');
-                    setTelefone('');
-                    toast.success('Cadastro realizado com sucesso');
-                    window.setTimeout(function () {
-                        window.history.back();
-                    }, 1000);
-                })
-                .catch((error) => {
-                    if (error.code === 'auth/weak-password') {
-                        toast.error('Senha muito fraca, por favor insira outra');
-                    } else if (error.code === 'auth/email-already-in-use') {
-                        toast.error('Email já existente');
-                    }
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
 
-                })
+                const uid = userCredential.user.uid;
+
+                const userDocRef = doc(db, 'users', uid);
+                await setDoc(userDocRef, {
+                    nome: nome,
+                    email: email,
+                    senha: senha,
+                    telefone: telefone,
+                    avatarUrl: 'https://robohash.org/Ia',
+                });
+
+                setEmail('');
+                setSenha('');
+                setSenhaconf('');
+                setNome('');
+                setTelefone('');
+                toast.success('Cadastro realizado com sucesso');
+                window.setTimeout(function () {
+                    window.history.back();
+                }, 1000);
+            } catch (error) {
+                if (error.code === 'auth/weak-password') {
+                    toast.error('Senha muito fraca, por favor insira outra');
+                } else if (error.code === 'auth/email-already-in-use') {
+                    toast.error('Email já existente');
+                } else {
+                    console.error('Erro ao criar usuário:', error);
+                }
+            }
         } else {
-            toast.error("Senhas não coincidem!")
+            toast.error('Senhas não coincidem!');
         }
-
     }
 
     const handleBack = () => {
@@ -107,6 +121,16 @@ export default function AutoCadastro() {
                             <FaAngleLeft size={20} className="icon" /> {/* Ícone de seta para trás */}
                         </button>
                     </Tooltip>
+                    <Link to="/" className='espacamento link-invisivel'>
+                        <Tooltip
+                            title="Home"
+                            position="bottom"
+                            trigger="mouseenter"
+                            className="tool"
+                        >
+                            <button className='botao button-dark home'> <FaHouse size={20} className="icon" /></button>
+                        </Tooltip>
+                    </Link>
                     <Tooltip
                         title="Cadastrar"
                         position="bottom"

@@ -200,7 +200,6 @@ header {
 
 /* Input*/
 input {
-    padding: 0 20px;
     text-align: left;
     border: none;
     outline: none;
@@ -211,6 +210,7 @@ input {
     width: 300px;
     height: 35px;
     padding: 10px;
+    margin: 10px 0;
     background: var(--branco-base);
     transition: ease-in-out 0.2s;
 }

@@ -46,7 +46,7 @@ import Adobephotoshop from './pages/design/adobephotohop';
 import Login from './pages/login'
 import AutoCadastro from "./pages/autoCadastro";
 /* Histórico */
-import Historico from './pages/historico';
+import Historico from './components/historico';
 import Private from './private'
 
 export default function RoutesAPP(){
