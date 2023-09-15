@@ -14,6 +14,7 @@ import LoginButton from "../../components/loginButton";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
 import { FaCalendar } from "react-icons/fa6";
+import Finalizar from '../../components/contextProgress/finalizar';
 
 export default function Front() {
 
@@ -35,6 +36,7 @@ export default function Front() {
                 </button>
               </Link>
             </Tooltip>
+            <Finalizar />
             <LoginButton />
           </div>
           {/* -------------------Inicio dos cards----------------------- */}
