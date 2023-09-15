@@ -13,9 +13,10 @@ import BackButton from "../../components/backButton";
 import LoginButton from "../../components/loginButton";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
-import { FaCalendar } from "react-icons/fa6";
+import { FaCalendar, FaCircleCheck, FaRegCircle } from "react-icons/fa6";
+import { connect } from 'react-redux';
 
-export default function Back() {
+function Back(props) {
 
   return (
     <body style={{ backgroundColor: 'var(--preto-cinza)' }}>
@@ -41,7 +42,13 @@ export default function Back() {
           <div
             className="col-3 box box_java"
           >
-            <Link to="/java" className='link-invisivel'>
+            {props.languages.includes('JAVA') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('JAVA') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/java" className='link-invisivel' onClick={props.java}>
               <div class="col-12">
                 <img src={java} alt="java"></img>
               </div>
@@ -55,7 +62,13 @@ export default function Back() {
           <div
             className="col-3 box box_python"
           >
-            <Link to="/python" className="link-invisivel">
+            {props.languages.includes('PYTHON') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('PYTHON') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/python" className="link-invisivel" onClick={props.python}>
               <div className="col-12">
                 <img src={python} alt="python"></img>
               </div>
@@ -68,7 +81,13 @@ export default function Back() {
           <div
             className="col-3 box box_roxo"
           >
-            <Link to="/csharp" className='link-invisivel'>
+            {props.languages.includes('CSHARP') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('CSHARP') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/csharp" className='link-invisivel' onClick={props.csharp}>
               <div class="col-12">
                 <img src={csharp} alt="c#"></img>
               </div>
@@ -81,7 +100,13 @@ export default function Back() {
           <div
             className="col-3 box box_postman"
           >
-            <Link to="/postman" className='link-invisivel'>
+            {props.languages.includes('POSTMAN') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('POSTMAN') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/postman" className='link-invisivel' onClick={props.postman}>
               <div class="col-12">
                 <img src={postman} alt="postman"></img>
               </div>
@@ -94,7 +119,13 @@ export default function Back() {
           <div
             className="col-3 box box_verde"
           >
-            <Link to="/spring" className='link-invisivel'>
+            {props.languages.includes('SPRING') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('SPRING') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/spring" className='link-invisivel' onClick={props.spring}>
               <div class="col-12">
                 <img src={spring} alt="spring"></img>
               </div>
@@ -107,7 +138,13 @@ export default function Back() {
           <div
             className="col-3 box box_verde"
           >
-            <Link to="/swagger" className='link-invisivel'>
+            {props.languages.includes('SWAGGER') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('SWAGGER') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/swagger" className='link-invisivel' onClick={props.swagger}>
               <div class="col-12">
                 <img src={swagger} alt="swagger"></img>
               </div>
@@ -122,3 +159,21 @@ export default function Back() {
     </body>
   );
 }
+
+const mapState = (state) => {
+  return {
+    languages: state.languages,
+  };
+}
+
+const mapAssociate = (dispatch) => {
+  return {
+    java: () => dispatch({ type: 'JAVA' }),
+    python: () => dispatch({ type: 'PYTHON' }),
+    csharp: () => dispatch({ type: 'CSHARP' }),
+    postman: () => dispatch({ type: 'POSTMAN' }),
+    spring: () => dispatch({ type: 'SPRING' }),
+    swagger: () => dispatch({ type: 'SWAGGER' }),
+  };
+}
+export default connect(mapState, mapAssociate)(Back)
