@@ -13,9 +13,10 @@ import BackButton from "../../components/backButton";
 import LoginButton from "../../components/loginButton";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
-import { FaCalendar } from "react-icons/fa6";
+import { FaCalendar, FaCircleCheck, FaRegCircle } from "react-icons/fa6";
+import { connect } from 'react-redux';
 
-export default function Design() {
+function Design(props) {
 
     return (
         <body style={{ backgroundColor: 'var(--azul-roxo)' }}>
@@ -41,7 +42,13 @@ export default function Design() {
                     <div
                         className="col-3 box box_figma"
                     >
-                        <Link to="/figma" className='link-invisivel'>
+                        {props.languages.includes('FIGMA') &&
+                            <div className='iconCheck'><FaCircleCheck /></div>
+                        }
+                        {!props.languages.includes('FIGMA') &&
+                            <div className='iconDontCheck'><FaRegCircle /></div>
+                        }
+                        <Link to="/figma" className='link-invisivel' onClick={props.figma}>
                             <div class="col-12">
                                 <img src={figma} alt="figma"></img>
                             </div>
@@ -55,7 +62,13 @@ export default function Design() {
                     <div
                         className="col-3 box box_canva"
                     >
-                        <Link to="/canva" className="link-invisivel">
+                        {props.languages.includes('CANVA') &&
+                            <div className='iconCheck'><FaCircleCheck /></div>
+                        }
+                        {!props.languages.includes('CANVA') &&
+                            <div className='iconDontCheck'><FaRegCircle /></div>
+                        }
+                        <Link to="/canva" className="link-invisivel" onClick={props.canva}>
                             <div className="col-12">
                                 <img src={canva} alt="canva"></img>
                             </div>
@@ -68,7 +81,13 @@ export default function Design() {
                     <div
                         className="col-3 box box_illustrator"
                     >
-                        <Link to="/illustrator" className='link-invisivel'>
+                        {props.languages.includes('ILLUSTRATOR') &&
+                            <div className='iconCheck'><FaCircleCheck /></div>
+                        }
+                        {!props.languages.includes('ILLUSTRATOR') &&
+                            <div className='iconDontCheck'><FaRegCircle /></div>
+                        }
+                        <Link to="/illustrator" className='link-invisivel' onClick={props.illustrator}>
                             <div class="col-12">
                                 <img src={illustrator} alt="illustrator"></img>
                             </div>
@@ -81,7 +100,13 @@ export default function Design() {
                     <div
                         className="col-3 box box_invision"
                     >
-                        <Link to="/invision" className='link-invisivel'>
+                        {props.languages.includes('INVISION') &&
+                            <div className='iconCheck'><FaCircleCheck /></div>
+                        }
+                        {!props.languages.includes('INVISION') &&
+                            <div className='iconDontCheck'><FaRegCircle /></div>
+                        }
+                        <Link to="/invision" className='link-invisivel' onClick={props.invision}>
                             <div class="col-12">
                                 <img src={invision} alt="invision"></img>
                             </div>
@@ -94,7 +119,13 @@ export default function Design() {
                     <div
                         className="col-3 box box_sketch"
                     >
-                        <Link to="/sketch" className='link-invisivel'>
+                        {props.languages.includes('SKETCH') &&
+                            <div className='iconCheck'><FaCircleCheck /></div>
+                        }
+                        {!props.languages.includes('SKETCH') &&
+                            <div className='iconDontCheck'><FaRegCircle /></div>
+                        }
+                        <Link to="/sketch" className='link-invisivel' onClick={props.sketch}>
                             <div class="col-12">
                                 <img src={sketch} alt="sketch"></img>
                             </div>
@@ -107,7 +138,13 @@ export default function Design() {
                     <div
                         className="col-3 box box_adobephotoshop"
                     >
-                        <Link to="/adobephotoshop" className='link-invisivel'>
+                        {props.languages.includes('ADOBEPH') &&
+                            <div className='iconCheck'><FaCircleCheck /></div>
+                        }
+                        {!props.languages.includes('ADOBEPH') &&
+                            <div className='iconDontCheck'><FaRegCircle /></div>
+                        }
+                        <Link to="/adobephotoshop" className='link-invisivel' onClick={props.adobeph}>
                             <div class="col-12">
                                 <img src={adobephotoshop} alt="adobephotoshop"></img>
                             </div>
@@ -122,3 +159,21 @@ export default function Design() {
         </body>
     );
 }
+
+const mapState = (state) => {
+    return {
+        languages: state.languages,
+    };
+}
+
+const mapAssociate = (dispatch) => {
+    return {
+        figma: () => dispatch({ type: 'FIGMA' }),
+        canva: () => dispatch({ type: 'CANVA' }),
+        illustrator: () => dispatch({ type: 'ILLUSTRATOR' }),
+        invision: () => dispatch({ type: 'INVISION' }),
+        sketch: () => dispatch({ type: 'SKETCH' }),
+        adobeph: () => dispatch({ type: 'ADOBEPH' }),
+    };
+}
+export default connect(mapState, mapAssociate)(Design)

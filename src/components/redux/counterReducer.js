@@ -106,6 +106,114 @@ const counterReducer = (state = initialState, action) => {
                 languages: state.languages,
             };
 
+        case 'ANDROID':
+            state.languages.push('ANDROID')
+            return {
+                languages: state.languages,
+            };
+
+        case 'FLUTER':
+            state.languages.push('FLUTER')
+            return {
+                languages: state.languages,
+            };
+
+        case 'IONIC':
+            state.languages.push('IONIC')
+            return {
+                languages: state.languages,
+            };
+
+        case 'NATIVE':
+            state.languages.push('NATIVE')
+            return {
+                languages: state.languages,
+            };
+
+        case 'XAMARIN':
+            state.languages.push('XAMARIN')
+            return {
+                languages: state.languages,
+            };
+
+        case 'XCODE':
+            state.languages.push('XCODE')
+            return {
+                languages: state.languages,
+            };
+
+        case 'ORACLE':
+            state.languages.push('ORACLE')
+            return {
+                languages: state.languages,
+            };
+
+        case 'HEID':
+            state.languages.push('HEID')
+            return {
+                languages: state.languages,
+            };
+
+        case 'PGADMIN':
+            state.languages.push('PGADMIN')
+            return {
+                languages: state.languages,
+            };
+
+        case 'MONGODB':
+            state.languages.push('MONGODB')
+            return {
+                languages: state.languages,
+            };
+
+        case 'MYSQL':
+            state.languages.push('MYSQL')
+            return {
+                languages: state.languages,
+            };
+
+        case 'SQLITE':
+            state.languages.push('SQLITE')
+            return {
+                languages: state.languages,
+            };
+
+        case 'FIGMA':
+            state.languages.push('FIGMA')
+            return {
+                languages: state.languages,
+            };
+
+        case 'CANVA':
+            state.languages.push('CANVA')
+            return {
+                languages: state.languages,
+            };
+
+        case 'ILLUSTRATOR':
+            state.languages.push('ILLUSTRATOR')
+            return {
+                languages: state.languages,
+            };
+
+        case 'INVISION':
+            state.languages.push('INVISION')
+            return {
+                languages: state.languages,
+            };
+
+        case 'SKETCH':
+            state.languages.push('SKETCH')
+            return {
+                languages: state.languages,
+            };
+
+        case 'ADOBEPH':
+            state.languages.push('ADOBEPH')
+            return {
+                languages: state.languages,
+            };
+
         default:
             return state;
     }

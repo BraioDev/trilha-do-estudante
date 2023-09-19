@@ -13,9 +13,10 @@ import BackButton from "../../components/backButton";
 import LoginButton from "../../components/loginButton";
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
-import { FaCalendar } from "react-icons/fa6";
+import { FaCalendar, FaCircleCheck, FaRegCircle } from "react-icons/fa6";
+import { connect } from 'react-redux';
 
-export default function Mobile() {
+function Mobile(props) {
 
   return (
     <body style={{ backgroundColor: 'var(--verde-claro)' }}>
@@ -41,7 +42,13 @@ export default function Mobile() {
           <div
             className="col-3 box box_android"
           >
-            <Link to="/android" className='link-invisivel'>
+            {props.languages.includes('ANDROID') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('ANDROID') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/android" className='link-invisivel' onClick={props.android}>
               <div class="col-12">
                 <img src={android} alt="android"></img>
               </div>
@@ -55,7 +62,13 @@ export default function Mobile() {
           <div
             className="col-3 box box_flutter"
           >
-            <Link to="/flutter" className="link-invisivel">
+            {props.languages.includes('FLUTER') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('FLUTER') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/flutter" className="link-invisivel" onClick={props.fluter}>
               <div className="col-12">
                 <img src={flutter} alt="flutter"></img>
               </div>
@@ -68,7 +81,13 @@ export default function Mobile() {
           <div
             className="col-3 box box_ionic"
           >
-            <Link to="/ionic" className='link-invisivel'>
+            {props.languages.includes('IONIC') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('IONIC') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/ionic" className='link-invisivel' onClick={props.ionic}>
               <div class="col-12">
                 <img src={ionic} alt="ionic"></img>
               </div>
@@ -81,7 +100,13 @@ export default function Mobile() {
           <div
             className="col-3 box box_react"
           >
-            <Link to="/reactNative" className='link-invisivel'>
+            {props.languages.includes('NATIVE') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('NATIVE') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/reactNative" className='link-invisivel' onClick={props.native}>
               <div class="col-12">
                 <img src={reactNative} alt="reactNative"></img>
               </div>
@@ -94,7 +119,13 @@ export default function Mobile() {
           <div
             className="col-3 box box_xamarin"
           >
-            <Link to="/xamarin" className='link-invisivel'>
+            {props.languages.includes('XAMARIN') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('XAMARIN') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/xamarin" className='link-invisivel' onClick={props.xamarin}>
               <div class="col-12">
                 <img src={xamarin} alt="xamarin"></img>
               </div>
@@ -107,7 +138,13 @@ export default function Mobile() {
           <div
             className="col-3 box box_xcode"
           >
-            <Link to="/xcode" className='link-invisivel'>
+            {props.languages.includes('XCODE') &&
+              <div className='iconCheck'><FaCircleCheck /></div>
+            }
+            {!props.languages.includes('XCODE') &&
+              <div className='iconDontCheck'><FaRegCircle /></div>
+            }
+            <Link to="/xcode" className='link-invisivel' onClick={props.xcode}>
               <div class="col-12">
                 <img src={xcode} alt="xcode"></img>
               </div>
@@ -122,3 +159,21 @@ export default function Mobile() {
     </body>
   );
 }
+
+const mapState = (state) => {
+  return {
+    languages: state.languages,
+  };
+}
+
+const mapAssociate = (dispatch) => {
+  return {
+    android: () => dispatch({ type: 'ANDROID' }),
+    fluter: () => dispatch({ type: 'FLUTER' }),
+    ionic: () => dispatch({ type: 'IONIC' }),
+    native: () => dispatch({ type: 'NATIVE' }),
+    xamarin: () => dispatch({ type: 'XAMARIN' }),
+    xcode: () => dispatch({ type: 'XCODE' }),
+  };
+}
+export default connect(mapState, mapAssociate)(Mobile)
