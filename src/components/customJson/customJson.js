@@ -84,7 +84,7 @@ export default function CustomComponent({ linguagem }) {
                             trigger="mouseenter"
                             className="tool"
                         >
-                            <button className="botao espacamento lixeira" onClick={() => setSearchKeyword("")}>
+                            <button className="botao button-dark espacamento lixeira" onClick={() => setSearchKeyword("")}>
                                 <FaTrash size={20} className="icon" />
                             </button>
                         </Tooltip>

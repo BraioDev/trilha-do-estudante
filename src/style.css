@@ -296,7 +296,7 @@ input:focus::placeholder {
 }
 
 .lixeira {
-    background-color: var(--vermelho);
+    background-color: var(--vermelho-bordo) !important;
     color: var(--branco-base);
 }
 
