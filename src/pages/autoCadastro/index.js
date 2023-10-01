@@ -67,7 +67,7 @@ export default function AutoCadastro() {
     return (
         <body style={{ backgroundColor: 'var(--branco-cinza)' }}>
             <div className="login-container">
-                <div className="login-card">
+                <div className="login-card" style={{height: '380px'}}>
                     <h2>Cadastro</h2>
                     <input
                         type="nome"
