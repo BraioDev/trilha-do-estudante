@@ -1,14 +1,34 @@
 const express = require('express');
+const { getApps, initializeApp } = require('firebase/app');
+const { getAuth, signInWithEmailAndPassword } = require('firebase/auth');
 const appe = express();
-const port = 8080;
+const port = 8000;
 const bodyParser = require('body-parser');
 
 //Configuração do ejs para carregar as views
 appe.set('view engine', 'ejs');
 appe.set('views', __dirname + '/views');
 
+var firebaseConfig = {
+    apiKey: "AIzaSyC8zv9RH-Aetxl7cfm1wxmVLIYYUuqohu4",
+    authDomain: "trilhadoestudante-23b83.firebaseapp.com",
+    projectId: "trilhadoestudante-23b83",
+    storageBucket: "trilhadoestudante-23b83.appspot.com",
+    messagingSenderId: "113199600295",
+    appId: "1:113199600295:web:2101ee3dac696589108182",
+    measurementId: "G-S76DRY10EH"
+};
+
+appe.use(express.json());
+appe.use(express.urlencoded({ extended: false }));
+const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+const auth = getAuth(firebaseApp);
+
+//public
+appe.use(express.static('public'))
+
 //Configurar o body-parser, para processar os dados do form
-appe.use(bodyParser.urlencoded({extended: true}));
+appe.use(bodyParser.urlencoded({ extended: true }));
 
 //Blog
 const posts = [
@@ -24,9 +44,27 @@ const posts = [
     }
 ];
 
-//Rota princiapal
 appe.get('/', (req, res) => {
-    res.render('index', {posts} );
+    res.render('index');
+});
+
+appe.post('/login', async (req, res) => {
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, req.body.email, req.body.password);
+        res.redirect('/home');
+    } catch (error) {
+        res.send(error.message);
+    }
+});
+
+
+appe.get('/home', (req, res) => {
+    const user = auth.currentUser;
+    if (user) {
+        res.render('home', { user: user });
+    } else {
+        res.redirect('/');
+    }
 });
 
 //Rota para exibir uma postagem individual
@@ -45,7 +83,7 @@ appe.get('/add', (req, res,) => {
 appe.post('/add', (req, res) => {
     const { titulo, conteudo } = req.body;
     const id = posts.length + 1;
-    posts.push({id, titulo, conteudo});
+    posts.push({ id, titulo, conteudo });
     res.redirect('/');
 });
 
@@ -64,6 +102,27 @@ appe.post('/salvar-dados', (req, res) => {
     res.send("Dado salvo com sucesso!")
 })
 
+appe.post('/login', async (req, res) => {
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, req.body.email, req.body.password);
+        console.log(userCredential); // Adicione esta linha
+        res.redirect('/home');
+    } catch (error) {
+        res.send(error.message);
+    }
+});
+
+
+appe.get('/home', (req, res) => {
+    const user = auth.currentUser;
+    console.log(user); // Adicione esta linha
+    if (user) {
+        res.render('home', { user: user });
+    } else {
+        res.redirect('/');
+    }
+});
+
 appe.listen(port, () => {
-    console.log('Rodando em: http://localhost:8080');
+    console.log(`Rodando em: http://localhost:${port}`);
 })
