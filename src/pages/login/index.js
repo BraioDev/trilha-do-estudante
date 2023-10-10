@@ -30,11 +30,6 @@ export default function Login() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-    const spinnerStyle = css`
-  display: block;
-  margin: 0 auto;
-`;
-
     const handleBack = () => {
         window.history.back();
     };
