@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Home</title>
-    </head>
+<head>
+    <title>Formulário</title>
+</head>
 
-    <body>
-        <h1>Bem-vindo, <%= user.email %>!</h1>
-    </body>
+<body>
+    <h1>Salvar login</h1>
+    <form action="/salvar" method="POST">
+        <!-- Campo de texto -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <!-- Campo de email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <!-- Caixa de seleção (select) -->
+        <label for="idade">Idade:</label>
+        <select id="idade" name="idade">
+            <option value="menos de 18">Menos de 18</option>
+            <option value="18-30">18-30</option>
+            <option value="31-50">31-50</option>
+            <option value="mais de 50">Mais de 50</option>
+        </select><br>
+
+        <!-- Botões de rádio -->
+        <label>Gênero:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="genero" value="feminino">
+        <label for="feminino">Feminino</label>
+        <input type="radio" id="outro" name="genero" value="outro">
+        <label for="outro">Elu</label><br>
+
+        <!-- Campo de senha -->
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        <label for="senhaConfirmada">Confirme sua senha:</label>
+        <input type="password" id="senhaConfirmada" name="senhaConfirmada" required><br>
+
+        <!-- Botão de envio -->
+        <button type="submit">Adicionar</button>
+    </form>
+</body>
 
 </html>

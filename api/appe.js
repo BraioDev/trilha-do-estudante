@@ -1,9 +1,11 @@
 const express = require('express');
 const { getApps, initializeApp } = require('firebase/app');
 const { getAuth, signInWithEmailAndPassword } = require('firebase/auth');
+const { getFirestore, collection, addDoc } = require('firebase/firestore');
 const appe = express();
 const port = 8000;
 const bodyParser = require('body-parser');
+const { redirect } = require('react-router-dom');
 
 //Configuração do ejs para carregar as views
 appe.set('view engine', 'ejs');
@@ -22,7 +24,9 @@ var firebaseConfig = {
 appe.use(express.json());
 appe.use(express.urlencoded({ extended: false }));
 const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
-const auth = getAuth(firebaseApp);
+var auth = getAuth(firebaseApp);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 //public
 appe.use(express.static('public'))
@@ -85,6 +89,27 @@ appe.post('/add', (req, res) => {
     const id = posts.length + 1;
     posts.push({ id, titulo, conteudo });
     res.redirect('/');
+});
+
+appe.post('/salvar', async (req, res) => {
+    if (req.body.senha === req.body.senhaConfirmada) {
+        try {
+            const dataToSave = {
+                nome: req.body.nome,
+                email: req.body.email,
+                senha: req.body.senha,
+                idade: req.body.idade,
+                genero: req.body.genero,
+            };
+
+            await addDoc(collection(db, 'informacoes'), dataToSave);
+            res.send('Informações salvas com sucesso.');
+        } catch (error) {
+            res.send('Erro ao tentar salvar suas informações: ' + error);
+        }
+    } else {
+        res.send('Erro ao tentar salvar suas informações: As senhas não coincidem.');
+    }
 });
 
 appe.get('/ler-dados:id', (req, res, next) => {
