@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Login</title>
-    </head>
+<head>
+    <title>Login</title>
+</head>
 
-    <body>
-        <h1>Login</h1>
-        <form action="/login" method="post">
-            <input type="text" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-            <button type="submit">Login</button>
+<body style="background-color: #bbbbbb; font-family: 'Cera Round Pro', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+    <div style="text-align: center;">
+        <h1 style="font-weight: bold;">Login</h1>
+        <form action="/login" method="post" style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0 auto;">
+
+            <!-- Campo de Email -->
+            <div style="margin-bottom: 20px; width: 100%;">
+                <input type="text" name="email" placeholder="Email"
+                    style="width: 100%; height: 35px; text-align: left; border: none; outline: none; border-radius: 8px; font-size: 14px; font-weight: bold; padding: 10px; background: #ececec; color: #000; transition: background-color 0.2s, color 0.2s;"
+                    onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+                    onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';">
+            </div>
+
+            <!-- Campo de Senha -->
+            <div style="margin-bottom: 20px; width: 100%;">
+                <input type="password" name="password" placeholder="Senha"
+                    style="width: 100%; height: 35px; text-align: left; border: none; outline: none; border-radius: 8px; font-size: 14px; font-weight: bold; padding: 10px; background: #ececec; color: #000; transition: background-color 0.2s, color 0.2s;"
+                    onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+                    onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';">
+            </div>
+
+            <!-- Botão de Login -->
+            <button type="submit"
+                style="border: none; border-radius: 8px; font-size: 16px; height: 35px; width: 83px; background: transparent; transition: background-color 0.3s, color 0.3s; user-select: none; color: var(--preto-cinza); background-color: #ececec !important; font-weight: bold; font-family: 'Cera Round Pro', sans-serif;"
+                onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+                onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = 'var(--preto-cinza)';">Login</button>
         </form>
-    </body>
-
+    </div>
+</body>
 </html>
