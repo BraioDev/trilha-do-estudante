@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const texto = document.getElementById("dataDisplay");
 
     button.addEventListener("click", () => {
+        console.log("CLICK");
         // eslint-disable-next-line no-undef
         axios.get("https://jsonplaceholder.typicode.com/posts/1")
             .then(response => {

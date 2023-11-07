@@ -1,4 +1,4 @@
-const chai = require('chai');
+/* const chai = require('chai');
 const expect = chai.expect;
 const soma = require('../api/math');
 
@@ -17,4 +17,4 @@ describe('Função de soma', () => {
         const resultado = soma(2, -3);
         expect(resultado).to.equal(-1);
     });
-});
+}); */

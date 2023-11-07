@@ -1,145 +1,179 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Nos Ajude</title>
-  </head>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Nos Ajude</title>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
 
-  <body
-    style="
-      background-color: #bbbbbb;
-      font-family: 'Cera Round Pro', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    "
-  >
-    <div style="text-align: center">
-      <h1 style="font-weight: bold">Deixe sua Colaboração!</h1>
-      <form
-        action="/salvar"
-        method="POST"
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          max-width: 400px;
-          margin: 0 auto;
-        "
-      >
-        <!-- Campo de texto -->
-        <div style="margin-bottom: 20px; width: 100%">
-          <label for="nome" style="font-weight: bold">Nome:</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            required
-            maxlength="20"
-            placeholder="Informe o seu apelido"
-            style="
-              width: 100%;
-              border: none;
-              outline: none;
-              border-radius: 8px;
-              font-size: 14px;
-              font-weight: bold;
-              height: 35px;
-              padding: 10px;
-              background: #ececec;
-              color: #000;
-              transition: ease-in-out 0.2s;
-            "
-            onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
-            onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
-          />
-        </div>
+    <body
+      style="
+        background-color: #bbbbbb;
+        font-family: 'Cera Round Pro', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      "
+    >
+      <div style="text-align: center">
+        <h1 style="font-weight: bold">Deixe sua Colaboração!</h1>
 
-        <!-- Campo de assunto -->
-        <div style="margin-bottom: 20px; width: 100%">
-          <label for="assunto" style="font-weight: bold">Assunto:</label>
-          <input
-            type="text"
-            id="assunto"
-            name="assunto"
-            required
-            style="
-              width: 100%;
-              border: none;
-              outline: none;
-              border-radius: 8px;
-              font-size: 14px;
-              font-weight: bold;
-              height: 35px;
-              padding: 10px;
-              background: #ececec;
-              color: #000;
-              transition: ease-in-out 0.2s;
-            "
-            onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
-            onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
-            placeholder="Informe brevemente o assunto"
-          />
-        </div>
-
-        <!-- Campo de Texto -->
-        <div style="margin-bottom: 20px; width: 100%">
-          <label for="texto" style="font-weight: bold">Texto:</label>
-          <textarea
-            id="texto"
-            name="texto"
-            required
-            style="
-              resize: none;
-              width: 100%;
-              border: none;
-              outline: none;
-              border-radius: 8px;
-              font-size: 14px;
-              font-weight: bold;
-              height: 200px;
-              padding: 10px;
-              background: #ececec;
-              color: #000;
-              transition: ease-in-out 0.2s;
-            "
-            onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
-            onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
-            placeholder="Informe o que você gostaria de abordar"
-          ></textarea>
-        </div>
-
-        <!-- Botão de envio -->
-        <button
-          type="submit"
+        <form
+          action="/salvar"
+          method="POST"
           style="
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            height: 35px;
-            width: 83px;
-            background: transparent;
-            transition: ease-in-out 0.3s;
-            user-select: none;
-            color: #000;
-            background-color: #ececec !important;
-            font-weight: bold;
-            font-family: 'Cera Round Pro', sans-serif;
+            display: inline-block;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
           "
-          onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
-          onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
         >
-          Adicionar
-        </button>
-      </form>
-    </div>
-  </body>
+          <!-- Campo de texto -->
+          <div style="margin-bottom: 20px; width: 100%">
+            <label for="nome" style="font-weight: bold">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              maxlength="20"
+              placeholder="Informe o seu apelido"
+              style="
+                width: 100%;
+                border: none;
+                outline: none;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: bold;
+                height: 35px;
+                padding: 10px;
+                background: #ececec;
+                color: #000;
+                transition: ease-in-out 0.2s;
+              "
+              onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+              onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+            />
+          </div>
 
-  <script>
-    const redirectButton = document.getElementById("redirectButton");
-    redirectButton.addEventListener("click", function () {
-      window.location.href = "../public/index.html";
-    });
-  </script>
-</html>
+          <!-- Campo de assunto -->
+          <div style="margin-bottom: 20px; width: 100%">
+            <label for="assunto" style="font-weight: bold">Assunto:</label>
+            <input
+              type="text"
+              id="assunto"
+              name="assunto"
+              required
+              style="
+                width: 100%;
+                border: none;
+                outline: none;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: bold;
+                height: 35px;
+                padding: 10px;
+                background: #ececec;
+                color: #000;
+                transition: ease-in-out 0.2s;
+              "
+              onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+              onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+              placeholder="Informe brevemente o assunto"
+            />
+          </div>
+
+          <!-- Campo de Texto -->
+          <div style="margin-bottom: 20px; width: 100%">
+            <label for="texto" style="font-weight: bold">Texto:</label>
+            <textarea
+              id="texto"
+              name="texto"
+              required
+              id="dataDisplay"
+              style="
+                resize: none;
+                width: 100%;
+                border: none;
+                outline: none;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: bold;
+                height: 200px;
+                padding: 10px;
+                background: #ececec;
+                color: #000;
+                transition: ease-in-out 0.2s;
+              "
+              onfocus="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+              onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+              placeholder="Informe o que você gostaria de abordar"
+            ></textarea>
+          </div>
+
+          <!-- Botão de envio -->
+          <button
+            type="button"
+            formmethod="GET"
+            id="listar-button"
+            style="
+              border: none;
+              border-radius: 8px;
+              font-size: 16px;
+              height: 35px;
+              width: 83px;
+              background: transparent;
+              transition: ease-in-out 0.3s;
+              user-select: none;
+              color: #000;
+              background-color: #ececec !important;
+              font-weight: bold;
+              font-family: 'Cera Round Pro', sans-serif;
+            "
+            onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+            onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+          >
+            Listar
+          </button>
+
+          <button
+            type="submit"
+            formmethod="POST"
+            style="
+              border: none;
+              border-radius: 8px;
+              font-size: 16px;
+              height: 35px;
+              width: 83px;
+              background: transparent;
+              transition: ease-in-out 0.3s;
+              user-select: none;
+              color: #000;
+              background-color: #ececec !important;
+              font-weight: bold;
+              font-family: 'Cera Round Pro', sans-serif;
+            "
+            onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+            onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+          >
+            Salvar
+          </button>
+        </form>
+      </div>
+
+      <script>
+        document.getElementById("listar-button").addEventListener("click", async () => {
+          const response = await fetch("/salvar");
+          if (response.ok) {
+            const data = await response.json();
+            document.getElementById("nome").value = data.nome;
+            document.getElementById("assunto").value = data.assunto;
+            document.getElementById("texto").value = data.texto;
+          } else {
+            alert("Erro ao obter dados");
+          }
+        });
+      </script>
+    </body>
+  </html>

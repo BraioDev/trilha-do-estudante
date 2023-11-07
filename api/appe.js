@@ -1,11 +1,12 @@
 const express = require("express");
+const fsPromisse = require("fs/promises");
+const fs = require("fs");
 const { getApps, initializeApp } = require("firebase/app");
 const { getAuth, signInWithEmailAndPassword } = require("firebase/auth");
-const { getFirestore, collection, addDoc } = require("firebase/firestore");
+const { getFirestore } = require("firebase/firestore");
 const appe = express();
 const port = 8080;
 const bodyParser = require("body-parser");
-const { redirect } = require("react-router-dom");
 
 //Configuração do ejs para carregar as views
 appe.set("view engine", "ejs");
@@ -37,17 +38,6 @@ appe.get("/", (req, res) => {
   res.render("index");
 });
 
-appe.get("/home", (req, res) => {
-  const user = auth.currentUser;
-  if (user) {
-    res.render("home", { user: user });
-  } else {
-    res.redirect("./public/index.html");
-  }
-});
-
-// Rota para exibir o formulario de adição
-
 appe.post("/salvar", async (req, res) => {
   try {
     const dataToSave = {
@@ -56,35 +46,39 @@ appe.post("/salvar", async (req, res) => {
       texto: req.body.texto,
     };
 
-    await addDoc(collection(db, "colaboracao"), dataToSave);
-    res.redirect("./public/index.html");
+    let existingData = [];
+    try {
+      const data = fs.readFileSync("dados.json", "utf-8");
+      existingData = JSON.parse(data);
+    } catch (error) {
+      console.error("Erro ao ler dados do arquivo JSON:", error);
+    }
+
+    existingData.push(dataToSave);
+
+    fs.writeFileSync("dados.json", JSON.stringify(existingData));
+    res.send("Dados salvos com sucesso!");
   } catch (error) {
     res.send("Erro ao tentar salvar suas informações: " + error);
   }
 });
 
-appe.get("/ler-dados:id", (req, res, next) => {
-  const parametro = req.query.parametro;
-  if (parametro) {
-    next();
-  } else {
-    res.status(401).send("Não Autorizado");
+appe.get("/salvar", async (req, res) => {
+  try {
+    const data = await fsPromisse.readFile("dados.json", "utf-8");
+    const jsonData = JSON.parse(data);
+    const randomIndex = Math.floor(Math.random() * jsonData.length);
+    const randomItem = jsonData[randomIndex];
+    res.json(randomItem);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Erro ao Obter dados" });
   }
-});
-
-appe.post("/salvar-dados", (req, res) => {
-  const dados = req.body;
-  console.log("dados: ", dados);
-  res.send("Dado salvo com sucesso!");
 });
 
 appe.post("/login", async (req, res) => {
   try {
-    await signInWithEmailAndPassword(
-      auth,
-      req.body.email,
-      req.body.password
-    );
+    await signInWithEmailAndPassword(auth, req.body.email, req.body.password);
     res.redirect("/home");
   } catch (error) {
     res.send(error.message);
@@ -93,7 +87,7 @@ appe.post("/login", async (req, res) => {
 
 appe.get("/home", (req, res) => {
   const user = auth.currentUser;
-  console.log(user);
+
   if (user) {
     res.render("home", { user: user });
   } else {

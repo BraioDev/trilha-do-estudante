@@ -1,0 +1,92 @@
+[
+  {
+    "nome": "React",
+    "assunto": "Framework JavaScript",
+    "texto": "React é uma biblioteca JavaScript para construir interfaces de usuário."
+  },
+  {
+    "nome": "Node.js",
+    "assunto": "Plataforma JavaScript",
+    "texto": "Node.js é uma plataforma que permite executar JavaScript no servidor."
+  },
+  {
+    "nome": "Python",
+    "assunto": "Linguagem de Programação",
+    "texto": "Python é uma linguagem de programação de alto nível e de fácil leitura."
+  },
+  {
+    "nome": "Django",
+    "assunto": "Framework Python",
+    "texto": "Django é um framework web Python para o desenvolvimento de aplicativos web."
+  },
+  {
+    "nome": "Java",
+    "assunto": "Linguagem de Programação",
+    "texto": "Java é uma linguagem de programação amplamente usada para desenvolvimento de aplicativos."
+  },
+  {
+    "nome": "Spring Boot",
+    "assunto": "Framework Java",
+    "texto": "Spring Boot é um framework Java para desenvolvimento de aplicativos web e microserviços."
+  },
+  {
+    "nome": "Angular",
+    "assunto": "Framework JavaScript",
+    "texto": "Angular é um framework JavaScript para desenvolvimento de aplicações web."
+  },
+  {
+    "nome": "Vue.js",
+    "assunto": "Framework JavaScript",
+    "texto": "Vue.js é um framework JavaScript progressivo para construção de interfaces de usuário."
+  },
+  {
+    "nome": "Ruby on Rails",
+    "assunto": "Framework Ruby",
+    "texto": "Ruby on Rails é um framework Ruby para desenvolvimento de aplicativos web."
+  },
+  {
+    "nome": "C++",
+    "assunto": "Linguagem de Programação",
+    "texto": "C++ é uma linguagem de programação de propósito geral e amplamente utilizada."
+  },
+  {
+    "nome": "PHP",
+    "assunto": "Linguagem de Programação",
+    "texto": "PHP é uma linguagem de script usada para o desenvolvimento web."
+  },
+  {
+    "nome": "MongoDB",
+    "assunto": "Banco de Dados NoSQL",
+    "texto": "MongoDB é um banco de dados NoSQL orientado a documentos."
+  },
+  {
+    "nome": "Docker",
+    "assunto": "Tecnologia de Contêiner",
+    "texto": "Docker é uma plataforma para desenvolvimento, envio e execução de aplicativos em contêineres."
+  },
+  {
+    "nome": "Kubernetes",
+    "assunto": "Orquestração de Contêineres",
+    "texto": "Kubernetes é uma plataforma de código aberto para orquestração de contêineres."
+  },
+  {
+    "nome": "Swift",
+    "assunto": "Linguagem de Programação",
+    "texto": "Swift é uma linguagem de programação desenvolvida pela Apple para o desenvolvimento de aplicativos iOS e macOS."
+  },
+  {
+    "nome": "Ruby",
+    "assunto": "Linguagem de Programação",
+    "texto": "Ruby é uma linguagem de programação interpretada e orientada a objetos."
+  },
+  {
+    "nome": "Ruby on Rails",
+    "assunto": "Framework Ruby",
+    "texto": "Ruby on Rails é um framework Ruby para desenvolvimento de aplicativos web."
+  },
+  {
+    "nome": "Django",
+    "assunto": "Framework Python",
+    "texto": "Django é um framework web Python para o desenvolvimento de aplicativos web.a"
+  }
+]
