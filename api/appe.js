@@ -1,12 +1,37 @@
 const express = require("express");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const fsPromisse = require("fs/promises");
 const fs = require("fs");
 const { getApps, initializeApp } = require("firebase/app");
 const { getAuth, signInWithEmailAndPassword } = require("firebase/auth");
 const { getFirestore } = require("firebase/firestore");
-const appe = express();
+
 const port = 8080;
+const appe = express();
 const bodyParser = require("body-parser");
+const produtos = [
+  { id: 1, nome: "Arroz", preco: 25 },
+  {
+    id: 2,
+    nome: "Feijão",
+    preco: 15,
+  },
+  {
+    id: 3,
+    nome: "Bife",
+    preco: 40,
+  },
+];
+
+appe.use(cookieParser());
+appe.use(
+  session({
+    secret: "minhachave",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 //Configuração do ejs para carregar as views
 appe.set("view engine", "ejs");
@@ -100,6 +125,56 @@ appe.get("/dados-do-servidor", (req, res) => {
     nodeVersion: process.versions.node,
   };
   res.json(data);
+});
+
+/*Session e cookie*/
+//Rota para exibir produtos
+appe.get("/produtos", (req, res) => {
+  res.send(`
+  <h1>Lista de produtos</h1>
+  <ul>
+  ${produtos
+    .map(
+      (produto) =>
+        `<li>${produto.nome} - ${produto.preco} <a href="/adicionar/${produto.id}"> adicionar ao carrinho </a></li>`
+    )
+    .join("")}
+  </ul>
+  <a href="/carrinho"> Ver carrinho</a>
+  `);
+});
+
+appe.get("/adicionar/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const produto = produtos.find((p) => p.id === id);
+
+  if (produto) {
+    if (!req.session.carrinho) {
+      req.session.carrinho = [];
+    }
+    req.session.carrinho.push(produto);
+  }
+
+  res.redirect("/produtos");
+});
+
+appe.get("/carrinho", (req, res) => {
+  const carrinho = req.session.carrinho || [];
+  const total = carrinho.reduce((acc, produto) => acc + produto.preco, 0);
+
+  res.send(`
+  <h1>Carrinho de compras</h1>
+  <ul>
+  ${carrinho.map(
+      (produto) =>
+        `<li>${produto.nome} - ${produto.preco}<li>`
+    )
+    .join("")}
+  </ul>
+
+  <p>Total: ${total}</p>
+  <a href="/produtos">Continuar comprando<a/>
+  `);
 });
 
 appe.listen(port, () => {
