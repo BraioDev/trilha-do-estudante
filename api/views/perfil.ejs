@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <style>
+      body {
+        font-family: "Cera Round Pro", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 60px;
+        background-color: #bbbbbb;
+      }
+
+      h1 {
+        color: #333333;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 0;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      li {
+        margin-top: 20px;
+        color: #333333;
+      }
+
+      a {
+        display: inline-block;
+        color: #000;
+        background-color: #ececec;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: bold;
+        font-family: "Cera Round Pro", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Seu perfil</h1>
+    <ul>
+      <img src="<%= user.url %>" alt="foto" />
+      <li><strong>Nome:</strong> <%= user.nome %></li>
+      <li><strong>Email:</strong> <%= user.email %></li>
+      <li><strong>Instagram:</strong> <%= user.instagram %></li>
+      <li><strong>Gênero:</strong> <%= user.genero %></li>
+      <li><strong>Se identifica como:</strong> <%= user.identifica %></li>
+    </ul>
+    <a
+      href="/home"
+      onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+      onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+      >Voltar</a
+    >
+  </body>
+</html>

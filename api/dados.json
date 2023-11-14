@@ -88,5 +88,10 @@
     "nome": "Django",
     "assunto": "Framework Python",
     "texto": "Django é um framework web Python para o desenvolvimento de aplicativos web.a"
+  },
+  {
+    "nome": "Spring Bootão",
+    "assunto": "Framework Java",
+    "texto": "Spring Boot é um framework Java para desenvolvimento de aplicativos web e microserviços."
   }
 ]
