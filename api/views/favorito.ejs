@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favoritos</title>
+  <style>
+    body {
+      font-family: "Cera Round Pro", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 60px;
+      background-color: #bbbbbb;
+    }
+
+    h1 {
+      color: #333333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ececec;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    li {
+      color: #333333;
+    }
+
+    a {
+      display: inline-block;
+      color: #000;
+      background-color: #ececec;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+      font-family: "Cera Round Pro", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Seus favoritos</h1>
+  <ul>
+    <% for (let i = 0; i < favorites.length; i++) { %>
+      <div class="card">
+        <li><strong>Nome:</strong> <%= favorites[i].nome %></li>
+        <li><strong>Assunto:</strong> <%= favorites[i].assunto %></li>
+        <li><strong>Texto:</strong> <%= favorites[i].texto %></li>
+      </div>
+    <% } %>
+  </ul>
+  <a href="/home" onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';" onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';">Voltar</a>
+</body>
+
+</html>

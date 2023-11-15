@@ -17,12 +17,16 @@
     "
   >
     <div
-      style="text-align: center; display: flex; gap: 10px; margin-bottom: 20px"
+      style="
+        text-align: center;
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      "
     >
-      <form action="/perfil" method="get">
+      <form action="/favorito" method="get">
         <button
           type="submit"
-          method="get"
           style="
             border: none;
             border-radius: 8px;
@@ -40,7 +44,7 @@
           onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
           onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
         >
-          Perfil
+          Favoritos
         </button>
       </form>
 
@@ -65,6 +69,31 @@
           onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
         >
           Base64
+        </button>
+      </form>
+
+      <form action="/perfil" method="get">
+        <button
+          type="submit"
+          method="get"
+          style="
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            height: 35px;
+            width: 83px;
+            background: transparent;
+            transition: ease-in-out 0.3s;
+            user-select: none;
+            color: #000;
+            background-color: #ececec !important;
+            font-weight: bold;
+            font-family: 'Cera Round Pro', sans-serif;
+          "
+          onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+          onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+        >
+          Perfil
         </button>
       </form>
     </div>
@@ -163,6 +192,14 @@
             onblur="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
             placeholder="Informe o que você gostaria de abordar"
           ></textarea>
+
+          <label for="like" style="font-weight: bold; margin-top: 20px;">Favorito:</label>
+          <input
+            type="checkbox"
+            id="like"
+            name="like"
+            style="margin-top: 10px"
+          />
         </div>
 
         <!-- Botão de envio -->
@@ -191,8 +228,31 @@
         </button>
 
         <button
+          type="button"
+          id="excluir-button"
+          style="
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            height: 35px;
+            width: 83px;
+            background: transparent;
+            transition: ease-in-out 0.3s;
+            user-select: none;
+            color: #000;
+            background-color: #ececec !important;
+            font-weight: bold;
+            font-family: 'Cera Round Pro', sans-serif;
+          "
+          onmouseover="this.style.backgroundColor = '#303134'; this.style.color = '#ececec';"
+          onmouseout="this.style.backgroundColor = '#ececec'; this.style.color = '#000';"
+        >
+          Excluir
+        </button>
+
+        <button
           type="submit"
-          formmethod="POST"
+          id="salvar-button"
           style="
             border: none;
             border-radius: 8px;
@@ -227,6 +287,61 @@
             document.getElementById("texto").value = data.texto;
           } else {
             alert("Erro ao obter dados");
+          }
+        });
+
+      document
+        .getElementById("salvar-button")
+        .addEventListener("click", async () => {
+          event.preventDefault();
+          const likeCheckbox = document.getElementById("like");
+
+          const response = await fetch("/salvar", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              nome: document.getElementById("nome").value,
+              assunto: document.getElementById("assunto").value,
+              texto: document.getElementById("texto").value,
+              like: likeCheckbox.checked,
+            }),
+          });
+          if (response.ok) {
+            const data = await response.json();
+            document.getElementById("nome").value = "";
+            document.getElementById("assunto").value = "";
+            document.getElementById("texto").value = "";
+            alert("Salvo com sucesso!");
+          } else {
+            alert("Por favor, informe todos os campos necessários!");
+          }
+        });
+
+      document
+        .getElementById("excluir-button")
+        .addEventListener("click", async () => {
+          const response = await fetch("/excluir", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              nome: document.getElementById("nome").value,
+              assunto: document.getElementById("assunto").value,
+              texto: document.getElementById("texto").value,
+            }),
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            document.getElementById("nome").value = "";
+            document.getElementById("assunto").value = "";
+            document.getElementById("texto").value = "";
+            alert("Excluído com sucesso!");
+          } else {
+            alert("Por favor, selecione ao menos um assunto!");
           }
         });
     </script>
