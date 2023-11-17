@@ -99,7 +99,6 @@ async function translateValues(data, sourceLang, targetLang) {
 
 app.post("/salvar", async (req, res) => {
   const like = req.body.like;
-  console.log("🚀 ~ file: appe.js:102 ~ app.post ~ like:", like);
 
   try {
     const dataToSave = {
